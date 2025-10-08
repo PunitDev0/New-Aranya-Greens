@@ -1,9 +1,9 @@
 {
-  "_index-DGil7Hwk.js": {
-    "file": "assets/index-DGil7Hwk.js",
+  "_index-DDGMJDLr.js": {
+    "file": "assets/index-DDGMJDLr.js",
     "name": "index",
     "imports": [
-      "resources/js/app.tsx"
+      "resources/js/app.jsx"
     ]
   },
   "node_modules/@fancyapps/ui/dist/index.js": {
@@ -29,17 +29,17 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Bx6Djfzx.css",
+    "file": "assets/app-CC_93Jet.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
       "app.css"
     ]
   },
-  "resources/js/app.tsx": {
-    "file": "assets/app-CtaBbtRs.js",
+  "resources/js/app.jsx": {
+    "file": "assets/app-DIeGfORx.js",
     "name": "app",
-    "src": "resources/js/app.tsx",
+    "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
       "resources/js/pages/PaymentForm.jsx",
@@ -49,61 +49,61 @@
     ],
     "css": [
       "assets/app-D-DBFKq3.css",
-      "assets/app-Bx6Djfzx.css"
+      "assets/app-CC_93Jet.css"
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-CHm49--2.js",
+    "file": "assets/PaymentForm-Cycn0cIE.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx"
+      "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Bx6Djfzx.css"
+      "assets/app-CC_93Jet.css"
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-BPD2TUsJ.js",
+    "file": "assets/dashboard-DabqPGoR.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx",
-      "_index-DGil7Hwk.js"
+      "resources/js/app.jsx",
+      "_index-DDGMJDLr.js"
     ],
     "css": [
-      "assets/app-Bx6Djfzx.css"
+      "assets/app-CC_93Jet.css"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-BkkJs9Ug.js",
+    "file": "assets/login-BfbkfAYZ.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx",
-      "_index-DGil7Hwk.js"
+      "resources/js/app.jsx",
+      "_index-DDGMJDLr.js"
     ],
     "css": [
-      "assets/app-Bx6Djfzx.css"
+      "assets/app-CC_93Jet.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-C3gBln1Q.js",
+    "file": "assets/welcome-DQb35kYp.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
-      "resources/js/app.tsx"
+      "resources/js/app.jsx"
     ],
     "dynamicImports": [
       "node_modules/@fancyapps/ui/dist/index.js"
     ],
     "css": [
       "assets/welcome-Bj6qLXYl.css",
-      "assets/app-Bx6Djfzx.css"
+      "assets/app-CC_93Jet.css"
     ],
     "assets": [
       "assets/fa-brands-400-BfBXV7Mm.woff2",
