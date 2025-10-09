@@ -165,7 +165,7 @@ const handleEnqFormChange = (e) => {
     }
 
     try {
-      const response = await axios.post('/register', regForm);
+      const response = await axios.post('/api/register', regForm);
       console.log('Registration Response:', response.data);
 
       if (response.data.success && response.data.payment_url) {
