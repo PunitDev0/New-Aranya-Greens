@@ -49,7 +49,7 @@ const Registrations = () => {
   useEffect(() => {
     const fetchRegistrations = async () => {
       try {
-        const res = await axios.get("/register"); // ✅ API route
+        const res = await axios.get("/api/register"); // ✅ API route
         const data = res.data.data || [];
         setRegistrations(data);
         setFilteredData(data);
@@ -81,7 +81,7 @@ const Registrations = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("/admin/logout");
+      await axios.post("/api/admin/logout");
       window.location.href = "/admin/login";
     } catch (error) {
       console.error("Logout failed:", error);
