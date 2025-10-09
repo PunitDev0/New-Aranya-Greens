@@ -23,7 +23,7 @@ const RegistrationModal = ({
       });
       return () => fp.destroy();
     }
-  }, [regForm.dob, handleRegFormChange, dobInputRef]);
+  }, [ dobInputRef]);
 
   return (
     <div className="modal fade" id="registrationModal" tabIndex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
