@@ -1,6 +1,6 @@
 {
-  "_index-BauEW83K.js": {
-    "file": "assets/index-BauEW83K.js",
+  "_index-__CYfLPg.js": {
+    "file": "assets/index-__CYfLPg.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
@@ -29,7 +29,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-BfIIIaqI.js",
+    "file": "assets/app-Cyi1BypV.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -44,7 +44,7 @@
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-BgU1-Vf3.js",
+    "file": "assets/PaymentForm-BMdkrkDl.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -53,27 +53,27 @@
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-ienIXYv_.js",
+    "file": "assets/dashboard-Fep0YrzK.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BauEW83K.js"
+      "_index-__CYfLPg.js"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-ClmjKWFC.js",
+    "file": "assets/login-D0GU9uWd.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BauEW83K.js"
+      "_index-__CYfLPg.js"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-CJSzZLqN.js",
+    "file": "assets/welcome-BIv2UKYp.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
@@ -84,7 +84,7 @@
       "node_modules/@fancyapps/ui/dist/index.js"
     ],
     "css": [
-      "assets/welcome-CFpSNVjE.css"
+      "assets/welcome-Bj6qLXYl.css"
     ],
     "assets": [
       "assets/fa-brands-400-BfBXV7Mm.woff2",
