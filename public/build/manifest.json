@@ -1,6 +1,6 @@
 {
-  "_index-BZ-0_qsT.js": {
-    "file": "assets/index-BZ-0_qsT.js",
+  "_index-Bpah7pH_.js": {
+    "file": "assets/index-Bpah7pH_.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
@@ -29,7 +29,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-DimmUQjq.css",
+    "file": "assets/app-6LWfKXRV.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
@@ -37,7 +37,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-DDmdbwQ7.js",
+    "file": "assets/app-BCY86XKa.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -49,11 +49,11 @@
     ],
     "css": [
       "assets/app-D-DBFKq3.css",
-      "assets/app-DimmUQjq.css"
+      "assets/app-6LWfKXRV.css"
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-DlbZGJXL.js",
+    "file": "assets/PaymentForm-jqp0DP3X.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -61,37 +61,37 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-DimmUQjq.css"
+      "assets/app-6LWfKXRV.css"
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-BX8cN_sB.js",
+    "file": "assets/dashboard-CODpeW4t.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BZ-0_qsT.js"
+      "_index-Bpah7pH_.js"
     ],
     "css": [
-      "assets/app-DimmUQjq.css"
+      "assets/app-6LWfKXRV.css"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-B61sgEVt.js",
+    "file": "assets/login-Cl4cayjW.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BZ-0_qsT.js"
+      "_index-Bpah7pH_.js"
     ],
     "css": [
-      "assets/app-DimmUQjq.css"
+      "assets/app-6LWfKXRV.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-CmCuNQAi.js",
+    "file": "assets/welcome-CcI0WdWl.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
@@ -103,7 +103,7 @@
     ],
     "css": [
       "assets/welcome-Bj6qLXYl.css",
-      "assets/app-DimmUQjq.css"
+      "assets/app-6LWfKXRV.css"
     ],
     "assets": [
       "assets/fa-brands-400-BfBXV7Mm.woff2",
