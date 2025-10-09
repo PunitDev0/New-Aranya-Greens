@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Header = ({ isNavOpen, toggleNav, handleNavLinkClick }) => {
+const Header = ({ isNavOpen, toggleNav }) => {
   return (
-    <header>
-      <div className="container navbar-wrapper-main">
-        <div className="logo-client">
+    <header className="bg-white shadow-sm">
+      <div className="container d-flex align-items-center justify-content-between py-2">
+        {/* Logos */}
+        <div className="d-flex align-items-center gap-2">
           <a href="/">
             <img src="images/download.jpg" className="single-client-logo" alt="Logo 1" />
           </a>
@@ -12,12 +13,25 @@ const Header = ({ isNavOpen, toggleNav, handleNavLinkClick }) => {
             <img src="images/support.png" className="single-client-logo" alt="Logo 2" />
           </a>
         </div>
-        <button id="menuToggle" className="d-md-none" onClick={toggleNav}>
+
+        {/* Menu button (mobile) */}
+        <button
+          id="menuToggle"
+          className="d-md-none btn btn-light"
+          onClick={toggleNav}
+        >
           <i className="fas fa-bars"></i>
         </button>
-        <ul className={`navM collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarSupportedContent">
+
+        {/* Menu items */}
+        <ul
+          className={`navM d-flex align-items-center gap-3 mb-0 ${
+            isNavOpen ? 'd-flex flex-column position-absolute top-100 start-0 bg-white p-3 shadow-md' : 'd-none'
+          } d-md-flex`}
+          style={{ listStyle: 'none' }}
+        >
           <li>
-            <a href="tel:+919211494111" onClick={() => window.gtag_call_conversion?.()}>
+            <a href="tel:+919211494111">
               <i className="fas fa-phone"></i> +91-9211494111
             </a>
           </li>
@@ -27,7 +41,12 @@ const Header = ({ isNavOpen, toggleNav, handleNavLinkClick }) => {
             </a>
           </li>
           <li>
-            <a href="#" className="register-btn" data-bs-toggle="modal" data-bs-target="#registrationModal">
+            <a
+              href="#"
+              className="register-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#registrationModal"
+            >
               <i className="fas fa-user-circle"></i> EOI Registration Open
             </a>
           </li>

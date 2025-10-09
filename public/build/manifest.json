@@ -1,6 +1,6 @@
 {
-  "_index-Bt85cUAq.js": {
-    "file": "assets/index-Bt85cUAq.js",
+  "_index-BauEW83K.js": {
+    "file": "assets/index-BauEW83K.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
@@ -29,7 +29,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-hUoQWgB3.js",
+    "file": "assets/app-BfIIIaqI.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -44,7 +44,7 @@
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-ClNhu99M.js",
+    "file": "assets/PaymentForm-BgU1-Vf3.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -53,27 +53,27 @@
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-X4ujkCe5.js",
+    "file": "assets/dashboard-ienIXYv_.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-Bt85cUAq.js"
+      "_index-BauEW83K.js"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-BdzOoZIB.js",
+    "file": "assets/login-ClmjKWFC.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-Bt85cUAq.js"
+      "_index-BauEW83K.js"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-BObcJFFN.js",
+    "file": "assets/welcome-CJSzZLqN.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
