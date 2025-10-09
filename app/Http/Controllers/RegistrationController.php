@@ -35,7 +35,7 @@ class RegistrationController extends Controller
             $registration = Registration::create(array_merge($validated, ['status' => 'pending']));
 
             // Prepare payment
-            $amount = 1.00;
+            $amount = 31000.00;
             $productinfo = 'EOI';
 
             // Initiate payment
@@ -91,8 +91,8 @@ class RegistrationController extends Controller
                 'email' => $email,
                 'phone' => $phone,
                 'productinfo' => $productinfo,
-                'surl' => 'http://127.0.0.1:8000/api/payment/callback',
-                'furl' => 'http://127.0.0.1:8000/api/payment/callback',
+                'surl' => '/api/payment/callback',
+                'furl' => '/api/payment/callback',
                 'udf1' => (string) $registrationId,
                 'udf2' => '',
                 'udf3' => '',
