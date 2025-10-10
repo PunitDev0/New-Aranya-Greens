@@ -11,7 +11,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next)
     {
         // Use the 'admin' guard instead of default 'web'
-        if (!Auth::guard('admin')->check()) {
+        if (!Auth::check()) {
             return redirect('/admin/login');
         }
 

@@ -23,9 +23,17 @@ Route::get('/refund-policy', fn() => Inertia::render('RefundPolicy'))->name('ref
 // ----------------------
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 
-Route::middleware(['admin'])->group(function () {
-    Route::get('/admin/registrations', fn() => Inertia::render('dashboard'))->name('admin.dashboard');
-});
+
+Route::get('/admin/registrations', function () {
+    // Agar admin login nahi hai
+    if (!Auth::guard('admin')->check()) {
+        return redirect('/admin/login'); // login page pe bhej do
+    }
+
+    // Agar login hai, dashboard page render karo
+    return Inertia::render('dashboard');
+})->name('admin.dashboard');
+
 
 // ----------------------
 // Protected admin routes
