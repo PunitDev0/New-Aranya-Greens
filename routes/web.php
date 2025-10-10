@@ -22,6 +22,7 @@ Route::get('/refund-policy', fn() => Inertia::render('RefundPolicy'))->name('ref
 // Admin login routes
 // ----------------------
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
+
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin/registrations', fn() => Inertia::render('dashboard'))->name('admin.dashboard');
 });
