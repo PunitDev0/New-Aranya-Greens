@@ -235,14 +235,14 @@ const MainContent = ({
           </div>
           <div className="row">
             {[
-              'fieldImage3.jpg',
-              'fieldImage5.jpg',
-              'gal6.jpg',
-              'fieldImage7.jpg',
-              'fieldImage15.jpg',
-              'fieldImage8.jpg',
-              'fieldImage9.jpg',
-              'fieldImage10.jpg',
+              'fieldImage3.webp',
+              'fieldImage5.webp',
+              'fieldImage4.webp',
+              'fieldImage7.webp',
+              'fieldImage15.webp',
+              'fieldImage8.webp',
+              'fieldImage9.webp',
+              'fieldImage10.webp',
             ].map((image, index) => (
               <div className="col-md-4 p-0" key={index}>
                 <a data-fancybox="gallery-images" href={`images/${image}`}>

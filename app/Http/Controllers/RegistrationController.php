@@ -134,6 +134,85 @@ class RegistrationController extends Controller
         }
     }
 
+            /**
+         * ✅ Refund Payment (Fetch details from DB using registration_id)
+         */
+        public function refundPayment($registrationId)
+        {
+            try {
+                // Fetch registration and payment details
+                $registration = Registration::findOrFail($registrationId);
+                $payment = Payment::where('registration_id', $registrationId)->latest()->first();
+
+                if (!$payment) {
+                    throw new \Exception('No payment record found for this registration.');
+                }
+
+                // Easebuzz credentials
+                $MERCHANT_KEY = env('EASEBUZZ_KEY');
+                $SALT = env('EASEBUZZ_SALT');
+                $ENV = env('EASEBUZZ_ENV', 'prod');
+
+                if (!$MERCHANT_KEY || !$SALT) {
+                    throw new \Exception('Easebuzz credentials missing in .env.');
+                }
+
+                $easebuzz = new Easebuzz($MERCHANT_KEY, $SALT, $ENV);
+
+                // Prepare refund data
+                $postData = [
+                    'txnid' => $payment->txnid,
+                    'refund_amount' => $payment->amount,
+                    'phone' => $registration->phone,
+                    'email' => $registration->email,
+                    'amount' => $payment->amount,
+                ];
+
+                Log::info('Easebuzz Refund Initiation', [
+                    'registration_id' => $registrationId,
+                    'postData' => $postData
+                ]);
+
+                // Call Easebuzz refund API
+                $result = $easebuzz->refundAPI($postData);
+                $resultData = json_decode($result, true);
+
+                Log::info('Easebuzz Refund Response', [
+                    'registration_id' => $registrationId,
+                    'response' => $resultData
+                ]);
+
+                // Validate response
+                if (isset($resultData['status']) && $resultData['status'] == 1) {
+                    // Update payment status
+                    $payment->update([
+                        'status' => 'refunded',
+                        'refund_data' => $resultData,
+                    ]);
+
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Refund processed successfully.',
+                        'data' => $resultData
+                    ], 200);
+                }
+
+                throw new \Exception('Refund failed: Invalid response from Easebuzz.');
+
+            } catch (\Exception $e) {
+                Log::error('Refund Error', [
+                    'registration_id' => $registrationId,
+                    'message' => $e->getMessage()
+                ]);
+
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Refund failed: ' . $e->getMessage()
+                ], 500);
+            }
+        }
+
+
     public function index()
     {
         $registrations = Registration::with('payment')->latest()->get();

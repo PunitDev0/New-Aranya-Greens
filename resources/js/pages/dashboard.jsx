@@ -12,7 +12,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Loader2, ArrowLeft, Search, LogOut, Eye } from "lucide-react";
+import {
+  Loader2,
+  ArrowLeft,
+  Search,
+  LogOut,
+  Eye,
+  RotateCcw,
+} from "lucide-react";
 import {
   Pagination,
   PaginationContent,
@@ -30,6 +37,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { toast } from "sonner"; // ✅ Optional (if using Sonner or any toast lib)
 
 const Registrations = () => {
   const [registrations, setRegistrations] = useState([]);
@@ -38,6 +46,7 @@ const Registrations = () => {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedRegistration, setSelectedRegistration] = useState(null);
+  const [isRefunding, setIsRefunding] = useState(false);
 
   const itemsPerPage = 10;
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -46,10 +55,11 @@ const Registrations = () => {
     currentPage * itemsPerPage
   );
 
+  // ✅ Fetch all registrations
   useEffect(() => {
     const fetchRegistrations = async () => {
       try {
-        const res = await axios.get("/api/register"); // ✅ API route
+        const res = await axios.get("/api/register");
         const data = res.data.data || [];
         setRegistrations(data);
         setFilteredData(data);
@@ -62,6 +72,7 @@ const Registrations = () => {
     fetchRegistrations();
   }, []);
 
+  // ✅ Search Filter
   useEffect(() => {
     const lowerSearch = search.toLowerCase();
     const filtered = registrations.filter(
@@ -79,12 +90,42 @@ const Registrations = () => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
+  // ✅ Logout
   const handleLogout = async () => {
     try {
       await axios.post("/api/admin/logout");
       window.location.href = "/admin/login";
     } catch (error) {
       console.error("Logout failed:", error);
+    }
+  };
+
+  // ✅ Refund Payment
+  const handleRefund = async (registrationId) => {
+    setIsRefunding(true);
+    try {
+      const res = await axios.post(`/api/registration/${registrationId}/refund`);
+      if (res.data.success) {
+        toast.success("Refund processed successfully!");
+        // Refresh data
+        const updatedList = registrations.map((item) =>
+          item.id === registrationId
+            ? {
+                ...item,
+                payment: { ...item.payment, status: "refunded" },
+              }
+            : item
+        );
+        setRegistrations(updatedList);
+        setFilteredData(updatedList);
+      } else {
+        toast.error(res.data.message || "Refund failed!");
+      }
+    } catch (error) {
+      console.error("Refund error:", error);
+      toast.error("Refund failed! Please check logs.");
+    } finally {
+      setIsRefunding(false);
     }
   };
 
@@ -163,7 +204,17 @@ const Registrations = () => {
                         <TableCell>{row.email}</TableCell>
                         <TableCell>{row.city}</TableCell>
                         <TableCell>
-                          {row.payment?.status || "N/A"}
+                          <span
+                            className={`px-2 py-1 text-xs rounded-full ${
+                              row.payment?.status === "refunded"
+                                ? "bg-green-100 text-green-600"
+                                : row.payment?.status === "pending"
+                                ? "bg-yellow-100 text-yellow-700"
+                                : "bg-gray-100 text-gray-700"
+                            }`}
+                          >
+                            {row.payment?.status || "N/A"}
+                          </span>
                         </TableCell>
                         <TableCell>
                           <Dialog>
@@ -177,50 +228,88 @@ const Registrations = () => {
                                 <Eye className="w-4 h-4" /> View
                               </Button>
                             </DialogTrigger>
-                            <DialogContent className="min-w-2xl max-h-[90vh] text-white overflow-auto">
+
+                            <DialogContent className="min-w-2xl max-h-[90vh] overflow-auto">
                               <DialogHeader>
-                                <DialogTitle>Registration Details</DialogTitle>
+                                <DialogTitle>
+                                  Registration Details
+                                </DialogTitle>
                                 <DialogDescription>
                                   Full details of the registration and payment.
                                 </DialogDescription>
                               </DialogHeader>
 
-                              <div className="mt-4 grid grid-cols-2 gap-4">
+                              <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
                                 {selectedRegistration &&
-                                  Object.entries(selectedRegistration).map(([key, value]) => {
-                                    if (key === "payment" && value) {
-                                      return (
-                                        <div key={key} className="col-span-2">
-                                          <span className="font-semibold ">Payment Details</span>
-                                          <div className="grid grid-cols-2 gap-2 mt-1 border text-black border-gray-200 p-2 rounded bg-gray-50">
-                                            <div className="font-medium">ID:</div>
-                                            <div>{value.id}</div>
-                                            <div className="font-medium">TXNID:</div>
-                                            <div>{value.txnid}</div>
-                                            <div className="font-medium">Amount:</div>
-                                            <div>{value.amount}</div>
-                                            <div className="font-medium">Status:</div>
-                                            <div>{value.status}</div>
+                                  Object.entries(selectedRegistration).map(
+                                    ([key, value]) => {
+                                      if (key === "payment" && value) {
+                                        return (
+                                          <div key={key} className="col-span-2">
+                                            <span className="font-semibold">
+                                              Payment Details
+                                            </span>
+                                            <div className="grid grid-cols-2 gap-2 mt-2 border text-black border-gray-200 p-2 rounded bg-gray-50">
+                                              <div className="font-medium">
+                                                TXNID:
+                                              </div>
+                                              <div>{value.txnid}</div>
+                                              <div className="font-medium">
+                                                Amount:
+                                              </div>
+                                              <div>{value.amount}</div>
+                                              <div className="font-medium">
+                                                Status:
+                                              </div>
+                                              <div>{value.status}</div>
+                                            </div>
                                           </div>
-                                        </div>
-                                      );
-                                    } else if (key !== "payment") {
-                                      return (
-                                        <React.Fragment key={key}>
-                                          <div className="font-medium ">{key}:</div>
-                                          <div>{value?.toString() || "N/A"}</div>
-                                        </React.Fragment>
-                                      );
+                                        );
+                                      } else if (key !== "payment") {
+                                        return (
+                                          <React.Fragment key={key}>
+                                            <div className="font-medium">
+                                              {key}:
+                                            </div>
+                                            <div>{value?.toString() || "N/A"}</div>
+                                          </React.Fragment>
+                                        );
+                                      }
                                     }
-                                  })}
+                                  )}
                               </div>
 
-                              <div className="mt-4 flex justify-end">
-                                <Button onClick={() => setSelectedRegistration(null)}>Close</Button>
+                              <div className="mt-6 flex justify-end gap-2">
+                                {selectedRegistration?.payment?.status !==
+                                  "refunded" && (
+                                  <Button
+                                    variant="outline"
+                                    onClick={() =>
+                                      handleRefund(selectedRegistration.id)
+                                    }
+                                    disabled={isRefunding}
+                                    className="flex items-center gap-2"
+                                  >
+                                    {isRefunding ? (
+                                      <>
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        Processing...
+                                      </>
+                                    ) : (
+                                      <>
+                                        <RotateCcw className="w-4 h-4" />
+                                        Refund
+                                      </>
+                                    )}
+                                  </Button>
+                                )}
+                                <Button
+                                  onClick={() => setSelectedRegistration(null)}
+                                >
+                                  Close
+                                </Button>
                               </div>
                             </DialogContent>
-
-
                           </Dialog>
                         </TableCell>
                       </TableRow>
@@ -231,16 +320,19 @@ const Registrations = () => {
             )}
           </CardContent>
 
+          {/* Pagination */}
           <CardFooter>
-            {/* Pagination */}
             <div className="mt-6 flex justify-center">
               <Pagination>
                 <PaginationContent>
                   <PaginationItem>
                     <PaginationPrevious
                       onClick={() => handlePageChange(currentPage - 1)}
-                      className={`cursor-pointer ${currentPage === 1 ? "pointer-events-none opacity-50" : ""
-                        }`}
+                      className={`cursor-pointer ${
+                        currentPage === 1
+                          ? "pointer-events-none opacity-50"
+                          : ""
+                      }`}
                     />
                   </PaginationItem>
 
@@ -258,10 +350,11 @@ const Registrations = () => {
                   <PaginationItem>
                     <PaginationNext
                       onClick={() => handlePageChange(currentPage + 1)}
-                      className={`cursor-pointer ${currentPage === totalPages
-                        ? "pointer-events-none opacity-50"
-                        : ""
-                        }`}
+                      className={`cursor-pointer ${
+                        currentPage === totalPages
+                          ? "pointer-events-none opacity-50"
+                          : ""
+                      }`}
                     />
                   </PaginationItem>
                 </PaginationContent>

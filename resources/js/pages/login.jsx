@@ -30,7 +30,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("/api/admin/login", formData,);
+      const res = await axios.post("/api/login", formData,);
 
       if (res.data.success) {
         alert("✅ Login successful!");
