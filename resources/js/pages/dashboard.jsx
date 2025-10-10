@@ -37,9 +37,10 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { toast } from "sonner"; // ✅ Optional (if using Sonner or any toast lib)
+import { toast } from "sonner";
 
-const Registrations = () => {
+export default function Registrations() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [registrations, setRegistrations] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -55,24 +56,40 @@ const Registrations = () => {
     currentPage * itemsPerPage
   );
 
-  // ✅ Fetch all registrations
+  // Check if user is logged in
   useEffect(() => {
-    const fetchRegistrations = async () => {
-      try {
-        const res = await axios.get("/api/register");
-        const data = res.data.data || [];
-        setRegistrations(data);
-        setFilteredData(data);
-      } catch (error) {
-        console.error("Error fetching registrations:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchRegistrations();
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setIsLoggedIn(true);
+      fetchRegistrations();
+    } else {
+      setLoading(false);
+    }
   }, []);
 
-  // ✅ Search Filter
+  // Fetch registrations
+  const fetchRegistrations = async () => {
+    try {
+      const res = await axios.get("/api/register", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      });
+      const data = res.data.data || [];
+      setRegistrations(data);
+      setFilteredData(data);
+    } catch (error) {
+      console.error("Error fetching registrations:", error);
+      if (error.response?.status === 401) {
+        localStorage.removeItem("authToken");
+        setIsLoggedIn(false);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Search filter
   useEffect(() => {
     const lowerSearch = search.toLowerCase();
     const filtered = registrations.filter(
@@ -90,30 +107,40 @@ const Registrations = () => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
   };
 
-  // ✅ Logout
+  // Handle logout
   const handleLogout = async () => {
     try {
-      await axios.post("/admin/logout");
+      await axios.post("/admin/logout", {}, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      });
+      localStorage.removeItem("authToken");
+      setIsLoggedIn(false);
       window.location.href = "/admin/login";
     } catch (error) {
       console.error("Logout failed:", error);
     }
   };
 
-  // ✅ Refund Payment
+  // Handle refund
   const handleRefund = async (registrationId) => {
     setIsRefunding(true);
     try {
-      const res = await axios.post(`/api/registration/${registrationId}/refund`);
+      const res = await axios.post(
+        `/api/registration/${registrationId}/refund`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+          },
+        }
+      );
       if (res.data.success) {
         toast.success("Refund processed successfully!");
-        // Refresh data
         const updatedList = registrations.map((item) =>
           item.id === registrationId
-            ? {
-                ...item,
-                payment: { ...item.payment, status: "refunded" },
-              }
+            ? { ...item, payment: { ...item.payment, status: "refunded" } }
             : item
         );
         setRegistrations(updatedList);
@@ -129,10 +156,31 @@ const Registrations = () => {
     }
   };
 
+  // If not logged in, show login prompt
+  if (!isLoggedIn) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
+        <div className="w-full max-w-md bg-white shadow-xl rounded-2xl border border-gray-200 p-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Please Log In
+          </h2>
+          <p className="text-sm text-gray-500 mb-6">
+            You need to log in to access the registrations dashboard.
+          </p>
+          <Button
+            onClick={() => (window.location.href = "/admin/login")}
+            className="w-full"
+          >
+            Go to Login
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 sm:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
           <h2 className="text-2xl font-bold tracking-tight text-gray-800">
             Registrations List
@@ -170,7 +218,6 @@ const Registrations = () => {
           </div>
         </div>
 
-        {/* Table Card */}
         <Card className="shadow-sm min-h-screen border border-gray-200">
           <CardContent className="p-4 sm:p-6 overflow-x-auto">
             {loading ? (
@@ -320,7 +367,6 @@ const Registrations = () => {
             )}
           </CardContent>
 
-          {/* Pagination */}
           <CardFooter>
             <div className="mt-6 flex justify-center">
               <Pagination>
@@ -365,6 +411,4 @@ const Registrations = () => {
       </div>
     </div>
   );
-};
-
-export default Registrations;
+}

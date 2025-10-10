@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,13 +31,14 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("/admin/login", formData,{
-          withCredentials: true, // ye zaruri ha
+      const res = await axios.post("/admin/login", formData, {
+        withCredentials: true,
       });
 
       if (res.data.success) {
         alert("✅ Login successful!");
-        window.location.href = res.data.redirect; // Use redirect from response
+        localStorage.setItem("authToken", res.data.token); // Save token to localStorage
+        window.location.href = res.data.redirect || "/admin/registrations"; // Redirect to registrations
       } else {
         alert("❌ " + res.data.message);
       }
@@ -63,7 +65,6 @@ export default function Login() {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Email */}
           <div className="space-y-2">
             <Label htmlFor="email">Email address</Label>
             <Input
@@ -77,12 +78,11 @@ export default function Login() {
             />
           </div>
 
-          {/* Password */}
           <div className="space-y-2 relative">
             <div className="flex justify-between items-center">
               <Label htmlFor="password">Password</Label>
               <Link
-                href="/admin/forgot-password" // Updated to /admin/forgot-password
+                href="/admin/forgot-password"
                 className="text-sm text-blue-600 hover:underline"
               >
                 Forgot password?
@@ -106,7 +106,6 @@ export default function Login() {
             </button>
           </div>
 
-          {/* Remember me */}
           <div className="flex items-center space-x-2">
             <Checkbox
               id="remember"
@@ -119,7 +118,6 @@ export default function Login() {
             </Label>
           </div>
 
-          {/* Button */}
           <Button
             type="submit"
             disabled={loading}
@@ -130,7 +128,6 @@ export default function Login() {
           </Button>
         </form>
 
-        {/* Footer */}
         <p className="text-center text-sm text-gray-500 mt-6">
           Don’t have an account?{" "}
           <Link href="/register" className="text-blue-600 hover:underline">

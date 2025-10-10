@@ -25,11 +25,6 @@ Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name
 
 
 Route::get('/admin/registrations', function () {
-    // Agar admin login nahi hai
-    if (!Auth::guard('admin')->check()) {
-        return redirect('/admin/login'); // login page pe bhej do
-    }
-
     // Agar login hai, dashboard page render karo
     return Inertia::render('dashboard');
 })->name('admin.dashboard');
