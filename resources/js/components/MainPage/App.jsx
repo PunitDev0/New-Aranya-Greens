@@ -240,13 +240,29 @@ const handleEnqFormChange = (e) => {
     }
   };
 
-  const handleEnqFormSubmit = (e) => {
-    e.preventDefault();
-    console.log('Enquiry Form Submitted:', enqForm);
-    setEnqForm({ name: '', email: '', phone: '' });
-    const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-    modal.hide();
-  };
+
+const handleEnqFormSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    console.log('Submitting Enquiry Form:', enqForm);
+
+    // Send POST request to backend
+    const response = await axios.post('/api/enquiry', enqForm);
+
+    if (response.data.success) {
+      alert(response.data.message); // show success message
+      setEnqForm({ name: '', email: '', phone: '' }); // reset form
+      const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+      modal.hide(); // hide modal
+    } else {
+      alert(response.data.message || 'Something went wrong'); // handle backend error
+    }
+  } catch (error) {
+    console.error('Error submitting enquiry:', error);
+    alert('Error submitting enquiry. Please try again later.');
+  }
+};
 
   return (
     <div>

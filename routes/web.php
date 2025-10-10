@@ -13,7 +13,6 @@ use App\Http\Controllers\PaymentController;
 Route::get('/', fn() => Inertia::render('welcome'))->name('home');
 
 
-Route::post('/enquiry', [EnquiryController::class, 'store'])->name('enquiry.store');
 
 Route::get('/terms', fn() => Inertia::render('Terms'))->name('terms');
 Route::get('/privacy', fn() => Inertia::render('Privacy'))->name('privacy');
