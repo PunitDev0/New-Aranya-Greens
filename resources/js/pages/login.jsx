@@ -30,7 +30,9 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("/admin/login", formData,);
+      const res = await axios.post("/admin/login", formData,{
+          withCredentials: true, // ye zaruri ha
+      });
 
       if (res.data.success) {
         alert("✅ Login successful!");
