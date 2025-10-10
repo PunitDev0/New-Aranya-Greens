@@ -93,7 +93,7 @@ const Registrations = () => {
   // ✅ Logout
   const handleLogout = async () => {
     try {
-      await axios.post("/api/admin/logout");
+      await axios.post("/admin/logout");
       window.location.href = "/admin/login";
     } catch (error) {
       console.error("Logout failed:", error);
