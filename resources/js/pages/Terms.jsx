@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
 
   return (
     <div>
-      <header className="bg-white shadow">
+      {/* <header className="bg-white shadow">
         <div className="container mx-auto flex justify-between items-center py-4">
           <div className="flex space-x-4">
             <a href="index.php">
@@ -55,9 +55,9 @@ const TermsAndConditions = () => {
             </li>
           </ul>
         </div>
-      </header>
+      </header> */}
 
-      <section className="py-10">
+      <section className="py-10 bg-white text-black">
         <div className="container mx-auto w-4/5 text-justify">
           <p className="text-base font-light leading-6 mb-4">
             TERMS AND CONDITIONS FOR BOOKING OF THE COMMERCIAL UNIT IN THE PROJECT NAMELY “Springwoods City”, WHICH IS
@@ -524,30 +524,18 @@ const TermsAndConditions = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-100 py-6">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <p className="text-base font-light leading-6 mb-4 text-justify">
-              <strong>Disclaimer - </strong> Please be advised that this website is not an official site and serves solely as an informational portal managed by a RERA authorized real estate agent. It does not constitute an offer or guarantee of any services. The prices displayed on this website are subject to change without prior notice, and the availability of properties cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. Any unauthorized use or reproduction of the content may violate applicable laws. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website. Thank you for visiting our website.
-            </p>
-            <p className="text-base font-light">
-              &copy; Copyright 2025. All Rights Reserved{' '}
-              <a href="privacy.php" target="_blank" className="text-blue-600 hover:underline">Privacy Policy</a> |{' '}
-              <a href="terms.php" target="_blank" className="text-blue-600 hover:underline">Terms & Conditions</a> |{' '}
-              <a href="refund-policy.php" target="_blank" className="text-blue-600 hover:underline">Refund Policy</a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      
 
-      <a
+    
+
+      {/* <a
         href="https://api.whatsapp.com/send?phone=+919871315513&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
         target="_blank"
         className="fixed bottom-4 right-4"
       >
         <img src="img/whatsup.png" alt="WhatsApp" className="w-12" />
-      </a>
-
+      </a> */}
+{/* 
       <div className="fixed bottom-4 left-4 right-4 flex justify-around bg-white shadow-lg p-4">
         <div className="text-center">
           <a href="tel:+919871315513" className="text-blue-600 hover:underline">
@@ -602,7 +590,7 @@ const TermsAndConditions = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
