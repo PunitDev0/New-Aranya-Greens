@@ -19,6 +19,7 @@ import {
   LogOut,
   Eye,
   RotateCcw,
+  Download,
 } from "lucide-react";
 import {
   Pagination,
@@ -102,6 +103,71 @@ export default function Registrations() {
     setFilteredData(filtered);
     setCurrentPage(1);
   }, [search, registrations]);
+
+  // Export to CSV
+  const exportToCSV = () => {
+    const headers = [
+      "ID",
+      "Applicant Name",
+      "Father or Father's Name",
+      "DOB",
+      "Phone",
+      "Email",
+      "Aadhaar",
+      "PAN",
+      "Address",
+      "City",
+      "Pincode",
+      "State",
+      "Quota",
+      "Size",
+      "RMCODE",
+      "CREATED_AT",
+      "Status",
+      "Payment Status",
+      "Payment TXNID",
+      "Payment Amount",
+    ];
+    
+    const rows = registrations.map((row) => [
+      row.id,
+      `"${row.applicant_name}"`,
+      row.father_or_husband_name,
+      row.dob,
+      row.phone,
+      row.email,
+      row.aadhaar,
+      row.pan,
+      row.address,
+      row.city,
+      row.pincode,
+      row.state,
+      row.quota,
+      row.size,
+      row.rmcode,
+      row.created_at,
+      row.status,
+      row.payment?.status || "N/A",
+      row.payment?.txnid || "N/A",
+      row.payment?.amount || "N/A",
+    ]);
+
+    const csvContent = [
+      headers.join(","),
+      ...rows.map((row) => row.join(",")),
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", `registrations_${new Date().toISOString()}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    toast.success("Data exported successfully!");
+  };
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) setCurrentPage(page);
@@ -200,6 +266,15 @@ export default function Registrations() {
 
             <Button
               variant="outline"
+              onClick={exportToCSV}
+              className="flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              Export CSV
+            </Button>
+
+            <Button
+              variant="outline"
               onClick={() => (window.location.href = "/")}
               className="flex items-center gap-2"
             >
@@ -272,7 +347,8 @@ export default function Registrations() {
                                 className="flex items-center gap-1"
                                 onClick={() => setSelectedRegistration(row)}
                               >
-                                <Eye className="w-4 h-4" /> View
+                                <Eye className="w-4 h-4" />
+                                View
                               </Button>
                             </DialogTrigger>
 
