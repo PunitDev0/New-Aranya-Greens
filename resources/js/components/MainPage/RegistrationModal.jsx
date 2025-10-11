@@ -123,7 +123,7 @@ const RegistrationModal = ({
                   <input
                     type="text"
                     className={`form-control ${regFormErrors.pan ? 'is-invalid' : ''}`}
-                    placeholder="xxxxxxxxxx"
+                    placeholder="e.g. ABCDE1234F"
                     name="pan"
                     value={regForm.pan}
                     onChange={handleRegFormChange}
