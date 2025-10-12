@@ -26,7 +26,9 @@ const Header = ({ isNavOpen, toggleNav }) => {
         {/* Menu items */}
         <ul
           className={`navM d-flex align-items-center gap-3 mb-0 ${
-            isNavOpen ? 'd-flex flex-column position-absolute top-100 start-0 bg-white p-3 shadow-md' : 'd-none'
+            isNavOpen
+              ? 'd-flex flex-column position-absolute top-100 start-0 bg-white p-3 shadow-md'
+              : 'd-none'
           } d-md-flex`}
           style={{ listStyle: 'none' }}
         >
@@ -40,14 +42,20 @@ const Header = ({ isNavOpen, toggleNav }) => {
               <i className="fas fa-envelope"></i> info@deendayaljanawasyojnareg.org
             </a>
           </li>
+
+          {/* Registration Closed */}
           <li>
             <a
               href="#"
-              className="register-btn"
-              data-bs-toggle="modal"
-              data-bs-target="#registrationModal"
+              className="register-btn text-danger fw-bold disabled-link"
+              onClick={(e) => e.preventDefault()}
+              style={{
+                pointerEvents: 'none',
+                opacity: 0.7,
+                textDecoration: 'none',
+              }}
             >
-              <i className="fas fa-user-circle"></i> EOI Registration Open
+              <i className="fas fa-user-slash"></i> EOI Registration Closed
             </a>
           </li>
         </ul>
