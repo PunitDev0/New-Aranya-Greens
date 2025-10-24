@@ -15,10 +15,10 @@ const MainContent = ({
               <div className="md:flex md:justify-center blue-bg-box">
                 <div className="w-full h-full md:w-1/2 md:h-1/2 place-items-center">
                   <div className="bg-blue-100 p-4 mt-4 rounded text-center text-black">
-                    <h2 className="text-2xl font-bold">Elite Homes + O2 Home | Most Affordable Plots in Sonipat</h2>
-                    <p>Under Deen Dayal Jan Awas Yojna at Sector-24 Haryana</p>
+                    <h2 className="text-2xl font-bold">AARANYA GREENS (FINAL PHASE) | RESIDENTIAL PLOTS | BUILDER FLOORS | SECTOR 35 SONIPAT</h2>
+                    <p>HRERA-PKL-SNP-675-2025 dated on 19-03-2025</p>
                     <p className="mt-4 font-bold">EOI REGISTRATION AMOUNT</p>
-                    <p className="text-3xl font-bold text-blue-600">₹ 31,000 /-</p>
+                    <p className="text-3xl font-bold text-blue-600">(HARYANA GOVT. RESIDENTIAL PLOTS)</p>
                   </div>
                 </div>
               </div>
@@ -33,17 +33,17 @@ const MainContent = ({
           <div className="row">
             <div className="col-md-4 col-sm-4 col-4">
               <div className="bank_logo">
-                <img src="images/bobbank.png" alt="Bank of Baroda" />
+                <img src="images/hdfcbank.png" alt="HDFC Bank" />
               </div>
             </div>
             <div className="col-md-4 col-sm-4 col-4">
               <div className="bank_logo">
-                <img src="images/icicibank.png" alt="ICICI Bank" />
+                <img src="images/icicibank.png" style={{ height: '100px', width: '80%' }} alt="ICICI Bank" />
               </div>
             </div>
             <div className="col-md-4 col-sm-4 col-4">
               <div className="bank_logo">
-                <img src="images/unionbank.png" style={{ height: '100px', width: '80%' }} alt="Union Bank" />
+                <img src="images/ausmall.png" alt="AUSMALL Bank" />
               </div>
             </div>
           </div>
@@ -53,94 +53,100 @@ const MainContent = ({
 
       <section className="pd-30 top-details">
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>Project Area</h4>
-                <p>9.98177 acres</p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>Project Units</h4>
-                <p>181 units</p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>Gated</h4>
-                <p>Society</p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>Freehold</h4>
-                <p>Plot</p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>HRERA-PKL-SNP-</h4>
-                <p>548-2024</p>
-              </div>
-            </div>
-            <div className="col-md-2">
-              <div className="status-strip">
-                <h4>Plots Size</h4>
-                <p>143.42 - 179.39 sq.ft.</p>
-              </div>
-            </div>
-          </div>
+        <div class="row">
+                       <div class="col-md-3">
+                           <div class="status-strip">
+                              <h4>Plots Starting</h4>
+                            <p>Price ₹92.5 Lac*</p> 
+                           </div>
+                       </div>
+                         <div class="col-md-3">
+                           <div class="status-strip">
+                              <h4>Total No. of Plots</h4> 
+                              <p>  113</p>
+                           </div>
+                       </div>
+                       
+                         <div class="col-md-3">
+                         <div class="status-strip">
+                              <h4>Payment Plan</h4>
+                            <p>10:40:25:25</p>
+                           </div>
+                       </div>
+                       
+                      
+                       
+                         <div class="col-md-3">
+                          <div class="status-strip">
+                              <h4>HRERA-NO</h4>
+                            <p>HRERA-PKL-SNP-675-2025 dated on 19-03-2025</p>
+                           </div>
+                       </div>
+                       
+
+                        
+                       
+                     
+                  
+           </div>
         </div>
       </section>
 
       <div className="bg-success text-white p-4">
         <div className="container">
-          <div className="row align-items-center">
+          <div className=" flex flex-row w-full items-center justify-between">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              <h2 className="h4 h2-md mb-3">Deen Dayal Jan Awas Yojana Affordable Residential Plots</h2>
+              <h2 className="h4 h2-md mb-3">AARANYA GREENS, SECTOR - 35 SONIPAT</h2>
+              <p>HRERA-PKL-SNP-675-2025 dated on 19-03-2025</p>
               {/* <a href="#" className="btn btn-danger px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#registrationModal">
                 EOI Registration Open
               </a> */}
-              <a href="#" className="btn btn-danger px-4 py-2 fw-bold"  >
-                EOI Registration Close
-              </a>
+                <a
+              href="#"
+              className="register-btn text-white fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#registrationModal"
+              style={{ textDecoration: 'none' }}
+            >
+              EOI Registration Open
+            </a>
             </div>
-            <div className="col-md-6 text-center">
+            <div className=" text-center w-fit">
               <img src="images/rera-logo.png" alt="DDJAY Image" className="img-fluid rounded" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="amenities-highlights" id="amenities-highlights">
-        <h2 className="cons-heading pb-5 text-center font-sans">Deen Dayal Jan Awas Yojana Highlights</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-sm-6">
-              <div className="amenities-listing">
-                <ul className="list-disc list-inside">
-                  <li>Freehold Plots</li>
-                  <li>RERA Registered (HRERA-PKL-SNP-548-2024)</li>
-                  <li>Gated Society with boundary walls</li>
-                  <li>Possession Offered</li>
-                  <li>Sports Facilities like Basketball Court, Badminton Court, Cricket Net Pitch, Skating Rink and much more</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-6 col-sm-6">
-              <div className="amenities-listing">
-                <ul className="list-disc list-inside">
-                  <li>Gated Society with CCTV Surveillance</li>
-                  <li>Gas pipeline connectivity in every plot</li>
-                  <li>Entrance from 30 meter wide main road</li>
-                  <li>Roadside Shopping complex and Restaurant</li>
-                  <li>Temple, Community Area, Kids playing zone</li>
-                  <li>Several Families Living</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div className="amenities-highlights mt-10" id="amenities-highlights">
+        <h2 className="cons-heading pb-5 text-center font-sans"> AARANYA GREENS SECTOR 35 SONIPAT HIGHLIGHTS</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="amenities-listing">
+                        <ul class="list-disc list-inside">
+                            <li>Spread Across 6.5 Acres</li>
+                            <li>Multi-Purpose Hall For community gatherings & events</li>
+                            <li>24m & 9m Wide Roads Network and Pathways</li>
+                            <li>Secure Gated Development Peace of mind with controlled access</li>
+                            <li>Water Supply & Drainage System</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-sm-6">
+                    <div class="amenities-listing">
+                        <ul class="list-disc list-inside">
+                            <li>Dedicated Commercial Area For everyday essentials</li>
+                            <li>Lush Green Parks Serene spaces to unwind, walk, and relax</li>
+                            <li>Safe and joyful spaces for children to explore and play</li>
+                            <li>Illuminated avenues for a refined living experience</li>
+                            <li>Multi-Purpose Hall For community gatherings & events</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+
         </div>
       </div>
 
@@ -193,7 +199,7 @@ const MainContent = ({
         </div>
       </div>
 
-      <section className="mb-4 mt-4">
+      {/* <section className="mb-4 mt-4">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12">
@@ -214,22 +220,10 @@ const MainContent = ({
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <div className="amenities-overview" id="amenities-overview">
-        <h2 className="cons-heading pb-5 text-center font-sans">Deen Dayal Jan Awas Yojna Plots Overview</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 col-sm-12">
-              <div className="amenities-listing">
-                <p>
-                  Elite Homes + O2 Home is a project under Deen Dayal Jan Awas Yojna, spread over 10 acres and surrounded by a lush green, peaceful environment. Located on Kakroi Road, Sonipat, Sector 24, the Elite Homes + O2 Home project has unique specifications. For the first time in the history of DDJAY Plots, we offer a Club House provision at our site, creating a cheerful and conversational ambiance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
+  
 
       <section className="pd-30 gallery" id="gallery">
         <div className="container">
@@ -238,14 +232,14 @@ const MainContent = ({
           </div>
           <div className="row">
             {[
-              'fieldImage3.webp',
-              'fieldImage5.webp',
-              'fieldImage4.webp',
-              'fieldImage7.webp',
-              'fieldImage15.webp',
-              'fieldImage8.webp',
-              'fieldImage9.webp',
-              'fieldImage10.webp',
+              'gal1.jpeg',
+              'gal2.jpeg',
+              'gal3.jpeg',
+              'gal4.jpeg',
+              'gal5.jpeg',
+              'gal6.jpeg',
+              // 'gal7.jpeg',
+              // 'gal8.jpeg',
             ].map((image, index) => (
               <div className="col-md-4 p-0" key={index}>
                 <a data-fancybox="gallery-images" href={`images/${image}`}>
@@ -257,39 +251,83 @@ const MainContent = ({
         </div>
       </section>
 
-      <div className="amenities-location" id="amenities-location">
-        <h2 className="cons-heading pb-5 text-center font-sans">Location Advantages</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-sm-6">
-              <div>
-                <ul className="list-disc list-inside">
-                  <li>Mini Secretariat - 1Km</li>
-                  <li>OP Jindal University - 6Km</li>
-                  <li>UER 2, NH 344 - 2.5Km</li>
-                  <li>Main City Bus Stand - 1.5Km</li>
-                  <li>Sonipat Railway Station - 800 Mtr.</li>
-                  <li>Near to upcoming Kundli Metro station</li>
-                  <li>Near to upcoming Bullet Train station</li>
-                  <li>Near Maruti Kharkhoda Plant</li>
-                </ul>
-              </div>
+
+      <div class="amenities " id="amenities">
+        <h2 class="cons-heading pb-2 text-center font-sans">
+      AARANYA GREENS | RESIDENTIAL PLOTS | BUILDER FLOORS | SECTOR 35 SONIPAT
+        </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="amenities-listing">
+                     <p>Flowtech Estates proudly marks its debut in Sonipat with Aaranya Greens — a meticulously planned plotted residential enclave that blends thoughtful design with long-term value. Nestled in the land of our origins, this landmark project features precisely demarcated plots, elegant builder floors, curated green landscaping, and robust infrastructure — all crafted to deliver comfort, connectivity, and a high standard of living.</p>
+                     <p>From wide, paved roads to abundant open spaces, dependable water supply to well-engineered drainage and modern sewage systems — every detail has been planned to enhance everyday life, going far beyond what's promised in brochures.</p>
+                     <p>Developed under the Deen Dayal Jan Awas Yojna (DDJAY), Aaranya Greens offers freehold plots, interest subsidies, and affordable financing options for aspiring homeowners. For developers, individual plot registries and floor-wise loan approvals add to the ease and opportunity, making this not just a place to live, but a place to grow — both personally and financially.</p>
+                     
+                      
+                </div>
             </div>
-            <div className="col-md-6 col-sm-6">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.2059465918705!2d76.99502827500032!3d28.98126767547617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dbb00153a4279%3A0x76250346865c7cde!2sElite%20Homes%20%2B%2002%20Home!5e0!3m2!1sen!2sin!4v1748684383425!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Elite Homes Location Map"
-              ></iframe>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>     
+   </div>   
+
+   <div class="amenities jst-pb" id="amenities">
+       
+       <div class="container">
+            <h2 class="cons-heading pb-5 text-center font-sans">
+      Location Advantages
+       </h2>
+           <div class="row">
+               <div class="col-md-6 col-sm-6">
+                  <div class="highlights-container">
+                      <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Strategic Location:</strong> Located on the northern edge of Delhi, Sonipat enjoys excellent access to the capital city.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Unmatched Road Connectivity:</strong> Seamless travel via KMP Expressway, Eastern Peripheral Expressway, and NH-44.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Future-Ready Transport:</strong> Delhi–Karnal RRTS Rapid Rail to significantly reduce commute time.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Part of Mega Industrial Corridor:</strong> Integrated into the Delhi-Mumbai Industrial Corridor (DMIC), ensuring rapid development.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Investment Growth Zone:</strong> Kundli-Sonipat Investment Region (Phase II-A) set to boost logistics, industry, and housing demand.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Upcoming Metro Connectivity:</strong> Planned metro line to Sonipat will enhance Delhi access, reduce travel time, and raise property values.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Educational Advantage:</strong> Right opposite OP Jindal Global University—an international education hub that boosts rental and resale potential.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>Thriving Social Infrastructure:</strong> Rapid growth in malls, hospitals, and schools turning Sonipat into a self-sustained urban hub.</p>
+                       </div>
+                       <div class="highlight-item flex gap-3">
+                           <i class="fas fa-check-circle"></i>
+                           <p className='text-sm'><strong>High ROI Potential:</strong> Competitive property prices today with high appreciation expected due to ongoing and upcoming infrastructure projects.</p>
+                       </div>
+
+
+                   </div>
+           </div>
+           
+               <div class="col-md-6 col-sm-6">
+                     <img src="images/Screenshot 2025-07-10 at 10.58.20 AM.png" class="/img-fluid img-thumbnail w-100" alt="Responsive-image" />
+                   {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.2059465918705!2d76.99502827500032!3d28.98126767547617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dbb00153a4279%3A0x76250346865c7cde!2sElite%20Homes%20%2B%2002%20Home!5e0!3m2!1sen!2sin!4v1748684383425!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+           </div>
+       </div>
+   </div>     
+ </div>   
 
       <div className="pd-60" id="developer">
         <div className="container">
@@ -371,7 +409,7 @@ const MainContent = ({
             <div className="col-md-12">
               <div className="disclaimer text-center">
                 <p className="text-justify">
-                  <b>Disclaimer - </b> Please be advised that this website is not an official site and serves solely as an informational portal managed by a RERA authorized real estate agent. It does not constitute an offer or guarantee of any services. The prices displayed on this website are subject to change without prior notice, and the availability of properties cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. All rights reserved. The content, design, and information on this website are protected by copyright and other intellectual property rights. Any unauthorized use or reproduction of the content may violate applicable laws. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website. Thank you for visiting our website.
+                  <b>Disclaimer - </b> Disclaimer - The content herein is for informational purposes only and does not constitute an offer or invitation to offer. All images are artistic impressions and not actual representations. Aaranya Greens, located in Sector 35, Sonipat, is a DDJAY project. Flowtech Estates does not guarantee the accuracy or completeness of the information. All details are subject to change without prior notice.
                 </p>
                 <p>
                   &copy; Copyright 2025. All Rights Reserved{' '}

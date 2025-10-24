@@ -43,19 +43,16 @@ const Header = ({ isNavOpen, toggleNav }) => {
             </a>
           </li>
 
-          {/* Registration Closed */}
+          {/* Registration Open */}
           <li>
             <a
               href="#"
-              className="register-btn text-danger fw-bold disabled-link"
-              onClick={(e) => e.preventDefault()}
-              style={{
-                pointerEvents: 'none',
-                opacity: 0.7,
-                textDecoration: 'none',
-              }}
+              className="register-btn text-white fw-bold"
+              data-bs-toggle="modal"
+              data-bs-target="#registrationModal"
+              style={{ textDecoration: 'none' }}
             >
-              <i className="fas fa-user-slash"></i> EOI Registration Closed
+              <i className="fas fa-user-plus"></i> EOI Registration Open
             </a>
           </li>
         </ul>

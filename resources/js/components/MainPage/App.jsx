@@ -59,9 +59,9 @@ const App = ({ flash }) => {
     }
   }, [flash]);
 
-  // Countdown timer logic
+  // Countdown timer logic - Updated to October 31, 2025
   useEffect(() => {
-    const endTime = Date.parse('October 12, 2025 18:00:00 PDT') / 1000;
+    const endTime = Date.parse('October 31, 2025 18:00:00 PDT') / 1000;
     const makeTimer = () => {
       const now = Date.parse(new Date()) / 1000;
       const timeLeft = endTime - now;
@@ -146,14 +146,15 @@ const App = ({ flash }) => {
       setRegFormErrors((prev) => ({ ...prev, [name]: '' }));
     }
   };
-const handleEnqFormChange = (e) => {
-  const { name, value, type, checked } = e.target;
 
-  setEnqForm((prev) => ({
-    ...prev,
-    [name]: type === 'checkbox' ? checked : value,
-  }));
-}
+  const handleEnqFormChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    setEnqForm((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
 
   const handleRegFormSubmit = async (e) => {
     e.preventDefault();
@@ -240,29 +241,28 @@ const handleEnqFormChange = (e) => {
     }
   };
 
+  const handleEnqFormSubmit = async (e) => {
+    e.preventDefault();
 
-const handleEnqFormSubmit = async (e) => {
-  e.preventDefault();
+    try {
+      console.log('Submitting Enquiry Form:', enqForm);
 
-  try {
-    console.log('Submitting Enquiry Form:', enqForm);
+      // Send POST request to backend
+      const response = await axios.post('/api/enquiry', enqForm);
 
-    // Send POST request to backend
-    const response = await axios.post('/api/enquiry', enqForm);
-
-    if (response.data.success) {
-      alert(response.data.message); // show success message
-      setEnqForm({ name: '', email: '', phone: '' }); // reset form
-      const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-      modal.hide(); // hide modal
-    } else {
-      alert(response.data.message || 'Something went wrong'); // handle backend error
+      if (response.data.success) {
+        alert(response.data.message); // show success message
+        setEnqForm({ name: '', email: '', phone: '' }); // reset form
+        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+        modal.hide(); // hide modal
+      } else {
+        alert(response.data.message || 'Something went wrong'); // handle backend error
+      }
+    } catch (error) {
+      console.error('Error submitting enquiry:', error);
+      alert('Error submitting enquiry. Please try again later.');
     }
-  } catch (error) {
-    console.error('Error submitting enquiry:', error);
-    alert('Error submitting enquiry. Please try again later.');
-  }
-};
+  };
 
   return (
     <div>
