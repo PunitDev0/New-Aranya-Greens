@@ -1,598 +1,85 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const TermsAndConditions = () => {
-  useEffect(() => {
-    // Timer logic for countdown
-    const makeTimer = () => {
-      const endTime = Date.parse('April 27, 2025 18:00:00 PDT') / 1000;
-      const now = Date.parse(new Date()) / 1000;
-      const timeLeft = endTime - now;
-      const days = Math.floor(timeLeft / 86400);
-      const hours = Math.floor((timeLeft - days * 86400) / 3600);
-      const minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-      const seconds = Math.floor(timeLeft - days * 86400 - hours * 3600 - minutes * 60);
-      document.getElementById('days').innerHTML = `${days}<span>Days</span>`;
-      document.getElementById('hours').innerHTML = `${hours < 10 ? '0' + hours : hours}<span>Hours</span>`;
-      document.getElementById('minutes').innerHTML = `${minutes < 10 ? '0' + minutes : minutes}<span>Minutes</span>`;
-      document.getElementById('seconds').innerHTML = `${seconds < 10 ? '0' + seconds : seconds}<span>Seconds</span>`;
-    };
-    const interval = setInterval(makeTimer, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
+const Terms = () => {
   return (
-    <div>
-      {/* <header className="bg-white shadow">
-        <div className="container mx-auto flex justify-between items-center py-4">
-          <div className="flex space-x-4">
-            <a href="index.php">
-              <img src="img/download.jpg" alt="Logo 1" className="h-12" />
-            </a>
-            <a href="index.php">
-              <img src="img/support.png" alt="Logo 2" className="h-12" />
-            </a>
-          </div>
-          <ul className="flex space-x-6 items-center">
-            <li>
-              <a href="tel:+919871315513" className="flex items-center text-gray-700 hover:text-blue-600">
-                <i className="fas fa-phone mr-2"></i> +91-9871315513
-              </a>
-            </li>
-            <li>
-              <a href="mailto:support@deendayaljanawasyojnareg.com" className="flex items-center text-gray-700 hover:text-blue-600">
-                <i className="fas fa-envelope mr-2"></i> support@deendayaljanawasyojnareg.com
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                data-bs-toggle="modal"
-                data-bs-target="#registrationModal"
-              >
-                <i className="fas fa-user-circle mr-2"></i> Register Now
-              </a>
-            </li>
-          </ul>
-        </div>
-      </header> */}
-
-      <section className="py-10 bg-white text-black">
-        <div className="container mx-auto w-4/5 text-justify">
-          <p className="text-base font-light leading-6 mb-4">
-            TERMS AND CONDITIONS FOR BOOKING OF THE COMMERCIAL UNIT IN THE PROJECT NAMELY “Springwoods City”, WHICH IS
-            PART AND PARCEL OF THE RESIDENTIAL PLOTTED COLONY ‘Springwoods City’ BEING DEVELOPED BY LION
-            INFRADEVELOPERS LLP (“Springwoods City”) AT Sector-22, Dharuhera, Haryana UNDER THE DEEN
-            DAYAL JAN AWAS YOJNA – 2016 OF THE GOVERNMENT OF HARYANA VIDE NOTIFICATION NO. PF-27A/2700 dt.
-            08/02/2016 AND ANY AMENDMENTS THERETO
+    <section className="py-10 bg-white text-black min-h-screen">
+      <div className="container mx-auto w-4/5 text-justify leading-relaxed space-y-6">
+       <h1 className='text-center text-2xl'>Terms & Conditions
+       </h1>
+        <div className="flex flex-col space-y-6">
+          <p>
+            These Terms and Conditions, along with the privacy policy or other terms (“Terms”) constitute a binding agreement by and between 
+            <strong> TOP HAVEN DEVELOPERS PRIVATE LIMITED</strong> (“Website Owner”, “we”, “us”, or “our”) and you (“you” or “your”), 
+            and relate to your use of our website, goods (as applicable), or services (as applicable) (collectively, “Services”). 
+            By using our website and availing the Services, you agree that you have read and accepted these Terms (including the Privacy Policy). 
+            We reserve the right to modify these Terms at any time and without assigning any reason. 
+            It is your responsibility to periodically review these Terms to stay informed of updates.
           </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">1. NATURE OF BOOKING</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> This is an application for provisional booking of a Commercial Unit in the Project namely “Springwoods City” being
-              developed on the area of 0.50 acres which is the part and parcel of “Springwoods City”, an affordable residential
-              Plotted Colony spread over an area admeasuring 12.50 acres situated at Sector-22, Dharuhera, Haryana,
-              being developed by Springwoods City, under Deen Dayal Jan Awas Yojna -2016 of the Government of
-              Haryana.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> This provisional booking does not convey in favour of Applicant any right, title or interest of whatsoever nature unless and until the conveyance deed is executed in favour of the Applicant.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> This provisional booking shall be confirmed by Springwoods City only when the Applicant shall sign and execute the Allotment Letter, make the payment of Allotment Money along with applicable taxes and shall enter
-              into the registered Agreement for Sale/BBA.
-            </p>
-          </div>
+          <p>
+            The use of this website or availing of our Services is subject to the following terms of use:
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">2. PROJECT LAND TITLE, LICENCES AND LOCATION</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The Applicant has applied for allotment of the Commercial Unit with full knowledge and subject to all the laws/notifications(s) and rules applicable in general, which have been explained by Springwoods City to the
-              Applicant in vernacular language and duly understood by the Applicant.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Applicant has examined and fully satisfied himself/herself/themselves about the rights, interest and the title
-              of Springwoods City in the said land and has understood that Springwoods City, Lion Infradevelopers
-              LLP vide (1) Collaboration Agreement No. 12855 dated 27-03-2023 with Nika Propmart Pvt. Ltd. and Sh. Jan
-              Lohia S/o Sh. Ravinder Singh Lohia, (2) Collaboration Agreement No. 2817 dated 01-10-2013 between Smt.
-              Sukhpali W/o Satbir Singh and Nika Propmart Pvt. Ltd., registered GPA Vasika No. 88 dated 01-10-2013 and
-              registered Supplementary Agreement vide Vasika no. 11361 dated 07-02-2023 followed by registered Assignment
-              Agreement vide Vasika No. 13068 dated 31-03-2023 which was further confirmed by Mrs. Sukhpali vide registered
-              SPA Vasika No. 33 dated 03-08-2023 and (3) Collaboration Agreement No. 12397 dated 15-03-2023 with Sh. M. R.
-              Lohia S/o Sh. Phool Singh & Smt. Satyawa W/o Sh. M. R. Lohia, as per which the Project being part and parcel of
-              the Residential Plotted colony will be developed and has understood all limitations and obligations in respect
-              thereof. The Applicant agrees and accepts to abide by the terms and conditions of all the permissions, sanctions,
-              directions etc. issued by DGTCP and/or by any other competent authorities in this regard to The LLP
-              Firm/Developer.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> The Applicant has inspected the site where the Commercial Unit is proposed to be developed. The Applicant has
-              not merely relied or been influenced by any architect’s plan, sales plan, sales brochures, advertisement,
-              representations, warranties, statements or estimates of any nature whatsoever whether written or oral made by
-              Springwoods City and has taken his/her/their personal judgment prior to booking the Commercial Unit.
-            </p>
-          </div>
+          <p>
+            To access and use the Services, you agree to provide true, accurate, and complete information to us during and after registration, 
+            and you shall be responsible for all acts done through the use of your registered account.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">3. APPLICABLE LAWS</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The Project “Springwoods City” is being developed on the area of 0.50 acres which is the part and parcel of “Springwoods City”, an affordable residential Plotted Colony spread over an area admeasuring 12.50 acres situated at Sector-22, Dharuhera, Haryana, governed by THE DEEN DAYAL JAN AWAS YOJNA – 2016 of THE GOVERNMENT OF HARYANA bearing Notification No. PF-27A/2700 dt. 08/02/2016 and subsequent amendments therein (Policy). All the terms and conditions of the Policy shall be applicable on the Commercial Unit allotted under the
-              Application. The Applicant undertakes to abide by all applicable laws including any bye laws, rules and regulations
-              including the Real Estate (Regulation and Development) Act 2016 and the Rules, 2017 framed thereunder (“Real
-              Estate Act”).
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Developer shall comply Rule 24, 26, 27 and 28 of Haryana Development and Regulation of Urban Areas Rules,
-              1976 and Section 5 of Haryana Development and Regulation of Urban Areas Act (HDRU), 1975.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> The Applicant shall have a right in the Common Areas as provided under Rule 2(1)(f) of Rules, 2017 of the State
-              and shall be entitled to use common areas as permissible under the applicable law and right in the common areas
-              as per provisions of HDRU Act, 1975(8 of 1975).
-            </p>
-          </div>
+          <p>
+            Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, 
+            or suitability of the information and materials offered on this website or through the Services for any specific purpose. 
+            You acknowledge that such information and materials may contain inaccuracies or errors, 
+            and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">4. ALLOTMENT</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> Only such applications shall be considered which are complete and fulfill the criteria laid down in the Policy.
-              However, it is possible that some of the application forms have certain minor deficiencies viz., missing entry on
-              the application form, illegible copies of certain documents. Applicant may be granted an opportunity of removing
-              the shortcomings in their application in all respects within a period of 15 days, failing which their claim shall stand
-              forfeited.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Allotment Letter/ Agreement For Sale shall be executed by Springwoods City after realization of money
-              due on Allotment along with applicable taxes etc. However, issuance of Allotment Letter/Agreement For Sale shall
-              not confer any claim/right to the Applicant until all the terms and condition of Application Form and/or Allotment
-              Letter/ Agreement For Sale are fulfilled and complied by the Applicant, failing which this booking shall be
-              cancelled.
-            </p>
-          </div>
+          <p>
+            Your use of our Services and the website is solely at your own risk and discretion. 
+            You are required to independently assess and ensure that the Services meet your requirements. 
+            The contents of the Website and the Services are proprietary to us, 
+            and you will not have any authority to claim any intellectual property rights, title, or interest in its contents.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">5. CHANGES IN THE DRAWINGS/DESIGNS AND ADDITIONS & ALTERATIONS</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              The Applicant has seen the Zoning Plan, Building Plan, area of Commercial Unit etc. and has been made aware of
-              and accepts that the zoning plan, Carpet Area of the Commercial Unit are tentative and that there may be
-              variations, deletions, additions, alterations made by Springwoods City as it may in its sole discretion deem
-              fit and proper, or by or pursuant to requirements of a Governmental Authority, which may involve changes,
-              including change in the zoning plans for the Project, nature of facilities to be provided in the Project in accordance
-              with the policy. The Applicant has understood and agreed that after the completion of development of the
-              Commercial Unit and the occupation certificate/ part occupation/completion Certificate (as the case may be) is
-              granted by the competent authority, Springwoods City shall confirm the Carpet Area of the Commercial
-              Unit. All such adjustments in the amounts payable or refundable as the case may be shall be made at the same
-              rates as agreed herein.
-            </p>
-          </div>
+          <p>
+            You acknowledge that unauthorized use of the Website or the Services may lead to action against you as per these Terms or applicable laws. 
+            You agree to pay us the charges associated with availing the Services. 
+            You agree not to use the website and/or Services for any purpose that is unlawful, illegal, or forbidden by these Terms, 
+            or Indian or local laws that might apply to you. 
+            You agree and acknowledge that the website and the Services may contain links to other third-party websites. 
+            On accessing these links, you will be governed by the terms of use, privacy policy, 
+            and such other policies of such third-party websites.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">6. CONSIDERATION, TAXES AND PAYMENT OF DUES</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The total price (as defined in the terms and conditions in Agreement for Sale/BBA) shall be payable on the date as
-              specifically mentioned in the “payment plan” as annexed. The rate of External Development Charges (EDC)/
-              Infrastructure Development Charges (IDC) component as mentioned above is applicable as on date. In case of any
-              future amendment/change or upward revision of the EDC/IDC being levied, whether prospectively or
-              retrospectively, due to a change in legislation or otherwise demanded by any authority, on the Project and/or the Said Land, the Applicant shall be liable to pay such additional/revised amount in proportion to the area of the
-              Commercial Unit, as per the demand letter issued by Springwoods City at that time.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Total Price includes Taxes (GST and Cess or any other taxes/fees/charges/levies etc. which may be levied, in
-              connection with the development of the Project) paid/payable by the Developer up to the date of handing over
-              the possession of the Commercial Unit for commercial usage to the Allottee(s) or the competent authority, as the
-              case may be, after obtaining the necessary approvals from the competent authority for the purposes of such
-              possession. Provided that, in case there is any change/modification in the GST/taxes/charges/ fees/levies etc., the subsequent
-              amount payable by the Allottee(s) to Springwoods City shall be increased/decreased based on such
-              change/modification.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> All payments shall be made through Demand draft/Cheque/NEFT/RTGS etc. in favour of “Springwoods City
-              Springwoods City Collection Account”. The Applicant must specify their name, address, customer ID, mobile no. and
-              Project name on the back side of demand draft/cheque accepted by Springwoods City and The LLP
-              Firm/Developer shall be deemed to have accepted such cheque/demand draft subject to their realization.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>d)</strong> All payments should be deposited only at the office of Springwoods City. Springwoods City shall not
-              be responsible/accountable for any payment made to agent/broker/any third person. The Applicant must insist
-              for duly signed receipt from the authorized personnel of Springwoods City, after realization of the payment
-              instrument.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>e)</strong> The Applicant, on becoming a successful allottee in the manner as provided in this Application, shall be liable to
-              pay the total price for the Commercial Unit based on Unit Area.
-              <br />
-              <strong>i.</strong> The Total Price includes the Booking Amount paid by the Applicant to Springwoods City towards the
-              aforesaid Commercial Unit.
-              <br />
-              <strong>ii.</strong> The Applicant has to deposit 10% of the Total Price along with the Application. The Applicant will be required to
-              deposit the balance amount as per Payment Plan annexed as per Annexure-I. In case of transfer/assignment,
-              amount due till the date of assignment shall be cleared. Subsequent installments will be paid by the
-              Assignee/transferee and shall be payable as per payment plan annexed. Any default in payment will bear penal
-              interest as provided in Rule 15 of the Haryana Real Estate Regulatory Authority, Rules, 2017.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>f)</strong> Springwoods City shall periodically intimate in writing to the Applicant the amount payable as stated
-              above, the Applicant shall make payment as demanded by Springwoods City within the time and in the
-              manner specified therein. In addition, Springwoods City shall provide to the Applicant the details of the
-              taxes/ fees/ charges/ levies etc. paid or demanded along with copy of any new amendment in the acts/ rules
-              /notifications together with dates from which such taxes/ fees/ charges/ levies etc. have been imposed or
-              become effective. In case there is any change or modification in the rate of any applicable taxes/ fees/ charges/
-              levies etc., the subsequent amount payable by the Applicant to Springwoods City shall be increased or
-              decreased based on such change or modification. Provided further that GST is applicable on interest, late fees and
-              penalty on delayed payment, pursuant to foregoing, interest, late fees and penalty on delayed payment along
-              with GST applicable thereon will be computed and will be payable as and when the Applicant will make such
-              payments to Springwoods City against these charges. Provided further that if there is any increase in the
-              rate of taxes / fees/ charges/ levies etc. after the expiry of the scheduled date of completion of the Project as per registration with the competent authority, which shall include the extension of registration, if any, granted to the
-              Project by the competent authority, as per the Real Estate Act, the same shall not be charged from the Applicant.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>g)</strong> In case of delayed payment of installments/any other dues by the Applicant, the Applicant shall be liable to pay
-              interest as provided in Rule 15 of the Haryana Real Estate Regulatory Authority Rules, 2017.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>h)</strong> The Applicant shall clear all the dues towards the Commercial Unit, before taking possession of the Commercial
-              Unit.
-            </p>
-          </div>
+          <p>
+            You understand that upon initiating a transaction for availing the Services, 
+            you are entering into a legally binding and enforceable contract with us for the Services. 
+            You shall be entitled to claim a refund of the payment made by you in case we are not able to provide the Service. 
+            The timelines for such return and refund will be according to the specific Service you have availed 
+            or within the time period provided in our policies (as applicable). 
+            In case you do not raise a refund claim within the stipulated time, 
+            then this would make you ineligible for a refund. 
+            Notwithstanding anything contained in these Terms, 
+            the parties shall not be liable for any failure to perform an obligation under these Terms 
+            if performance is prevented or delayed by a force majeure event.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">7. LOANS</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The Applicant shall have no objection in case Springwoods City creates a charge on the Project land during
-              the course of development of the Project for raising loan from any bank/financial institution. However, such
-              charge, if created, shall be vacated before handing over possession of the Commercial Unit to the Applicant.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Applicant may avail loan from financial institutions to finance the Commercial Unit. However, if a particular
-              financing institution or bank refuses to extend financial assistance on any ground, the Applicant shall not make
-              such refusal an excuse for non-payment of further installments / dues. In case there is delay in processing the
-              loan in favour of the Applicant due to any reason what-so-ever and consequently the payments of installments
-              are delayed by the Applicant to Springwoods City, the Applicant agrees and accepts to make the payment
-              of accrued interest to Springwoods City, unconditionally.
-            </p>
-          </div>
+          <p>
+            These Terms and any dispute or claim relating to it, or its enforceability, 
+            shall be governed by and construed in accordance with the laws of India.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">8. CANCELLATION</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> If the Applicant fails to make payments for two consecutive demands (reminder for the outstanding amount for
-              more than 30 days shall be treated as new demand for this purpose) made by Springwoods City as per the
-              Payment Plan annexed hereto, despite having been issued notice in that regard the applicant shall be liable to pay
-              interest to Springwoods City on the unpaid amount at the rate prescribed in the Rules;
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> In case of default in payment by the Applicant under the conditions listed above continues for a period of ninety
-              days after notice from Springwoods City in this regard, Springwoods City may cancel the allotment of
-              the Commercial Unit in favour of the Applicant and refund the money paid by the Applicant after forfeiture of
-              Earnest Money i.e. 10% of Total Price and interest component on delayed payment. The rate of interest payable
-              by the Applicant shall be the rate of interest as provided in Rule 15 of the Haryana Real Estate Regulatory
-              Authority Rules, 2017. In case of cancellation of Commercial Unit after 30th September of the next financial year,
-              GST paid and/or due up to preceding Financial years along with earnest money and interest due etc. as per
-              Applicable Laws shall be deducted and the balance amount shall be refunded to the Applicant within 90 days of
-              such cancellation. Thereafter, the liability of Springwoods City arising out of such allotment stands
-              terminated and satisfied; Provided that Springwoods City shall intimate the Applicant about such
-              termination at least 30 days prior to such termination.
-              <br />
-              In case of surrender/cancellation of Commercial Unit after 30th September of the next financial year, GST paid
-              and/or due up to preceding Financial years along with Earnest Money and interest due etc. as per Applicable Laws
-              shall be deducted and the balance amount shall be refunded to the Applicant.
-            </p>
-          </div>
+          <p>
+            All disputes arising out of or in connection with these Terms 
+            shall be subject to the exclusive jurisdiction of the courts in <strong>DELHI, Delhi</strong>.
+          </p>
 
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">9. REGISTRATION & OTHER CHARGES</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              The Applicant shall get the conveyance deed for the Commercial Unit executed in his favour from The LLP
-              Firm/Developer after paying stamp duty, registration fee and other charges/expenses, as applicable in this regard. No administrative charges shall be levied by Springwoods City except Fee and Charges payable to outside
-              agencies including stamp duty and Registration Charges.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">10. POSSESSION</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> Possession of Commercial Unit shall be offered by Springwoods City on or before 15|12|2028 unless there is
-              delay due to “force majeure” such as war, flood, drought, fire, cyclone, epidemic, pandemic, earthquake or any
-              other calamity caused by nature, etc., court orders, governmental policy/guidelines, NGT/any government
-              department’s/ regulatory authority’s action/ inaction/ or omission/decision affecting the regular development of
-              the Project. If the completion of the Project is delayed due to the above condition/s, then the Allottee agrees that
-              Springwoods City shall be entitled to the extension of time for delivery of possession of the Commercial
-              Unit and Springwoods City shall not be liable to pay any penalty/ interest/ compensation etc. for such
-              extended period.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> Upon receipt of the occupation certificate/completion certificate or part thereof in respect of the Project, The LLP
-              Firm/Developer shall issue a written notice offering the possession of the Commercial Unit ("Possession
-              Notice/Offer of Possession") within three months from the date of above approval in terms of the Agreement.
-              Upon receiving the Possession Notice from Springwoods City, the Applicant shall take possession of the
-              Commercial Unit from Springwoods City by executing necessary indemnities, undertakings and such other
-              documentation as prescribed in the Agreement and Springwoods City shall give possession of the
-              Commercial Unit to the Applicant. In case the Applicant fails to take possession within the time provided in the
-              Possession Notice/Offer of Possession, such Applicant shall continue to be liable to pay maintenance charges and
-              holding charges in terms of the Agreement.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> The Commercial Unit shall be used only for the commercial purposes. After handing over of the possession of the
-              Commercial Unit by Springwoods City, the Applicant shall himself be responsible for repairs and
-              maintenance thereof.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>d)</strong> The Applicant shall be entitled only to the area enclosed within the peripheral Area of the Commercial Unit. The
-              Applicant shall not keep any material in the common areas of the Project. The Applicant shall be entitled to use
-              the common areas of the Project along with other allottees for such purposes for which such common areas have
-              been developed.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">11. MAINTENANCE</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> Springwoods City shall from the date of grant of occupation certificate/part occupation certificate of the
-              Project or part thereof, either itself or through some maintenance agency initially maintain the Project until the
-              maintenance of the Project is handed over to the Association of Allottees/ RWA for maintenance. After such
-              handing over, engaging any maintenance agency for such maintenance works shall be at the sole discretion and
-              terms and conditions finalized by the Association of Allottees/ RWA constituted under the Haryana Ownership Act
-              1983.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Applicant shall bear costs of consumption of electricity, water etc. for his Commercial Unit as well as the
-              proportionate running cost (i.e., electricity, water, manpower & consumables) for providing common services and
-              facilities in the Project with effect from the date of handing over possession of Commercial Unit by The LLP
-              Firm/Developer.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">12. FORCE MAJEURE</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The development of the Project/ Commercial Unit is subject to any event or combination of events or
-              circumstances beyond the reasonable control of Springwoods City which cannot (a) by the exercise of
-              reasonable diligence, or (b) despite the adoption of reasonable precaution and/or alternative measures, be prevented, or caused to be prevented, and which adversely affects Springwoods City’s ability to perform
-              including but not limited to the following:
-              <br />
-              I. Act of God i.e. fire, drought, flood, cyclone, earthquake, epidemics, pandemics, natural disasters or any
-              other calamity caused by nature;
-              <br />
-              II. Explosions or accidents, air crashes and shipwrecks;
-              <br />
-              III. Strikes or lock outs, industrial disputes, lockdowns due to government regulation;
-              <br />
-              IV. Non-availability of cement, steel or other construction/raw material or labour due to strikes of
-              manufacturers, suppliers, transporters or other intermediaries or due to any reason whatsoever;
-              <br />
-              V. War and hostilities of war, riots, bandh, act of terrorism or civil commotion;
-              <br />
-              VI. The promulgation of or amendment in any law, rule or regulation or the issue of any injunction, court
-              order, governmental policy/guidelines, NGT/any government department’s or regulatory authority’s
-              action, inaction, decision or direction from any governmental or statutory authority that prevents or
-              restricts the Developer from complying with any or all the terms and conditions as agreed in the
-              Agreement; or
-              <br />
-              VII. Any legislation, order or rule or regulation made or issued by the Government or any Authority or if any
-              Governmental Authority(ies) refuses, delays, withholds, denies the grant of necessary
-              approvals/certificates for the Project/Commercial Unit or if any matters, issues relating to such approvals,
-              permissions, notices, notifications by the Governmental Authority(ies) becomes subject matter of any
-              suit / writ before a competent court or; for any reason whatsoever;
-              <br />
-              VIII. Any event or circumstances analogous to the foregoing.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Applicant agrees and confirms that in the event it becomes impossible for Springwoods City to
-              implement the Project due to Force Majeure Events and above mentioned conditions, then this allotment shall
-              stand terminated and Springwoods City shall refund to the Applicant the entire amount received by The
-              LLP Firm/Developer from the Applicant within ninety days. Springwoods City shall intimate the Applicant
-              about such termination at least thirty days prior to such termination. After refund of the money as paid by the
-              Applicant, the Applicant agrees that he/ she shall not have any rights, claims etc. against Springwoods City
-              and that Springwoods City shall be released and discharged from all its obligations and liabilities.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">13. EVENTS OF DEFAULT</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              Subject to the Force Majeure Events, Court Orders, Government policy/ guidelines/ decisions, The LLP
-              Firm/Developer shall be considered under a condition of default, in the following events:
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> Springwoods City fails to provide possession of the fully developed Commercial Unit to the Applicant within
-              the time period specified above or fails to complete the Project within the stipulated time disclosed at the time of
-              registration of the Project with the concerned authority. For the purpose of this clause, 'fully developed
-              possession' shall mean that the Commercial Unit shall be complete in all respects including the provision of all
-              amenities and facilities as agreed to between the parties and for which occupation/completion certificate or part
-              thereof has been issued by the competent authority;
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> Discontinuance of Springwoods City’s business as a developer on account of suspension or revocation of his
-              registration under the provisions of the Real Estate Regulation Act or the rules or regulations made thereunder.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> In case of default by Springwoods City under the conditions listed above, Applicant is entitled to the
-              following:
-              <br />
-              I. Stop making further payments to Springwoods City as demanded by Springwoods City. If the
-              Applicant stops making payments, Springwoods City shall correct the situation by completing the development milestones and only thereafter the Applicant be required to make the next payment without
-              any interest for the period of such delay; or
-              <br />
-              II. The Applicant shall have the option of terminating the allotment of Commercial Unit/Agreement. In such case
-              Springwoods City shall be liable to refund the entire money paid by the Applicant whatsoever towards
-              the purchase of the Commercial Unit along with an interest as provided in rule 15 of the Haryana Real Estate
-              Regulatory Authority, Rules, 2017, within ninety days of receiving the termination notice. Provided that
-              where an Applicant does not intend to withdraw from the Project or terminate the allotment of the
-              Commercial Unit/Agreement, he shall be paid interest as provided in rule 15 of the Haryana Real Estate
-              Regulatory Authority, Rules, 2017 by Springwoods City for every month of delay till the handing over of
-              the possession of the Commercial Unit, within ninety days of it becoming due.
-            </p>
-            <h3 className="text-xl font-semibold mb-2">
-              Subject to the Force Majeure Events, Court Orders, Government Policy(ies)/Guidelines/Decisions, The Applicant
-              shall be considered under a condition of default in the following events:
-            </h3>
-            <p className="text-base font-light leading-6 mb-2">
-              a) Dishonor of any cheque(s) including post-dated cheques given by the Applicant to Springwoods City for
-              any reason whatsoever;
-              <br />
-              b) Failure to execute the Agreement For Sale/BBA, conveyance deed, maintenance agreement and/or any other
-              document required to be executed with Springwoods City within such timelines as stipulated by The
-              LLP Firm/Developer in terms of the Agreement/Application;
-              <br />
-              c) Applicant fails to take possession of the Commercial Unit within the time provided herein above;
-              <br />
-              d) Failure to pay any taxes and other charges including stamp duty, legal charges, registration fee/charges, any
-              incidental charges etc. in terms of the Agreement/Application;
-              <br />
-              e) Any other breach of the provision under Agreement/Application/ Policy by the Applicant.
-            </p>
-            <h3 className="text-xl font-semibold mb-2">
-              In case of an event of default committed by an Applicant in terms of sub clause (i) above, The LLP
-              Firm/Developer will have the following options (exercisable individually or jointly at the sole discretion of The
-              LLP Firm/Developer):
-            </h3>
-            <p className="text-base font-light leading-6 mb-2">
-              a) The Applicant shall be liable to pay interest as provided in Rule 15 of the Haryana Real Estate Regulatory
-              Authority, Rules, 2017 for the period of delay
-              <br />
-              b) In case of payment of delayed installment as per the Payment Plan, the payment so made by the Applicant
-              shall first be adjusted towards interest accrued on previous outstanding amounts and only thereafter the
-              balance payment shall be adjusted towards the current outstanding amounts.
-              <br />
-              c) In the event the Applicant fails to make the payment of two consecutive demands (reminder for the
-              outstanding amount for more than 30 days shall be treated as new demand for this purpose) made by The
-              LLP Firm/Developer as per the payment plan annexed hereto, despite having been issued notice in this
-              regard, the Applicant shall be liable to pay interest to Springwoods City on the unpaid amount at the
-              rate prescribed in the Rules. In case of Default by Applicant under the condition listed above continues for a
-              period beyond ninety days after notice from Springwoods City in this regard, Springwoods City
-              may cancel the allotment of the Commercial Unit in favour of the Applicant and refund the money paid by the
-              Applicant after forfeiture of Earnest Money i.e. 10% of Total Price and interest component on delayed
-              payment. The rate of interest payable by the Applicant shall be the State Bank of India highest Marginal Cost
-              of Lending Rate plus two percent. In case of cancellation of Commercial Unit after 30th September of the next
-              financial year, GST paid and/or due up to preceding Financial years along with earnest money and interest due
-              etc. as per Applicable Laws shall be deducted and the balance amount shall be refunded to the Applicant
-              within 90 days of such cancellation. On such default, the Agreement and the liability of The LLP
-              Firm/Developer arising out of the same stands terminated; Provided that Springwoods City shall
-              intimate the Applicant about such termination at least 30 days prior to such termination.
-              <br />
-              d) In case of such cancellation, the Applicant shall have no lien or claim on the Commercial Unit and The LLP
-              Firm/Developer will be entitled to sell, convey or transfer the Commercial Unit to any party at its sole
-              discretion.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">14. COMMUNICATION AND CHANGE OF ADDRESS</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> The Applicant shall get his / her / their complete address registered with Springwoods City at the time of
-              booking and it shall be his / her / their responsibility to inform Springwoods City in writing by registered AD
-              letter for any change in their mailing or permanent address. If he fails to do so, all demand notices and letters
-              posted at the first registered address will be deemed to have been received by him at the time when those should
-              ordinarily reach at such address and he shall be responsible for any default in making payment and other
-              consequences that might occur therefrom.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Applicant hereby undertakes to inform Springwoods City of any change in his address or any other
-              particular/information as given above, in writing, failing which the particulars available in the Application shall be
-              deemed to be correct and all the letters or any kind of communication sent at the recorded address by The LLP
-              Firm/Developer shall be deemed to have been received by the Applicant and shall not be subject to any dispute of
-              any nature. In case of any default in communication due to incorrect information, the Applicant shall be liable to
-              bear all the cost and expenses.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>c)</strong> In case of joint Applicant, Springwoods City shall send all letters/ notices and communications to the
-              sole/first Applicant at his address given in the application form through registered/speed post or through courier.
-              All such letters/notices and communications so sent to the sole/first Applicant shall be deemed to have been duly
-              received by all Applicants within 5 days from the date of dispatch. Springwoods City shall not be liable to
-              send separate communication, letters and notices to the second Applicant or to Applicant other than the first
-              Applicant.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">15. DISPUTE RESOLUTION</h2>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>a)</strong> All or any disputes arising out or touching upon or in relation to the terms and conditions of this Application/
-              Agreement including the interpretation and validity of the terms and conditions thereof and the respective rights
-              and obligations of the parties shall be resolved through conciliatory process. Springwoods City’s
-              representative shall resolve the dispute in an amicable manner by mutual discussion between the Parties. The
-              said process will be mandatory. At least, 30 days period would be given for resolving the dispute between the
-              parties. In case, the dispute is not resolved through conciliatory mode, the aggrieved party may opt for the
-              appropriate legal remedy in accordance with law.
-            </p>
-            <p className="text-base font-light leading-6 mb-2">
-              <strong>b)</strong> The Courts/Forum/Authority at Gurugram shall have exclusive jurisdiction to entertain the disputes between
-              the parties hereto.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      
-
-    
-
-      {/* <a
-        href="https://api.whatsapp.com/send?phone=+919871315513&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
-        target="_blank"
-        className="fixed bottom-4 right-4"
-      >
-        <img src="img/whatsup.png" alt="WhatsApp" className="w-12" />
-      </a> */}
-{/* 
-      <div className="fixed bottom-4 left-4 right-4 flex justify-around bg-white shadow-lg p-4">
-        <div className="text-center">
-          <a href="tel:+919871315513" className="text-blue-600 hover:underline">
-            <img src="img/call-icon-gif.gif" alt="Call" className="w-8 mx-auto" />
-            <br />
-            Call Now
-          </a>
-        </div>
-        <div className="text-center">
-          <a
-            href="https://api.whatsapp.com/send?phone=+919871315513&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
-            className="text-blue-600 hover:underline"
-          >
-            <img src="img/whatsapp.gif" alt="WhatsApp" className="w-8 mx-auto" />
-            <br />
-            Whatsapp
-          </a>
-        </div>
-        <div className="text-center">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" className="text-blue-600 hover:underline">
-            <img src="img/fillaform.jpeg" alt="Enquire" className="w-8 mx-auto" />
-            <br />
-            Enquire Now
-          </a>
+          <p>
+            All concerns or communications relating to these Terms must be communicated to us 
+            using the contact information provided on this website.
+          </p>
         </div>
       </div>
-
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Get a Callback</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div className="modal-body p-6">
-              <div className="space-y-4">
-                <div>
-                  <input type="text" className="w-full border-0 p-2" placeholder="Name" name="name" required />
-                </div>
-                <div>
-                  <input type="email" className="w-full border-0 p-2" placeholder="Email" name="email" required />
-                </div>
-                <div>
-                  <input type="tel" className="w-full border-0 p-2" placeholder="Phone" name="phone" maxLength="10" required />
-                </div>
-                <div className="text-center">
-                  <button type="button" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-                    Request A Call
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-    </div>
+    </section>
   );
 };
 
-export default TermsAndConditions;
+export default Terms;

@@ -195,7 +195,10 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Quota</option>
-                    <option value="Management Quota">Management Quota</option>
+                            <option value="Female Applicant">Female Applicant</option>
+                            <option value="Govt Employee Applicant">Govt Employee Applicant</option>
+                            <option value="General Applicant">General Applicant</option>
+                            <option value="Management Quota Applicant">Management Quota Applicant</option>
                   </select>
                   {regFormErrors.quota && <div className="invalid-feedback">{regFormErrors.quota}</div>}
                 </div>
@@ -209,12 +212,8 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Size</option>
-                    <option value="143.42 @ 65000">143.42 @ 65000</option>
-                    <option value="157.12 @ 65000">157.12 @ 65000</option>
-                    <option value="159.76 @ 65000">159.76 @ 65000</option>
-                    <option value="162.43 @ 65000">162.43 @ 65000</option>
-                    <option value="172.27 @ 65000">172.27 @ 65000</option>
-                    <option value="179.39 @ 65000">179.39 @ 65000</option>
+                    <option value="143.42 @ 65000">150.69 @ 136000</option>
+               
                   </select>
                   {regFormErrors.size && <div className="invalid-feedback">{regFormErrors.size}</div>}
                 </div>
@@ -243,7 +242,7 @@ const RegistrationModal = ({
                     required
                   />
                   <label className="form-check-label" htmlFor="termsCheck">
-                    By clicking checkbox, you agree to the <a href="terms.php" target="_blank">Terms and Conditions</a> set out by this site.
+                    By clicking checkbox, you agree to the <a href="terms" target="_blank">Terms and Conditions</a> set out by this site.
                   </label>
                   {regFormErrors.terms && <div className="invalid-feedback">{regFormErrors.terms}</div>}
                 </div>

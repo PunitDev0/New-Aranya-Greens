@@ -3,13 +3,11 @@ import '../css/style.css';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
-import { initializeTheme } from './hooks/use-appearance';
 
 // Load environment app name or fallback
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 // Initialize theme (dark/light mode)
-initializeTheme();
 
 createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),

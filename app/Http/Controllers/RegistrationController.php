@@ -24,8 +24,8 @@ class RegistrationController extends Controller
             'city' => 'required|string|max:100',
             'pincode' => 'required|digits:6',
             'state' => 'required|string|max:100',
-            'quota' => 'required|string|in:Management Quota',
-            'size' => 'required|string|in:143.42 @ 65000,157.12 @ 65000,159.76 @ 65000,162.43 @ 65000,172.27 @ 65000,179.39 @ 65000',
+            'quota' => 'required|string',
+            'size' => 'required|string',
             'rmcode' => 'required|string|max:50',
             'terms' => 'required|accepted',
         ]);
