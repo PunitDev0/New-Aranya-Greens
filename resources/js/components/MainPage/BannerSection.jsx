@@ -108,7 +108,7 @@ const BannerSection = ({ countdown }) => {
 
                            </div>
                            <div class="one-sec trd">
-                             <span><a href="images/AaranyaGreenSonipat35PriceList.pdf" target="_blank"  class="">Registration Open Only for 29 Plots.</a></span>
+                             <span><a href="#" class="">Registration Open Only for 29 Plots.</a></span>
                            </div>
                            
                            

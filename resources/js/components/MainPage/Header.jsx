@@ -10,7 +10,8 @@ const Header = ({ isNavOpen, toggleNav }) => {
             <img src="images/download.jpg" className="single-client-logo" alt="Logo 1" />
           </a>
           <a href="/">
-            <img src="images/support.png" className="single-client-logo" alt="Logo 2" />
+            <img src="images/support.png" className="single-client-logo" 
+            alt="Logo 2" />
           </a>
         </div>
 
@@ -27,7 +28,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
         <ul
           className={`navM d-flex align-items-center gap-3 mb-0 ${
             isNavOpen
-              ? 'd-flex flex-column position-absolute top-100 start-0 bg-white p-3 shadow-md'
+              ? 'd-flex flex-column position-absolute top-20 z-10 right-0 start-0 bg-white p-3 shadow-md'
               : 'd-none'
           } d-md-flex`}
           style={{ listStyle: 'none' }}
