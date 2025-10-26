@@ -59,9 +59,8 @@ const App = ({ flash }) => {
     }
   }, [flash]);
 
-  // Countdown timer logic - Updated to October 31, 2025
   useEffect(() => {
-    const endTime = Date.parse('November 30, 2025 18:00:00 PDT') / 1000;
+    const endTime = Date.parse('November 16, 2025 18:00:00 PDT') / 1000;
     const makeTimer = () => {
       const now = Date.parse(new Date()) / 1000;
       const timeLeft = endTime - now;
