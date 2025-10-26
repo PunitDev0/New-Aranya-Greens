@@ -63,7 +63,7 @@ const MainContent = ({
             <div class="col-md-3">
               <div class="status-strip">
                 <h4>Total No. of Plots</h4>
-                <p>  30</p>
+                <p>20</p>
               </div>
             </div>
 
