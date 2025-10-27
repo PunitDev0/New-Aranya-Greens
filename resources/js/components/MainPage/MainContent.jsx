@@ -108,7 +108,7 @@ const MainContent = ({
                 data-bs-target="#registrationModal"
                 style={{ textDecoration: 'none' }}
               >
-                EOI Registration Open
+                Registration Open
               </a>
             </div>
             <div className=" text-center w-fit">
