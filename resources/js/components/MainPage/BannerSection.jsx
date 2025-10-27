@@ -43,7 +43,7 @@ const BannerSection = ({ countdown }) => {
                   <span><a href="#loan">Loan Facility Available</a></span>
                 </div>
 
-                <div className=" bg-green-600 p-1 rounded-xl">
+                <div className=" bg-green-600 p-1 rounded-lg">
                     <p
                       className="text-white font-bold text-lg text-center animate-bounce transition-all duration-500 hover:scale-110 hover:text-green-700"
                     >
