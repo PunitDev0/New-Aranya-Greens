@@ -125,12 +125,12 @@ const MainContent = ({
             <div class="col-md-6 col-sm-6">
               <div class="amenities-listing">
                 <ul class="list-disc list-inside">
+                  <li>First-time availability on a 24 meter wide road at this price</li>
                   <li>Spread Across 6.5 Acres</li>
                   <li>Multi-Purpose Hall For community gatherings & events</li>
                   <li>24m & 9m Wide Roads Network and Pathways</li>
                   <li>Secure Gated Development Peace of mind with controlled access</li>
                   <li>Water Supply & Drainage System</li>
-                  <li>First-time availability on a 24 meter wide road at this price</li>
                 </ul>
               </div>
             </div>
@@ -162,24 +162,24 @@ const MainContent = ({
                     <tr>
                       <th className="main-th">UNIT SIZE (Sq.yd)</th>
                       <th className="main-th">UNIT PRICE (in Rs. Per Sq.yd.)</th>
-                      <th className="main-th">Total Cost*</th>
                       <th className="main-th">Registration Amount</th>
                       <th className="main-th">10% On Allotment</th>
-                      <th className="main-th">40% within 30 days of Allotment + Execution of BBA + 50% EDC/IDC</th>
-                      <th className="main-th">25% within 90 days of Allotment + 25% EDC/IDC</th>
-                      <th className="main-th">25% Offer of Possession + 25% EDC/IDC</th>
+                      <th className="main-th">40% within 30 days of Allotment + Execution of BBA + include 50% EDC/IDC</th>
+                      <th className="main-th">25% within 90 days of Allotment + include 25% EDC/IDC</th>
+                      <th className="main-th">25% Offer of Possession + include 25% EDC/IDC</th>
+                      <th className="main-th">Total Cost*</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>150.69</td>
-                      <td>136000</td>
-                      <td>20400000</td>
-                      <td>31000</td>
-                      <td>2040000</td>
-                      <td>8160000</td>
-                      <td>5100000</td>
-                      <td>5100000</td>
+                      <td>₹1,36,000</td>
+                      <td>₹31,000</td>
+                      <td>₹20,49,384</td>
+                      <td>₹84,08,502</td>
+                      <td>₹52,28,943</td>
+                      <td>₹52,28,943</td>
+                      <td>₹2,09,46,772</td>
                     </tr>
                   </tbody>
                 </table>
@@ -188,6 +188,7 @@ const MainContent = ({
           </div>
         </div>
       </div>
+
 
 
       {/* <section className="mb-4 mt-4">
