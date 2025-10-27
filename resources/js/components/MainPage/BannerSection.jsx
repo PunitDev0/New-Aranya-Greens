@@ -50,10 +50,12 @@ const BannerSection = ({ countdown }) => {
             </div>
 
             {/* CENTER COLUMN */}
-            <div className="col-md-6">
+            <div className="col-md-6 text-center text-bold">
+              <h1>Deen Dayal Jan Awas Yojna</h1>
+              <h5> (Under Haryana Governement)</h5>
               <div className="carousel-wrapper">
                 <img src="images/rera-logo.png" alt="Overlay" className="carousel-overlay-img" />
-                <div id="bannerCarousel" className="carousel slide bnr-img" data-bs-ride="carousel">
+                <div id="bannerCarousel" className="carousel slide bnr-img" data-bs-ride="c arousel">
                   <div className="carousel-indicators">
                     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
