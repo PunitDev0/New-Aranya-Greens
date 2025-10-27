@@ -21,7 +21,7 @@ const BannerSection = ({ countdown }) => {
 
                 <div className="two-sec scond">
                   <div id="timer" className="flex-wrap d-flex justify-content-center text-center">
-                    <p className="text-success fw-bold">Registration Open</p>
+                    <p className="text-success fw-bold text-red-600">Registration Closes in</p>
                     <div>
                       <span>{countdown.days} Days </span>
                       <span>{countdown.hours} Hours </span>
@@ -32,24 +32,27 @@ const BannerSection = ({ countdown }) => {
                 </div>
 
                 <div className="one-sec trd">
-                  <span><a href="#payment-plan">Attractive Payment Plan</a></span>
+                  <span><a href="#payment-plan">Attractive Payment Plan <br />10-40-25-25</a>
+                  
+                  </span>
                 </div>
 
                 <div className="one-sec">
-                  <span><p>HRERA No. PKL-SNP-548-2024 - Aranya Greens</p></span>
+                  <span><p>HRERA-PKL-SNP-675-2025 - Aranya Greens</p></span>
                 </div>
 
                 <div className="one-sec trd">
                   <span><a href="#loan">Loan Facility Available</a></span>
                 </div>
 
-                <div className=" bg-green-600 p-1 rounded-lg">
-                    <p
-                      className="text-white font-bold text-lg text-center animate-bounce transition-all duration-500 hover:scale-110 hover:text-green-700"
-                    >
-                      EOI Registration Open
-                    </p>
+                <div className="bg-green-600 p-1 rounded-lg">
+                  <p
+                    className="text-white font-bold text-sm text-center animate-[zoomInOut_2s_ease-in-out_infinite] hover:scale-110 hover:text-green-700 transition-transform duration-700"
+                  >
+                    **EOI Registration Open**
+                  </p>
                 </div>
+
               </div>
             </div>
 
