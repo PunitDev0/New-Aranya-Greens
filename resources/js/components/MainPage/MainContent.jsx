@@ -57,7 +57,7 @@ const MainContent = ({
             <div class="col-md-3">
               <div class="status-strip">
                 <h4>Plots Starting</h4>
-                <p>Price ₹20 Lac*</p>
+                <p>Price ₹2.09 cr*</p>
               </div>
             </div>
             <div class="col-md-3">

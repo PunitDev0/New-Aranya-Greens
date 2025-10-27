@@ -43,8 +43,12 @@ const BannerSection = ({ countdown }) => {
                   <span><a href="#loan">Loan Facility Available</a></span>
                 </div>
 
-                <div className="one-sec scond">
-                  <span><p className="text-success fw-bold">EOI Registration Open</p></span>
+                <div className=" bg-green-600 p-1 rounded-xl">
+                    <p
+                      className="text-white font-bold text-lg text-center animate-bounce transition-all duration-500 hover:scale-110 hover:text-green-700"
+                    >
+                      EOI Registration Open
+                    </p>
                 </div>
               </div>
             </div>
@@ -90,36 +94,36 @@ const BannerSection = ({ countdown }) => {
 
             {/* RIGHT COLUMN */}
             <div class="col-md-3">
-                      <div class="col-md-12">
+              <div class="col-md-12">
 
-                          
-                           
-                            <div class="one-sec">
-                             <span><p class="">HRERA-PKL-SNP-675-2025 dated on 19-03-2025 </p></span>
-                           </div>
-                           
-                            <div class="two-sec scond click_pad">
-                            <p><span><i class="fa fa-check-double"></i></span>Click to View Final License<a href="images/final-licence.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            <p><span><i class="fa fa-check-double"></i></span> Click to View Layout Plan<a href="images/layoutplan.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            <p><span><i class="fa fa-check-double"></i></span> Click to View RERA Certificate<a href="images/reracertificate.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            <p><span><i class="fa fa-check-double"></i></span>Click to View Brochure<a href="images/AaranyaGreensBrochure.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            <p><span><i class="fa fa-check-double"></i></span>Click to View Price List<a href="images/AaranyaGreensNewPriceList.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            <p><span><i class="fa fa-check-double"></i></span> Click to View Factsheet<a href="images/Aaranyafactsheetnewupdated.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                            
-                        
 
-                           </div>
-                           <div class="one-sec trd">
-                             <span><a href="#" class="">Registration Open Only for 20 Plots.</a></span>
-                           </div>
-                           
-                           
-                         
-                      </div>
-                  
-                  
-                  
+
+                <div class="one-sec">
+                  <span><p class="">HRERA-PKL-SNP-675-2025 dated on 19-03-2025 </p></span>
+                </div>
+
+                <div class="two-sec scond click_pad">
+                  <p><span><i class="fa fa-check-double"></i></span>Click to View Final License<a href="images/final-licence.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span> Click to View Layout Plan<a href="images/layoutplan.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span> Click to View RERA Certificate<a href="images/reracertificate.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span>Click to View Brochure<a href="images/AaranyaGreensBrochure.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span>Click to View Price List<a href="images/AaranyaGreensNewPriceList.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span> Click to View Factsheet<a href="images/Aaranyafactsheetnewupdated.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+
+
+
+                </div>
+                <div class="one-sec trd">
+                  <span><a href="#" class="">Registration Open Only for 20 Plots.</a></span>
+                </div>
+
+
+
               </div>
+
+
+
+            </div>
           </div>
         </div>
       </section>
