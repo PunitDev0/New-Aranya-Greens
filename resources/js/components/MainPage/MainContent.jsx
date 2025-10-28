@@ -27,29 +27,34 @@ const MainContent = ({
         </div>
       </section>
 
-      <div className="amenities-bank" id="amenities-bank" style={{ background: '#f7f7f7' }}>
-        <h2 className="cons-heading pb-2 text-center font-sans">The Project has been Approved By</h2>
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4 col-sm-4 col-4">
-              <div className="bank_logo">
-                <img src="images/hdfcbank.png" alt="HDFC Bank" />
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-4 col-4">
-              <div className="bank_logo">
-                <img src="images/icicibank.png" style={{ height: '100px', width: '80%' }} alt="ICICI Bank" />
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-4 col-4">
-              <div className="bank_logo">
-                <img src="images/ausmall.png" alt="AUSMALL Bank" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <p className="text-center pt-4">Plot owners can avail loans from these banks for financing purposes.</p>
-      </div>
+      <div id="amenities-bank" className="bg-gray-100 py-10">
+  <h2 className="text-2xl font-semibold text-center font-sans pb-4">
+    The Project has been Approved By
+  </h2>
+
+  <div className="flex flex-wrap justify-center items-center gap-6 px-4">
+    <div className="flex justify-center items-center w-28 h-24">
+      <img src="images/hdfcbank.png" alt="HDFC Bank" className="max-h-20 object-contain" />
+    </div>
+    <div className="flex justify-center items-center w-28 h-24">
+      <img src="images/pnb.png" alt="PNB Bank" className="max-h-20 object-contain" />
+    </div>
+    <div className="flex justify-center items-center w-28 h-24">
+      <img src="images/bob.jpg" alt="BOB Bank" className="max-h-20 object-contain" />
+    </div>
+    <div className="flex justify-center items-center w-28 h-24">
+      <img src="images/icicibank.png" alt="ICICI Bank" className="max-h-24 w-4/5 object-contain" />
+    </div>
+    <div className="flex justify-center items-center w-28 h-24">
+      <img src="images/AU.png" alt="AUSMALL Bank" className="max-h-20 object-contain" />
+    </div>
+  </div>
+
+  <p className="text-center pt-6 text-gray-700">
+    Plot owners can avail loans from these banks for financing purposes.
+  </p>
+</div>
+
 
       <section className="pd-30 top-details">
         <div className="container-fluid">
@@ -167,7 +172,7 @@ const MainContent = ({
                       <th className="main-th">40% within 30 days of Allotment + Execution of BBA + include 50% EDC/IDC</th>
                       <th className="main-th">25% within 90 days of Allotment + include 25% EDC/IDC</th>
                       <th className="main-th">25% Offer of Possession + include 25% EDC/IDC</th>
-                      <th className="main-th">Total Cost*</th>
+                      <th className="main-th">Total Cost Include EDC/IDC</th>
                     </tr>
                   </thead>
                   <tbody>

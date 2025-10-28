@@ -5,7 +5,7 @@ const BannerSection = ({ countdown }) => {
     <>
       <div className="news-tricker">
         <marquee width="100%" direction="left" height="100px">
-          ATTENTION REGISTRATION OPEN !!!! Book Your Shop under Affordable Housing Policy 2013 for Aranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 20 November 2025 *** LAST DATE OF APPLICATION 16 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
+          ATTENTION REGISTRATION OPEN !!!! Book Your Shop under Affordable Housing Policy 2013 for Aranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
         </marquee>
       </div>
 
@@ -16,7 +16,7 @@ const BannerSection = ({ countdown }) => {
             <div className="col-md-3">
               <div className="col-md-12">
                 <div className="one-sec">
-                  <span><p>Registration Open Until - 16/11/25 Friday</p></span>
+                  <span><p>Registration Open Until - 23/11/25 Friday</p></span>
                 </div>
 
                 <div className="two-sec scond">
@@ -32,7 +32,7 @@ const BannerSection = ({ countdown }) => {
                 </div>
 
                 <div className="one-sec trd">
-                  <span><a href="#payment-plan">Attractive Payment Plan <br />10-40-25-25</a>
+                  <span><a href="#payment-plan">Attractive Payment Plan <br />10%-40%-25%-25%</a>
                   
                   </span>
                 </div>
@@ -58,8 +58,8 @@ const BannerSection = ({ countdown }) => {
 
             {/* CENTER COLUMN */}
             <div className="col-md-6 text-center text-bold">
-              <h1>Deen Dayal Jan Awas Yojna</h1>
-              <h5> (Under Haryana Governement)</h5>
+              <h1>DEEN DAYAL JAN AWAS YOJNA</h1>
+              <h5> (Under Haryana Governement DTCP)</h5>
               <div className="carousel-wrapper">
                 <img src="images/rera-logo.png" alt="Overlay" className="carousel-overlay-img" />
                 <div id="bannerCarousel" className="carousel slide bnr-img" data-bs-ride="c arousel">

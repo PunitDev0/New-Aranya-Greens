@@ -3,7 +3,8 @@ import React from 'react';
 const Header = ({ isNavOpen, toggleNav }) => {
   return (
     <header className="bg-white shadow-sm">
-      <div className="container d-flex align-items-center justify-content-between py-2">
+      
+      <div className="d-flex align-items-center justify-content-between py-2 px-3">
         {/* Logos */}
         <div className="d-flex align-items-center gap-2">
           <a href="/">
@@ -11,6 +12,10 @@ const Header = ({ isNavOpen, toggleNav }) => {
           </a>
           <a href="/">
             <img src="images/support.png" className="single-client-logo" 
+            alt="Logo 2" />
+          </a>
+          <a href="/">
+            <img src="images/rera-logo.png" className="single-client-logo" 
             alt="Logo 2" />
           </a>
         </div>
@@ -53,7 +58,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
               data-bs-target="#registrationModal"
               style={{ textDecoration: 'none' }}
             >
-              <i className="fas fa-user-plus"></i> Registration Open
+              <i className="fas fa-user-plus text-white"></i> Registration Open
             </a>
           </li>
         </ul>
