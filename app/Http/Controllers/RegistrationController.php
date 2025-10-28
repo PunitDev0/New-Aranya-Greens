@@ -35,7 +35,7 @@ class RegistrationController extends Controller
             $registration = Registration::create(array_merge($validated, ['status' => 'pending']));
 
             // Prepare payment
-            $amount = 1.00;
+            $amount = 31000.00;
             $productinfo = 'EOI';
 
             // Initiate payment
