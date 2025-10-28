@@ -15,7 +15,7 @@ const MainContent = ({
               <div className="md:flex md:justify-center blue-bg-box">
                 <div className="w-full h-full md:w-1/2 md:h-1/2 place-items-center">
                   <div className="bg-blue-100 p-4 mt-4 rounded text-center text-black">
-                    <h2 className="text-2xl font-bold">AARANYA GREENS (FINAL PHASE) | RESIDENTIAL PLOTS | BUILDER FLOORS | SECTOR 35 SONIPAT</h2>
+                    <h2 className="text-2xl font-bold">AARANYA GREENS | RESIDENTIAL PLOTS | BUILDER FLOORS | SECTOR 35 SONIPAT</h2>
                     <p>HRERA-PKL-SNP-675-2025 dated on 19-03-2025</p>
                     <p className="mt-4 font-bold">HARYANA GOVT. RESIDENTIAL PLOTS</p>
                     <p className="text-3xl font-bold text-blue-600">(Sonipat’s First 24 Meter Road Plots at This Price)</p>
