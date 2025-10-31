@@ -257,7 +257,7 @@ const MainContent = ({
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <div class="amenities-listing">
-                <p>Flowtech Estates proudly marks its debut in Sonipat with Aaranya Greens — a meticulously planned plotted residential enclave that blends thoughtful design with long-term value. Nestled in the land of our origins, this landmark project features precisely demarcated plots, elegant builder floors, curated green landscaping, and robust infrastructure — all crafted to deliver comfort, connectivity, and a high standard of living.</p>
+                <p>Flowtech Estates Private Limited proudly marks its debut in Sonipat with Aaranya Greens — a meticulously planned plotted residential enclave that blends thoughtful design with long-term value. Nestled in the land of our origins, this landmark project features precisely demarcated plots, elegant builder floors, curated green landscaping, and robust infrastructure — all crafted to deliver comfort, connectivity, and a high standard of living.</p>
                 <p>From wide, paved roads to abundant open spaces, dependable water supply to well-engineered drainage and modern sewage systems — every detail has been planned to enhance everyday life, going far beyond what's promised in brochures.</p>
                 <p>Developed under the Deen Dayal Jan Awas Yojna (DDJAY), Aaranya Greens offers freehold plots, interest subsidies, and affordable financing options for aspiring homeowners. For developers, individual plot registries and floor-wise loan approvals add to the ease and opportunity, making this not just a place to live, but a place to grow — both personally and financially.</p>
 
@@ -406,7 +406,7 @@ const MainContent = ({
             <div className="col-md-12">
               <div className="disclaimer text-center">
                 <p className="text-justify">
-                  <b>Disclaimer - </b> Disclaimer - The content herein is for informational purposes only and does not constitute an offer or invitation to offer. All images are artistic impressions and not actual representations. Aaranya Greens, located in Sector 35, Sonipat, is a DDJAY project. Flowtech Estates does not guarantee the accuracy or completeness of the information. All details are subject to change without prior notice.
+                  <b>Disclaimer - </b> Disclaimer - The content herein is for informational purposes only and does not constitute an offer or invitation to offer. All images are artistic impressions and not actual representations. Aaranya Greens, located in Sector 35, Sonipat, is a DDJAY project. Flowtech Estates Private Limited does not guarantee the accuracy or completeness of the information. All details are subject to change without prior notice.
                 </p>
                 <p>
                   &copy; Copyright 2025. All Rights Reserved{' '}

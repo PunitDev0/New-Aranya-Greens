@@ -12,7 +12,7 @@ const RefundPolicy = () => {
 
             <p className="text-base font-light leading-7 mb-4">
               <strong>
-                FLOW TECHESTATE believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy:
+              Flowtech Estates Private Limited believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy:
               </strong>
             </p>
 
