@@ -109,7 +109,7 @@ const BannerSection = ({ countdown }) => {
                   <p><span><i class="fa fa-check-double"></i></span>Click to View Final License<a href="images/final-licence.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span> Click to View Layout Plan<a href="images/layoutplan.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span> Click to View RERA Certificate<a href="images/reracertificate.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  <p><span><i class="fa fa-check-double"></i></span>Click to View Brochure<a href="images/AaranyaGreensBrochure.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
+                  <p><span><i class="fa fa-check-double"></i></span>Click to View Brochure<a href="images/newAaranyaGreensBrochure.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span>Click to View Price List<a href="images/AaranyaGreensNewPriceList.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span> Click to View Factsheet<a href="images/Aaranyafactsheetnewupdated.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
 
