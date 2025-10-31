@@ -5,7 +5,7 @@ const BannerSection = ({ countdown }) => {
     <>
       <div className="news-tricker">
         <marquee width="100%" direction="left" height="100px">
-          ATTENTION REGISTRATION OPEN !!!! Book Your Shop under Affordable Housing Policy 2013 for Aranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
+          ATTENTION REGISTRATION OPEN !!!! Book Your Shop under Affordable Housing Policy 2013 for Aaranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
         </marquee>
       </div>
 
@@ -38,7 +38,7 @@ const BannerSection = ({ countdown }) => {
                 </div>
 
                 <div className="one-sec">
-                  <span><p>HRERA-PKL-SNP-675-2025 - Aranya Greens</p></span>
+                  <span><p>HRERA-PKL-SNP-675-2025 - Aaranya Greens</p></span>
                 </div>
 
                 <div className="one-sec trd">
