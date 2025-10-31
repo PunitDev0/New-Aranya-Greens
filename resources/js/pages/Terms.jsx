@@ -9,7 +9,7 @@ const Terms = () => {
         <div className="flex flex-col space-y-6">
           <p>
             These Terms and Conditions, along with the privacy policy or other terms (“Terms”) constitute a binding agreement by and between 
-            <strong> TOP HAVEN DEVELOPERS PRIVATE LIMITED</strong> (“Website Owner”, “we”, “us”, or “our”) and you (“you” or “your”), 
+            <strong>Flowtech Estates Private Limited</strong> (“Website Owner”, “we”, “us”, or “our”) and you (“you” or “your”), 
             and relate to your use of our website, goods (as applicable), or services (as applicable) (collectively, “Services”). 
             By using our website and availing the Services, you agree that you have read and accepted these Terms (including the Privacy Policy). 
             We reserve the right to modify these Terms at any time and without assigning any reason. 
