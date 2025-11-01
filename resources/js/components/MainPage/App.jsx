@@ -172,7 +172,6 @@ const App = ({ flash }) => {
         // Close modal before redirect
         const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
         modal.hide();
-
         // Reset form
         setRegForm({
           applicant_name: '',
@@ -194,7 +193,7 @@ const App = ({ flash }) => {
         setRegFormErrors({});
 
         // Redirect to payment gateway
-        window.location.href = response.data.payment_url;
+        // window.location.href = response.data.payment_url;
       } else {
         // Fallback if no payment URL
         setRegForm({
@@ -218,12 +217,14 @@ const App = ({ flash }) => {
 
         const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
         modal.hide();
+        alert('Registration successful! Your application has been saved.');
 
-        Inertia.visit('/', {
-          method: 'get',
-          data: { message: 'Registration successful! (No payment required)' },
-          preserveState: true,
-        });
+
+        // Inertia.visit('/', {
+        //   method: 'get',
+        //   data: { message: 'Registration successful! (No payment required)' },
+        //   preserveState: true,
+        // });
       }
     } catch (error) {
       console.error('Registration Error:', error);
