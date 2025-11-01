@@ -105,7 +105,7 @@ const BannerSection = ({ countdown }) => {
                   <span><p class="">HRERA-PKL-SNP-675-2025 dated on 19-03-2025 </p></span>
                 </div>
 
-                <div class="two-sec scond click_pad">
+                <div class="two-sec scond click_pad space-y-10">
                   <p><span><i class="fa fa-check-double"></i></span>Click to View Final License<a href="images/final-licence.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span> Click to View Layout Plan<a href="images/layoutplan.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
                   <p><span><i class="fa fa-check-double"></i></span> Click to View RERA Certificate<a href="images/reracertificate.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>

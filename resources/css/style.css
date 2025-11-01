@@ -1932,6 +1932,7 @@ padding:15px;
     border-radius: 10px;
     background-color: #f4faf1;
     margin-left: 15px;
+    
 }
 .two-sec p {
     font-size: 12px;
@@ -2037,6 +2038,9 @@ svg.svg-inline--fa.fa-arrow-right {
 }
 .two-sec.scond {
         margin-left: 0px;
+}
+.click_pad{
+  line-height: 4;
 }
 .one-sec.scond a{
         margin-left: 0px;
