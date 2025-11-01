@@ -1,6 +1,6 @@
 {
-  "_loader-circle-D4PRUrAv.js": {
-    "file": "assets/loader-circle-D4PRUrAv.js",
+  "_loader-circle-C4sx5PvO.js": {
+    "file": "assets/loader-circle-C4sx5PvO.js",
     "name": "loader-circle",
     "imports": [
       "resources/js/app.jsx"
@@ -37,7 +37,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-wVSp4Nj_.js",
+    "file": "assets/app-C1mPRJ8u.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -56,20 +56,20 @@
     ]
   },
   "resources/js/pages/Login.jsx": {
-    "file": "assets/Login-CKZNwYua.js",
+    "file": "assets/Login-D_g7koPP.js",
     "name": "Login",
     "src": "resources/js/pages/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_loader-circle-D4PRUrAv.js"
+      "_loader-circle-C4sx5PvO.js"
     ],
     "css": [
       "assets/app-U3A01yN0.css"
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-BWDjhiAP.js",
+    "file": "assets/PaymentForm-Clp8gqoW.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -81,7 +81,7 @@
     ]
   },
   "resources/js/pages/Privacy.jsx": {
-    "file": "assets/Privacy-D-kLdEfr.js",
+    "file": "assets/Privacy-9PKtQizR.js",
     "name": "Privacy",
     "src": "resources/js/pages/Privacy.jsx",
     "isDynamicEntry": true,
@@ -93,7 +93,7 @@
     ]
   },
   "resources/js/pages/RefundPolicy.jsx": {
-    "file": "assets/RefundPolicy-DOiBiLLW.js",
+    "file": "assets/RefundPolicy-C_CR2ME6.js",
     "name": "RefundPolicy",
     "src": "resources/js/pages/RefundPolicy.jsx",
     "isDynamicEntry": true,
@@ -105,7 +105,7 @@
     ]
   },
   "resources/js/pages/Terms.jsx": {
-    "file": "assets/Terms-CHUtVwmO.js",
+    "file": "assets/Terms-DLB33MGr.js",
     "name": "Terms",
     "src": "resources/js/pages/Terms.jsx",
     "isDynamicEntry": true,
@@ -117,20 +117,20 @@
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-BN_CYhBO.js",
+    "file": "assets/dashboard-HTZf8oub.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_loader-circle-D4PRUrAv.js"
+      "_loader-circle-C4sx5PvO.js"
     ],
     "css": [
       "assets/app-U3A01yN0.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-lhA2yoy5.js",
+    "file": "assets/welcome-CJ70Uo42.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
