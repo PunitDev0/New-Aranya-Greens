@@ -5,7 +5,7 @@ const BannerSection = ({ countdown }) => {
     <>
       <div className="news-tricker">
         <marquee width="100%" direction="left" height="100px">
-          ATTENTION REGISTRATION OPEN !!!! Book you plot under Haryana Government dtcp Policy 2013 for Aaranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
+          ATTENTION REGISTRATION OPEN !!!! Book you plot under Haryana Government DTCP Policy 2013 for Aaranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
         </marquee>
       </div>
 
