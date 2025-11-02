@@ -49,7 +49,7 @@ const BannerSection = ({ countdown }) => {
                   <p
                     className="text-white font-bold text-sm text-center animate-[zoomInOut_2s_ease-in-out_infinite] hover:scale-110 hover:text-green-700 transition-transform duration-700"
                   >
-                    **Registration Start Soon**
+                    **Registration Start's Soon**
                   </p>
                 </div>
 
