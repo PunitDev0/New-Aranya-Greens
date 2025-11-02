@@ -107,19 +107,14 @@ const MainContent = ({
                 EOI Registration Open
               </a> */}
               <a
-              href="#"
-              className="register-btn text-white fw-bold"
-              data-bs-toggle="modal"
-              data-bs-target="#registrationModal"
-              style={{
-                textDecoration: 'none',
-                pointerEvents: 'none', // disables click
-                opacity: 0.6, // makes it look disabled
-                cursor: 'not-allowed'
-              }}
-            >
-              <i className="fas fa-user-plus text-white"></i> Registration Start's Soon
-            </a>
+                href="#"
+                className="register-btn text-white fw-bold"
+                data-bs-toggle="modal"
+                data-bs-target="#registrationModal"
+                style={{ textDecoration: 'none' }}
+              >
+                Registration Starting Soon
+              </a>
             </div>
             <div className=" text-center w-fit">
               <img src="images/rera-logo.png" alt="DDJAY Image" className="img-fluid rounded" />

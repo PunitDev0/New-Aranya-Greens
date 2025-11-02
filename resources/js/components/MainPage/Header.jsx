@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({ isNavOpen, toggleNav }) => {
   return (
     <header className="bg-white shadow-sm">
-
+      
       <div className="d-flex align-items-center justify-content-between py-2 px-3">
         {/* Logos */}
         <div className="d-flex align-items-center gap-2">
@@ -11,12 +11,12 @@ const Header = ({ isNavOpen, toggleNav }) => {
             <img src="images/download.jpg" className="single-client-logo" alt="Logo 1" />
           </a>
           <a href="/">
-            <img src="images/support.png" className="single-client-logo"
-              alt="Logo 2" />
+            <img src="images/support.png" className="single-client-logo" 
+            alt="Logo 2" />
           </a>
           <a href="/">
-            <img src="images/rera-logo.png" className="single-client-logo"
-              alt="Logo 2" />
+            <img src="images/rera-logo.png" className="single-client-logo" 
+            alt="Logo 2" />
           </a>
         </div>
 
@@ -31,10 +31,11 @@ const Header = ({ isNavOpen, toggleNav }) => {
 
         {/* Menu items */}
         <ul
-          className={`navM d-flex align-items-center gap-3 mb-0 ${isNavOpen
+          className={`navM d-flex align-items-center gap-3 mb-0 ${
+            isNavOpen
               ? 'd-flex flex-column position-absolute top-20 z-10 right-0 start-0 bg-white p-3 shadow-md'
               : 'd-none'
-            } d-md-flex`}
+          } d-md-flex`}
           style={{ listStyle: 'none' }}
         >
           <li>
@@ -55,16 +56,10 @@ const Header = ({ isNavOpen, toggleNav }) => {
               className="register-btn text-white fw-bold"
               data-bs-toggle="modal"
               data-bs-target="#registrationModal"
-              style={{
-                textDecoration: 'none',
-                pointerEvents: 'none', // disables click
-                opacity: 0.6, // makes it look disabled
-                cursor: 'not-allowed'
-              }}
+              style={{ textDecoration: 'none' }}
             >
-              <i className="fas fa-user-plus text-white"></i> Registration Start's Soon
+              <i className="fas fa-user-plus text-white"></i> Registration Starting Soon
             </a>
-
           </li>
         </ul>
       </div>
