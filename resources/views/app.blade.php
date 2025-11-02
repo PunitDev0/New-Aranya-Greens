@@ -4,7 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="xNGMru6eFp53u3izeEoWl63Xlr0W26IoP5UnKx9kbAk"/>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRLMPM4N0X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-BRLMPM4N0X');
+</script>
         {{-- Inline script to detect system dark mode preference and apply it immediately --}}
         <script>
             (function() {
