@@ -62,7 +62,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
                 cursor: 'not-allowed'
               }}
             >
-              <i className="fas fa-user-plus text-white"></i> Registration Close
+              <i className="fas fa-user-plus text-white"></i> Registration Start Soon
             </a>
 
           </li>

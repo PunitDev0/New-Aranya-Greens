@@ -118,7 +118,7 @@ const MainContent = ({
                 cursor: 'not-allowed'
               }}
             >
-              <i className="fas fa-user-plus text-white"></i> Registration Close
+              <i className="fas fa-user-plus text-white"></i> Registration Start Soon
             </a>
             </div>
             <div className=" text-center w-fit">
