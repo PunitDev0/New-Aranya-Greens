@@ -47,14 +47,10 @@ const App = ({ flash }) => {
   const [showFlash, setShowFlash] = useState(false);
   const dobInputRef = useRef(null);
 
-  // Display flash message on page load
   useEffect(() => {
     if (flash && flash.message) {
       setShowFlash(true);
-      // Auto-hide flash message after 5 seconds
-      const timer = setTimeout(() => {
-        setShowFlash(false);
-      }, 5000);
+      const timer = setTimeout(() => setShowFlash(false), 5000);
       return () => clearTimeout(timer);
     }
   }, [flash]);
@@ -83,7 +79,6 @@ const App = ({ flash }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // Fancybox initialization
   useEffect(() => {
     import('@fancyapps/ui')
       .then(({ Fancybox }) => {
@@ -92,19 +87,14 @@ const App = ({ flash }) => {
       .catch((error) => console.error('Error loading Fancybox:', error));
   }, []);
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   const handleNavLinkClick = (e, targetId) => {
     e.preventDefault();
     setIsNavOpen(false);
     const element = document.querySelector(targetId);
     if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: 'smooth',
-      });
+      window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
     }
   };
 
@@ -116,9 +106,7 @@ const App = ({ flash }) => {
     else {
       const selectedDate = new Date(regForm.dob);
       const today = new Date();
-      if (selectedDate > today) {
-        errors.dob = 'Date of Birth cannot be in the future';
-      }
+      if (selectedDate > today) errors.dob = 'Date of Birth cannot be in the future';
     }
     if (!regForm.phone || !/^[0-9]{10}$/.test(regForm.phone)) errors.phone = 'Valid 10-digit Phone Number is required';
     if (!regForm.email || !/\S+@\S+\.\S+/.test(regForm.email)) errors.email = 'Valid Email is required';
@@ -147,12 +135,8 @@ const App = ({ flash }) => {
   };
 
   const handleEnqFormChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    setEnqForm((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
+    const { name, value } = e.target;
+    setEnqForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleRegFormSubmit = async (e) => {
@@ -169,9 +153,10 @@ const App = ({ flash }) => {
       console.log('Registration Response:', response.data);
 
       if (response.data.success && response.data.payment_url) {
-        // Close modal before redirect
+        // Close modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
         modal.hide();
+
         // Reset form
         setRegForm({
           applicant_name: '',
@@ -192,39 +177,8 @@ const App = ({ flash }) => {
         });
         setRegFormErrors({});
 
-        // Redirect to payment gateway
-        // window.location.href = response.data.payment_url;
-      } else {
-        // Fallback if no payment URL
-        setRegForm({
-          applicant_name: '',
-          father_or_husband_name: '',
-          dob: '',
-          phone: '',
-          email: '',
-          aadhaar: '',
-          pan: '',
-          address: '',
-          city: '',
-          pincode: '',
-          state: '',
-          quota: '',
-          size: '',
-          rmcode: '',
-          terms: false,
-        });
-        setRegFormErrors({});
-
-        const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
-        modal.hide();
-        alert('Registration successful! Your application has been saved.');
-
-
-        // Inertia.visit('/', {
-        //   method: 'get',
-        //   data: { message: 'Registration successful! (No payment required)' },
-        //   preserveState: true,
-        // });
+        // Redirect to Easebuzz
+        window.location.href = response.data.payment_url;
       }
     } catch (error) {
       console.error('Registration Error:', error);
@@ -234,9 +188,7 @@ const App = ({ flash }) => {
       } else {
         setShowFlash(true);
         flash.message = 'An error occurred during registration.';
-        setTimeout(() => {
-          setShowFlash(false);
-        }, 5000);
+        setTimeout(() => setShowFlash(false), 5000);
       }
     }
   };
@@ -245,18 +197,14 @@ const App = ({ flash }) => {
     e.preventDefault();
 
     try {
-      console.log('Submitting Enquiry Form:', enqForm);
-
-      // Send POST request to backend
       const response = await axios.post('/api/enquiry', enqForm);
-
       if (response.data.success) {
-        alert(response.data.message); // show success message
-        setEnqForm({ name: '', email: '', phone: '' }); // reset form
+        alert(response.data.message);
+        setEnqForm({ name: '', email: '', phone: '' });
         const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-        modal.hide(); // hide modal
+        modal.hide();
       } else {
-        alert(response.data.message || 'Something went wrong'); // handle backend error
+        alert(response.data.message || 'Something went wrong');
       }
     } catch (error) {
       console.error('Error submitting enquiry:', error);
@@ -269,19 +217,10 @@ const App = ({ flash }) => {
       {showFlash && flash && flash.message && (
         <div className="alert alert-dismissible fade show mt-3 mx-auto" style={{ maxWidth: '600px' }} role="alert">
           <strong>{flash.success ? 'Success' : 'Error'}</strong>: {flash.message}
-          <button
-            type="button"
-            className="btn-close"
-            onClick={() => setShowFlash(false)}
-            aria-label="Close"
-          ></button>
+          <button type="button" className="btn-close" onClick={() => setShowFlash(false)} aria-label="Close"></button>
         </div>
       )}
-      <Header
-        isNavOpen={isNavOpen}
-        toggleNav={toggleNav}
-        handleNavLinkClick={handleNavLinkClick}
-      />
+      <Header isNavOpen={isNavOpen} toggleNav={toggleNav} handleNavLinkClick={handleNavLinkClick} />
       <BannerSection countdown={countdown} />
       <RegistrationModal
         regForm={regForm}

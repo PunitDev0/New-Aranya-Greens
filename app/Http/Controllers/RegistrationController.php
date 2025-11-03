@@ -24,21 +24,20 @@ class RegistrationController extends Controller
             'city' => 'required|string|max:100',
             'pincode' => 'required|digits:6',
             'state' => 'required|string|max:100',
-            'quota' => 'required|string|',
+            'quota' => 'required|string',
             'size' => 'required|string',
             'rmcode' => 'required|string|max:50',
             'terms' => 'required|accepted',
         ]);
 
         try {
-            // ==================== ONLY SAVE TO DATABASE ====================
+            // Save registration
             $registration = Registration::create(array_merge($validated, [
                 'status' => 'pending'
             ]));
 
-            // ==================== PAYMENT BLOCK (FULLY COMMENTED) ====================
-            /*
-            $amount = 31000.00;
+            // Initiate payment
+            $amount = 1.00;
             $productinfo = 'EOI';
 
             $paymentUrl = $this->initiatePaymentForRegistration(
@@ -61,14 +60,6 @@ class RegistrationController extends Controller
                 'data' => $registration,
                 'payment_url' => $paymentUrl
             ], 201);
-            */
-
-            // ==================== SUCCESS WITHOUT PAYMENT ====================
-            return response()->json([
-                'success' => true,
-                'message' => 'Registration saved successfully!',
-                'data' => $registration
-            ], 201);
 
         } catch (\Exception $e) {
             Log::error('Registration Error', [
@@ -83,8 +74,6 @@ class RegistrationController extends Controller
         }
     }
 
-    // ==================== PAYMENT INIT FUNCTION (COMMENTED) ====================
-    /*
     private function initiatePaymentForRegistration($registrationId, $firstname, $email, $phone, $amount, $productinfo, $validatedData)
     {
         try {
@@ -138,12 +127,10 @@ class RegistrationController extends Controller
             return null;
         }
     }
-    */
 
-    // ==================== REFUND (Optional – keep if needed) ====================
     public function refundPayment($registrationId)
     {
-        // Keep or comment out as needed
+        // Optional: implement refund logic later
     }
 
     public function index()
