@@ -193,7 +193,7 @@ const App = ({ flash }) => {
         setRegFormErrors({});
 
         // Redirect to payment gateway
-        // window.location.href = response.data.payment_url;
+        window.location.href = response.data.payment_url;
       } else {
         // Fallback if no payment URL
         setRegForm({
