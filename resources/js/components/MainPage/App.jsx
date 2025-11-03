@@ -177,44 +177,8 @@ const App = ({ flash }) => {
         });
         setRegFormErrors({});
 
-<<<<<<< HEAD
         // Redirect to Easebuzz
         window.location.href = response.data.payment_url;
-=======
-        // Redirect to payment gateway
-        window.location.href = response.data.payment_url;
-      } else {
-        // Fallback if no payment URL
-        setRegForm({
-          applicant_name: '',
-          father_or_husband_name: '',
-          dob: '',
-          phone: '',
-          email: '',
-          aadhaar: '',
-          pan: '',
-          address: '',
-          city: '',
-          pincode: '',
-          state: '',
-          quota: '',
-          size: '',
-          rmcode: '',
-          terms: false,
-        });
-        setRegFormErrors({});
-
-        const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
-        modal.hide();
-        alert('Registration successful! Your application has been saved.');
-
-
-        // Inertia.visit('/', {
-        //   method: 'get',
-        //   data: { message: 'Registration successful! (No payment required)' },
-        //   preserveState: true,
-        // });
->>>>>>> c2fa54b0a9dec1c5bc0d80f6017f53f1f197aa72
       }
     } catch (error) {
       console.error('Registration Error:', error);
