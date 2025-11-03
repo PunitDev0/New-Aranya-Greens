@@ -37,7 +37,7 @@ class RegistrationController extends Controller
             ]));
 
             // ==================== PAYMENT BLOCK (FULLY COMMENTED) ====================
-            $amount = 1.00;
+            $amount = 31000.00;
             $productinfo = 'EOI';
 
             $paymentUrl = $this->initiatePaymentForRegistration(
