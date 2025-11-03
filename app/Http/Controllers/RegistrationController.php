@@ -37,7 +37,7 @@ class RegistrationController extends Controller
             ]));
 
             // Initiate payment
-            $amount = 31000.00;
+            $amount = 1.00;
             $productinfo = 'EOI';
 
             $paymentUrl = $this->initiatePaymentForRegistration(
