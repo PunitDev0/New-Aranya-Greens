@@ -157,7 +157,7 @@ const MainContent = ({
       </div>
 
       <div className="amenities-pricing" id="amenities-pricing">
-        <h2 className="cons-heading pb-2 text-center font-sans">Price List</h2>
+        <h2 className="cons-heading pb-2 text-center font-sans">Aaranya Greens Price List</h2>
         <div className="container">
           <div className="row">
             <div className="col-md-12 col-sm-12">
