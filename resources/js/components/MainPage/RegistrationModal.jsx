@@ -36,6 +36,7 @@ const RegistrationModal = ({
           <div className="modal-body">
             <form onSubmit={handleRegFormSubmit}>
               <div className="row g-3">
+                {/* Applicant Name */}
                 <div className="col-md-6">
                   <label className="form-label">Applicant Name</label>
                   <input
@@ -49,6 +50,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.applicant_name && <div className="invalid-feedback">{regFormErrors.applicant_name}</div>}
                 </div>
+
+                {/* Father's/Husband Name */}
                 <div className="col-md-6">
                   <label className="form-label">Father's Name/Husband Name</label>
                   <input
@@ -62,6 +65,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.father_or_husband_name && <div className="invalid-feedback">{regFormErrors.father_or_husband_name}</div>}
                 </div>
+
+                {/* Date of Birth */}
                 <div className="col-md-6">
                   <label className="form-label">Date of Birth</label>
                   <input
@@ -79,6 +84,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.dob && <div id="dobError" className="invalid-feedback">{regFormErrors.dob}</div>}
                 </div>
+
+                {/* Phone */}
                 <div className="col-md-6">
                   <label className="form-label">Phone Number</label>
                   <input
@@ -93,6 +100,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.phone && <div className="invalid-feedback">{regFormErrors.phone}</div>}
                 </div>
+
+                {/* Email */}
                 <div className="col-md-6">
                   <label className="form-label">Email Address</label>
                   <input
@@ -106,6 +115,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.email && <div className="invalid-feedback">{regFormErrors.email}</div>}
                 </div>
+
+                {/* Aadhaar */}
                 <div className="col-md-6">
                   <label className="form-label">Aadhaar Card Number (Optional)</label>
                   <input
@@ -118,6 +129,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.aadhaar && <div className="invalid-feedback">{regFormErrors.aadhaar}</div>}
                 </div>
+
+                {/* PAN */}
                 <div className="col-md-6">
                   <label className="form-label">PAN Card Number</label>
                   <input
@@ -132,6 +145,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.pan && <div className="invalid-feedback">{regFormErrors.pan}</div>}
                 </div>
+
+                {/* Address */}
                 <div className="col-md-6">
                   <label className="form-label">Address</label>
                   <input
@@ -145,6 +160,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.address && <div className="invalid-feedback">{regFormErrors.address}</div>}
                 </div>
+
+                {/* City */}
                 <div className="col-md-6">
                   <label className="form-label">City</label>
                   <input
@@ -158,6 +175,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.city && <div className="invalid-feedback">{regFormErrors.city}</div>}
                 </div>
+
+                {/* Pincode */}
                 <div className="col-md-6">
                   <label className="form-label">Pincode</label>
                   <input
@@ -172,6 +191,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.pincode && <div className="invalid-feedback">{regFormErrors.pincode}</div>}
                 </div>
+
+                {/* State */}
                 <div className="col-md-6">
                   <label className="form-label">State</label>
                   <input
@@ -185,6 +206,8 @@ const RegistrationModal = ({
                   />
                   {regFormErrors.state && <div className="invalid-feedback">{regFormErrors.state}</div>}
                 </div>
+
+                {/* Quota */}
                 <div className="col-md-6">
                   <label className="form-label">Quota</label>
                   <select
@@ -195,13 +218,15 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Quota</option>
-                            <option value="Female Applicant">Female Applicant</option>
-                            <option value="Govt Employee Applicant">Govt Employee Applicant</option>
-                            <option value="General Applicant">General Applicant</option>
-                            <option value="Management Quota Applicant">Management Quota Applicant</option>
+                    <option value="Female Applicant">Female Applicant</option>
+                    <option value="Govt Employee Applicant">Govt Employee Applicant</option>
+                    <option value="General Applicant">General Applicant</option>
+                    <option value="Management Quota Applicant">Management Quota Applicant</option>
                   </select>
                   {regFormErrors.quota && <div className="invalid-feedback">{regFormErrors.quota}</div>}
                 </div>
+
+                {/* Size */}
                 <div className="col-md-12">
                   <label className="form-label">Select Size</label>
                   <select
@@ -212,25 +237,39 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Size</option>
-                    <option value="143.42 @ 65000">150.69 @ 136000</option>
-               
+                    <option value="150.69 @ 136000">150.69 @ 136000</option>
                   </select>
                   {regFormErrors.size && <div className="invalid-feedback">{regFormErrors.size}</div>}
                 </div>
+
+                {/* RM Code Dropdown */}
                 <div className="col-md-12 pt-3">
                   <label className="form-label">RM Code</label>
                   <span style={{ color: 'red', fontSize: '10px' }}>(RM Code is Mandatory)</span>
-                  <input
-                    type="text"
+                  <select
                     className={`form-control ${regFormErrors.rmcode ? 'is-invalid' : ''}`}
-                    placeholder="RM Code"
                     name="rmcode"
                     value={regForm.rmcode}
                     onChange={handleRegFormChange}
                     required
-                  />
+                  >
+                    <option value="" disabled>Select RM Code</option>
+                    <option value="DD-0031">DD-0031</option>
+                    <option value="DD-1555">DD-1555</option>
+                    <option value="DD-0024">DD-0024</option>
+                    <option value="DD-0792">DD-0792</option>
+                    <option value="DD-1979">DD-1979</option>
+                    <option value="DD-0577">DD-0577</option>
+                    <option value="DD-1018">DD-1018</option>
+                    <option value="DD-2602">DD-2602</option>
+                    <option value="DD-3169">DD-3169</option>
+                    <option value="DD-8462">DD-8462</option>
+                    <option value="DD-1562">DD-1562</option>
+                  </select>
                   {regFormErrors.rmcode && <div className="invalid-feedback">{regFormErrors.rmcode}</div>}
                 </div>
+
+                {/* Terms Checkbox */}
                 <div className="form-check mt-4">
                   <input
                     className={`form-check-input ${regFormErrors.terms ? 'is-invalid' : ''}`}
@@ -246,6 +285,7 @@ const RegistrationModal = ({
                   </label>
                   {regFormErrors.terms && <div className="invalid-feedback">{regFormErrors.terms}</div>}
                 </div>
+
                 <button type="submit" className="btn btn-primary mt-3">Submit & Pay</button>
               </div>
             </form>

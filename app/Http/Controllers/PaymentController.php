@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Log;
 use Easebuzz\Easebuzz;
 use App\Models\Payment;
 use App\Models\Registration;
+use App\Mail\RegistrationConfirmation;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentController extends Controller
 {
@@ -82,7 +84,6 @@ class PaymentController extends Controller
             } else {
                 throw new \Exception('Payment initiation failed: Invalid response.');
             }
-
         } catch (\Exception $e) {
             Log::error('Easebuzz Payment Error', ['message' => $e->getMessage()]);
 
@@ -94,55 +95,80 @@ class PaymentController extends Controller
         }
     }
 
-public function callback(Request $request)
-{
-    try {
-        $txnid = $request->txnid ?? '';
-        $status = $request->status ?? '';
-        $udf1 = $request->udf1 ?? '';
+    public function callback(Request $request)
+    {
+        try {
+            $txnid = $request->txnid ?? '';
+            $status = $request->status ?? '';
+            $udf1 = $request->udf1 ?? '';
 
-        $payment = Payment::where('txnid', $txnid)->firstOrFail();
-        $registration = $payment->registration;
+            // Find payment
+            $payment = Payment::where('txnid', $txnid)->firstOrFail();
+            $registration = $payment->registration;
 
-        // Determine payment & registration status
-        if ($status === 'success') {
-            $paymentStatus = 'success';
-            $regStatus = 'paid';
-        } elseif (in_array($status, ['failed', 'userCancelled'])) {
-            $paymentStatus = 'failed';
-            $regStatus = 'cancelled';
-        } else {
-            $paymentStatus = 'pending';
-            $regStatus = 'pending';
+            // Determine payment & registration status
+            if ($status === 'success') {
+                $paymentStatus = 'success';
+                $regStatus = 'paid';
+            } elseif (in_array($status, ['failed', 'userCancelled'])) {
+                $paymentStatus = 'failed';
+                $regStatus = 'cancelled';
+            } else {
+                $paymentStatus = 'pending';
+                $regStatus = 'pending';
+            }
+
+            // Update payment & registration
+            $payment->update([
+                'status' => $paymentStatus,
+                'response_data' => $request->all(),
+            ]);
+
+            $registration->update(['status' => $regStatus]);
+
+            // Optional: update registration via udf1 if needed
+            if ($udf1 && !$payment->registration_id) {
+                $reg = Registration::find($udf1);
+                if ($reg) $reg->update(['status' => $regStatus]);
+            }
+
+            // Send confirmation email if payment successful
+            if ($paymentStatus === 'success') {
+                // RM Mapping
+                $rmMapping = [
+                    'DD-0031' => ['name' => 'ANIL SINGH', 'phone' => '9319493090'],
+                    'DD-1555' => ['name' => 'DHANANJAY ARYA', 'phone' => '9540556642'],
+                    'DD-0024' => ['name' => 'SAGAR GOLA', 'phone' => '8449987175'],
+                    'DD-0792' => ['name' => 'ADITYA SINGH', 'phone' => '7988808542'],
+                    'DD-1979' => ['name' => 'PRAVEEN SHIKHAWAT', 'phone' => '9306002013'],
+                    'DD-0577' => ['name' => 'DEEPAK SINGH', 'phone' => ''],
+                    'DD-1018' => ['name' => 'POONAM YADAV', 'phone' => ''],
+                    'DD-2602' => ['name' => 'SACHIN KHALDALWAL', 'phone' => ''],
+                    'DD-3169' => ['name' => 'Dev Sharma', 'phone' => ''],
+                    'DD-8462' => ['name' => 'Deepti Vashisht', 'phone' => '9870368462'],
+                    'DD-1562' => ['name' => 'Shanaya Kaur', 'phone' => '8076127927'],
+                ];
+
+                $rm = $rmMapping[$registration->rmcode] ?? ['name' => 'Not Assigned', 'phone' => 'Not Available'];
+
+                try {
+                    Mail::to($registration->email)->send(new RegistrationConfirmation($registration, $rm));
+                } catch (\Exception $e) {
+                    \Log::error('Registration confirmation email failed: ' . $e->getMessage());
+                }
+            }
+
+            // Redirect with appropriate message
+            $message = match ($paymentStatus) {
+                'success' => 'Payment successful!',
+                'failed' => $status === 'userCancelled' ? 'Payment cancelled by user.' : 'Payment failed.',
+                default => 'Payment pending.',
+            };
+
+            return redirect('/')->with('payment_message', $message);
+        } catch (\Exception $e) {
+            \Log::error('Payment callback error: ' . $e->getMessage());
+            return redirect('/')->with('payment_message', 'Payment processing failed.');
         }
-
-        // Update payment & registration
-        $payment->update([
-            'status' => $paymentStatus,
-            'response_data' => $request->all(),
-        ]);
-
-        $registration->update(['status' => $regStatus]);
-
-        // Optional: update registration via udf1 if needed
-        if ($udf1 && !$payment->registration_id) {
-            $reg = Registration::find($udf1);
-            if ($reg) $reg->update(['status' => $regStatus]);
-        }
-
-        // Redirect to home page with a success/failure message
-        $message = match($paymentStatus) {
-            'success' => 'Payment successful!',
-            'failed' => $status === 'userCancelled' ? 'Payment cancelled by user.' : 'Payment failed.',
-            default => 'Payment pending.',
-        };
-
-        return redirect('/')->with('payment_message', $message);
-
-    } catch (\Exception $e) {
-        return redirect('/')->with('payment_message', 'Payment processing failed.');
     }
-}
-
-
 }

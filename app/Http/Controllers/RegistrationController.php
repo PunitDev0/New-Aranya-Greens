@@ -37,7 +37,7 @@ class RegistrationController extends Controller
             ]));
 
             // Initiate payment
-            $amount = 31000.00;
+            $amount = 1.00;
             $productinfo = 'EOI';
 
             $paymentUrl = $this->initiatePaymentForRegistration(
@@ -95,8 +95,8 @@ class RegistrationController extends Controller
                 'email' => $email,
                 'phone' => $phone,
                 'productinfo' => $productinfo,
-                'surl' => 'https://deendayaljanawasyojnareg.com/api/payment/callback',
-                'furl' => 'https://deendayaljanawasyojnareg.com/api/payment/callback',
+                'surl' => 'http://deendayaljanawasyojnareg.com/api/payment/callback',
+                'furl' => 'http://deendayaljanawasyojnareg.com/api/payment/callback',
                 'udf1' => (string) $registrationId,
                 'address1' => $validatedData['address'] ?? '',
                 'city' => $validatedData['city'] ?? '',
@@ -126,11 +126,6 @@ class RegistrationController extends Controller
             Log::error('Payment Initiation Error', ['message' => $e->getMessage()]);
             return null;
         }
-    }
-
-    public function refundPayment($registrationId)
-    {
-        // Optional: implement refund logic later
     }
 
     public function index()
