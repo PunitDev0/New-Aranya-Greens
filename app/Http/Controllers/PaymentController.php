@@ -151,11 +151,8 @@ class PaymentController extends Controller
 
                 $rm = $rmMapping[$registration->rmcode] ?? ['name' => 'Not Assigned', 'phone' => 'Not Available'];
 
-                try {
-                    Mail::to($registration->email)->send(new RegistrationConfirmation($registration, $rm));
-                } catch (\Exception $e) {
-                    \Log::error('Registration confirmation email failed: ' . $e->getMessage());
-                }
+                Mail::to($registration->email)->send(new RegistrationConfirmation($registration, $rm));
+          
             }
 
             // Redirect with appropriate message
@@ -167,7 +164,6 @@ class PaymentController extends Controller
 
             return redirect('/')->with('payment_message', $message);
         } catch (\Exception $e) {
-            \Log::error('Payment callback error: ' . $e->getMessage());
             return redirect('/')->with('payment_message', 'Payment processing failed.');
         }
     }
