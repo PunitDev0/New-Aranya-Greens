@@ -244,32 +244,28 @@ const RegistrationModal = ({
                   {regFormErrors.size && <div className="invalid-feedback">{regFormErrors.size}</div>}
                 </div>
 
-                {/* RM Code Dropdown */}
-                <div className="col-md-12 pt-3">
-                  <label className="form-label">RM Code</label>
-                  <span style={{ color: 'red', fontSize: '10px' }}>(RM Code is Mandatory)</span>
-                  <select
-                    className={`form-control ${regFormErrors.rmcode ? 'is-invalid' : ''}`}
-                    name="rmcode"
-                    value={regForm.rmcode}
-                    onChange={handleRegFormChange}
-                    required
-                  >
-                    <option value="" disabled>Select RM Code</option>
-                    <option value="DD-0031">DD-0031</option>
-                    <option value="DD-1555">DD-1555</option>
-                    <option value="DD-0024">DD-0024</option>
-                    <option value="DD-0792">DD-0792</option>
-                    <option value="DD-1979">DD-1979</option>
-                    <option value="DD-0577">DD-0577</option>
-                    <option value="DD-1018">DD-1018</option>
-                    <option value="DD-2602">DD-2602</option>
-                    <option value="DD-3169">DD-3169</option>
-                    <option value="DD-8462">DD-8462</option>
-                    <option value="DD-1562">DD-1562</option>
-                  </select>
-                  {regFormErrors.rmcode && <div className="invalid-feedback">{regFormErrors.rmcode}</div>}
-                </div>
+                {/* RM Code Input */}
+<div className="col-md-12 pt-3">
+  <label className="form-label">RM Code</label>
+  <span style={{ color: 'red', fontSize: '10px' }}>
+    (RM Code is Mandatory)
+  </span>
+
+  <input
+    type="text"
+    className={`form-control ${regFormErrors.rmcode ? 'is-invalid' : ''}`}
+    name="rmcode"
+    value={regForm.rmcode}
+    onChange={handleRegFormChange}
+    placeholder="Enter RM Code e.g., DD105"
+    required
+  />
+
+  {regFormErrors.rmcode && (
+    <div className="invalid-feedback">{regFormErrors.rmcode}</div>
+  )}
+</div>
+
 
                 {/* Terms Checkbox */}
                 <div className="form-check mt-4">

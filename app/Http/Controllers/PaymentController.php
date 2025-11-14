@@ -136,17 +136,17 @@ class PaymentController extends Controller
             if ($paymentStatus === 'success') {
                 // RM Mapping
                 $rmMapping = [
-                    'DD-0031' => ['name' => 'ANIL SINGH', 'phone' => '9319493090'],
-                    'DD-1555' => ['name' => 'DHANANJAY ARYA', 'phone' => '9540556642'],
-                    'DD-0024' => ['name' => 'SAGAR GOLA', 'phone' => '8449987175'],
-                    'DD-0792' => ['name' => 'ADITYA SINGH', 'phone' => '7988808542'],
-                    'DD-1979' => ['name' => 'PRAVEEN SHIKHAWAT', 'phone' => '9306002013'],
-                    'DD-0577' => ['name' => 'DEEPAK SINGH', 'phone' => '7494941002'],
-                    'DD-1018' => ['name' => 'POONAM YADAV', 'phone' => '88007 10249'],
-                    'DD-2602' => ['name' => 'SACHIN KHALDALWAL', 'phone' => '9971331667'],
-                    'DD-3169' => ['name' => 'Dev Sharma', 'phone' => '9999355215'],
-                    'DD-8462' => ['name' => 'Deepti Vashisht', 'phone' => '9870368462'],
-                    'DD-1562' => ['name' => 'Shanaya Kaur', 'phone' => '8076127927'],
+                    'DD0031' => ['name' => 'ANIL SINGH', 'phone' => '9319493090'],
+                    'DD1555' => ['name' => 'DHANANJAY ARYA', 'phone' => '9540556642'],
+                    'DD0024' => ['name' => 'SAGAR GOLA', 'phone' => '8449987175'],
+                    'DD0792' => ['name' => 'ADITYA SINGH', 'phone' => '7988808542'],
+                    'DD1979' => ['name' => 'PRAVEEN SHIKHAWAT', 'phone' => '9306002013'],
+                    'DD0577' => ['name' => 'DEEPAK SINGH', 'phone' => '7494941002'],
+                    'DD1018' => ['name' => 'POONAM YADAV', 'phone' => '88007 10249'],
+                    'DD2602' => ['name' => 'SACHIN KHALDALWAL', 'phone' => '9971331667'],
+                    'DD3169' => ['name' => 'Dev Sharma', 'phone' => '9999355215'],
+                    'DD8462' => ['name' => 'Deepti Vashisht', 'phone' => '9870368462'],
+                    'DD1562' => ['name' => 'Shanaya Kaur', 'phone' => '8076127927'],
                 ];
 
                 $rm = $rmMapping[$registration->rmcode] ?? ['name' => 'Not Assigned', 'phone' => 'Not Available'];
