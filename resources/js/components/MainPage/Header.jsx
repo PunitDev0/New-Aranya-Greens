@@ -45,7 +45,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
           </li>
           <li>
             <a href="mailto:info@deendayaljanawasyojnareg.org">
-              <i className="fas fa-envelope"></i> info@deendayaljanawasyojnareg.org
+              <i className="fas fa-envelope"></i> info@deendayaljanawasyojnareg.com
             </a>
           </li>
 

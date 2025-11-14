@@ -459,9 +459,13 @@ h3.modal-heading{
 }
 .bid-site-visit .row a{
            font-size: 15px;
-    padding: 8px 0px;
     display: block;
     color: black;
+    display: flex;
+flex-direction: column;
+justify-content: center;   /* Horizontally center */
+align-items: center;       /* Vertically center */
+
 }
 .bid-site-visit .row a.whatsapp_btn {
     padding: 0!important;
