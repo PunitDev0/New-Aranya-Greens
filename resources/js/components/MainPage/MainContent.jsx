@@ -28,32 +28,32 @@ const MainContent = ({
       </section>
 
       <div id="amenities-bank" className="bg-gray-100 py-10">
-  <h2 className="text-2xl font-semibold text-center font-sans pb-4">
-    The Project has been Approved By
-  </h2>
+        <h2 className="text-2xl font-semibold text-center font-sans pb-4">
+          The Project has been Approved By
+        </h2>
 
-  <div className="flex flex-wrap justify-center items-center gap-6 px-4">
-    <div className="flex justify-center items-center w-28 h-24">
-      <img src="images/hdfcbank.png" alt="HDFC Bank" className="max-h-20 object-contain" />
-    </div>
-    <div className="flex justify-center items-center w-28 h-24">
-      <img src="images/pnb.png" alt="PNB Bank" className="max-h-20 object-contain" />
-    </div>
-    <div className="flex justify-center items-center w-28 h-24">
-      <img src="images/bob.jpg" alt="BOB Bank" className="max-h-20 object-contain" />
-    </div>
-    <div className="flex justify-center items-center w-28 h-24">
-      <img src="images/icicibank.png" alt="ICICI Bank" className="max-h-24 w-4/5 object-contain" />
-    </div>
-    <div className="flex justify-center items-center w-28 h-24">
-      <img src="images/AU.png" alt="AUSMALL Bank" className="max-h-20 object-contain" />
-    </div>
-  </div>
+        <div className="flex flex-wrap justify-center items-center gap-6 px-4">
+          <div className="flex justify-center items-center w-28 h-24">
+            <img src="images/hdfcbank.png" alt="HDFC Bank" className="max-h-20 object-contain" />
+          </div>
+          <div className="flex justify-center items-center w-28 h-24">
+            <img src="images/pnb.png" alt="PNB Bank" className="max-h-20 object-contain" />
+          </div>
+          <div className="flex justify-center items-center w-28 h-24">
+            <img src="images/bob.jpg" alt="BOB Bank" className="max-h-20 object-contain" />
+          </div>
+          <div className="flex justify-center items-center w-28 h-24">
+            <img src="images/icicibank.png" alt="ICICI Bank" className="max-h-24 w-4/5 object-contain" />
+          </div>
+          <div className="flex justify-center items-center w-28 h-24">
+            <img src="images/AU.png" alt="AUSMALL Bank" className="max-h-20 object-contain" />
+          </div>
+        </div>
 
-  <p className="text-center pt-6 text-gray-700">
-    Plot owners can avail loans from these banks for financing purposes.
-  </p>
-</div>
+        <p className="text-center pt-6 text-gray-700">
+          Plot owners can avail loans from these banks for financing purposes.
+        </p>
+      </div>
 
 
       <section className="pd-30 top-details">
@@ -62,7 +62,7 @@ const MainContent = ({
             <div class="col-md-3">
               <div class="status-strip">
                 <h4>Plots Starting</h4>
-                <p>Price ₹2.09 cr*</p>
+                <p>Price ₹1.45 cr*</p>
               </div>
             </div>
             <div class="col-md-3">
@@ -177,16 +177,37 @@ const MainContent = ({
                   </thead>
                   <tbody>
                     <tr>
-                      <td>150.69</td>
-                      <td>₹1,36,000</td>
+                       <td>150.69</td> 
+                       <td>₹1,36,000</td> 
+                       <td>₹31,000</td> 
+                       <td>₹20,18,384</td> 
+                       <td>₹84,08,502</td> 
+                       <td>₹52,28,943</td> 
+                       <td>₹52,28,943</td> 
+                       <td>₹2,09,15,772</td> 
+                    </tr>
+                    <tr>
+                      <td>128.98</td>
+                      <td>₹1,10,000</td>
                       <td>₹31,000</td>
-                      <td>₹20,18,384</td>
-                      <td>₹84,08,502</td>
-                      <td>₹52,28,943</td>
-                      <td>₹52,28,943</td>
-                      <td>₹2,09,15,772</td>
+                      <td>₹13,87,780</td>
+                      <td>₹58,55,692</td>
+                      <td>₹36,37,236</td>
+                      <td>₹36,37,236</td>
+                      <td>₹1,45,48,944</td>
+                    </tr>
+                    <tr>
+                      <td>129.80</td>
+                      <td>₹1,10,000</td>
+                      <td>₹31,000</td>
+                      <td>₹13,96,800</td>
+                      <td>₹58,92,920</td>
+                      <td>₹36,60,360</td>
+                      <td>₹36,60,360</td>
+                      <td>₹1,46,41,440</td>
                     </tr>
                   </tbody>
+
                 </table>
               </div>
             </div>

@@ -238,6 +238,8 @@ const RegistrationModal = ({
                   >
                     <option value="" disabled>Select Size</option>
                     <option value="150.69 @ 136000">150.69 @ 136000</option>
+                    <option value="128.98	 @ 110000">128.98 @ 110000</option>
+                    <option value="129.80	 @ 110000">129.80 @ 110000</option>
                   </select>
                   {regFormErrors.size && <div className="invalid-feedback">{regFormErrors.size}</div>}
                 </div>
