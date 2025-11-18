@@ -257,7 +257,7 @@ const RegistrationModal = ({
     name="rmcode"
     value={regForm.rmcode}
     onChange={handleRegFormChange}
-    placeholder="Enter RM Code e.g., DD105"
+    placeholder="Enter RM Code e.g., DD-XXXX"
     required
   />
 
