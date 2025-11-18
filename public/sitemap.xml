@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Home -->
+    <url>
+        <loc>https://deendayaljanawasyojnareg.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Terms -->
+    <url>
+        <loc>https://deendayaljanawasyojnareg.com/terms</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Privacy -->
+    <url>
+        <loc>https://deendayaljanawasyojnareg.com/privacy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Refund Policy -->
+    <url>
+        <loc>https://deendayaljanawasyojnareg.com/refund-policy</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+
+ 
+
+
+
+
+
+
+</urlset>
