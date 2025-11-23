@@ -58,7 +58,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
               // data-bs-target="#registrationModal"
               style={{ textDecoration: 'none' }}
             >
-              <i className="fas fa-user-plus text-white"></i> Registration Open Closed
+              <i className="fas fa-user-plus text-white"></i> Registration Closed
             </a>
           </li>
         </ul>
