@@ -110,10 +110,10 @@ const MainContent = ({
                 href="#"
                 className="register-btn text-white fw-bold"
                 data-bs-toggle="modal"
-                data-bs-target="#registrationModal"
+                // data-bs-target="#registrationModal"
                 style={{ textDecoration: 'none' }}
               >
-                Registration Open
+                Registration Open CLosed
               </a>
             </div>
             <div className=" text-center w-fit">

@@ -55,29 +55,35 @@ const App = ({ flash }) => {
     }
   }, [flash]);
 
-  useEffect(() => {
-    const endTime = Date.parse('November 23, 2025 18:00:00 PDT') / 1000;
-    const makeTimer = () => {
-      const now = Date.parse(new Date()) / 1000;
-      const timeLeft = endTime - now;
-      if (timeLeft <= 0) {
-        setCountdown({ days: '00', hours: '00', minutes: '00', seconds: '00' });
-        return;
-      }
-      const days = Math.floor(timeLeft / 86400);
-      const hours = Math.floor((timeLeft - days * 86400) / 3600);
-      const minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-      const seconds = Math.floor(timeLeft - days * 86400 - hours * 3600 - minutes * 60);
-      setCountdown({
-        days: days < 10 ? `0${days}` : days,
-        hours: hours < 10 ? `0${hours}` : hours,
-        minutes: minutes < 10 ? `0${minutes}` : minutes,
-        seconds: seconds < 10 ? `0${seconds}` : seconds,
-      });
-    };
-    const interval = setInterval(makeTimer, 1000);
-    return () => clearInterval(interval);
-  }, []);
+useEffect(() => {
+  const endTime = new Date(2025, 10, 23, 23, 59, 59).getTime() / 1000;
+
+  const makeTimer = () => {
+    const now = Date.now() / 1000;
+    const timeLeft = endTime - now;
+
+    if (timeLeft <= 0) {
+      setCountdown({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+      return;
+    }
+
+    const days = Math.floor(timeLeft / 86400);
+    const hours = Math.floor((timeLeft % 86400) / 3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = Math.floor(timeLeft % 60);
+
+    setCountdown({
+      days: days < 10 ? `0${days}` : days,
+      hours: hours < 10 ? `0${hours}` : hours,
+      minutes: minutes < 10 ? `0${minutes}` : minutes,
+      seconds: seconds < 10 ? `0${seconds}` : seconds,
+    });
+  };
+
+  const interval = setInterval(makeTimer, 1000);
+  return () => clearInterval(interval);
+}, []);
+
 
   useEffect(() => {
     import('@fancyapps/ui')
