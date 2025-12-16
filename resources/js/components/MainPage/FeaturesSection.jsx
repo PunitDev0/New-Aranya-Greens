@@ -5,7 +5,7 @@ function CountdownTimer() {
   // Countdown ends EXACTLY: 14 Dec 2025, 23:59:59 IST
   // Convert IST → UTC: Subtract 5 hours 30 minutes
   // 23:59:59 IST == 18:29:59 UTC
-  const targetDate = new Date("2026-1-4T18:29:59Z").getTime();
+  const targetDate = new Date("2026-01-04T18:29:59Z").getTime();
 
   const [timeLeft, setTimeLeft] = useState({});
 
