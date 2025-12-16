@@ -52,7 +52,7 @@ const notices = [
   },
   {
     title: "Registration Opened",
-    description: "Allotment Last Date 2 January 2025",
+    description: "Allotment Last Date 2 January 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
   },
