@@ -5,7 +5,7 @@ function CountdownTimer() {
   // Countdown ends EXACTLY: 14 Dec 2025, 23:59:59 IST
   // Convert IST → UTC: Subtract 5 hours 30 minutes
   // 23:59:59 IST == 18:29:59 UTC
-  const targetDate = new Date("2025-12-28T18:29:59Z").getTime();
+  const targetDate = new Date("2026-1-4T18:29:59Z").getTime();
 
   const [timeLeft, setTimeLeft] = useState({});
 
@@ -45,14 +45,14 @@ function CountdownTimer() {
 // ==================== NOTICE DATA ====================
 const notices = [
   {
-    title: "Registration Last Date - 28 December 2025",
+    title: "Registration Last Date - 4 January 2026",
     countdown: true,
     extra: "Please check our website for future updates.",
     borderColor: "border-green-500",
   },
   {
     title: "Registration Opened",
-    description: "Allotment Last Date 2 January 2026",
+    description: "Allotment Last Date 8 January 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
   },
