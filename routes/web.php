@@ -7,9 +7,7 @@ use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\PaymentController;
 
-// ----------------------
-// Public routes
-// ----------------------
+
 Route::get('/', fn() => Inertia::render('welcome'))->name('home');
 
 
@@ -37,6 +35,7 @@ Route::get('/admin/registrations', function () {
 Route::get('/payment', fn() => Inertia::render('PaymentForm'));
 
 
+Route::post('/enquiry', [EnquiryController::class, 'store']);
 Route::post('/payment/initiate', [PaymentController::class, 'initiatePayment'])->name('payment.initiate');
 Route::any('/payment/callback', [PaymentController::class, 'callback'])->name('payment.callback'); // 'any' for GET/POST from Easebuzzx`
 

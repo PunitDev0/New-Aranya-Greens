@@ -1,0 +1,103 @@
+import React, { useEffect, useState } from "react";
+
+// ==================== COUNTDOWN TIMER (IST FIXED) ====================
+function CountdownTimer() {
+  // Countdown ends EXACTLY: 14 Dec 2025, 23:59:59 IST
+  // Convert IST → UTC: Subtract 5 hours 30 minutes
+  // 23:59:59 IST == 18:29:59 UTC
+  const targetDate = new Date("2025-12-28T18:29:59Z").getTime();
+
+  const [timeLeft, setTimeLeft] = useState({});
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = Date.now();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ finished: true });
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((diff % (1000 * 60)) / 1000),
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (timeLeft.finished)
+    return <p className="text-green-600 text-xs">Registration Closed!</p>;
+
+  return (
+    <div className="text-[18px] sm:text-[22px] font-semibold text-red-600 mt-2">
+      <p className="text-black text-[15px] -mb-3">Registration Ends In</p>
+      {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
+    </div>
+  );
+}
+
+// ==================== NOTICE DATA ====================
+const notices = [
+  {
+    title: "Registration Last Date - 28 December 2025",
+    countdown: true,
+    extra: "Please check our website for future updates.",
+    borderColor: "border-green-500",
+  },
+  {
+    title: "Registration Opened",
+    description: "Allotment Last Date 2 January 2025",
+    extra: "Stay tuned for the next registration cycle.",
+    borderColor: "border-gray-500",
+  },
+  {
+    title: "Attractive Payment Plan",
+    description: "HRERA-PKL-SNP-675-2025",
+    extra: "EMI options available up to 12 months.",
+    borderColor: "border-blue-500",
+  },
+  {
+    title: "Loan Facility Available",
+    description: "Registration Open",
+    extra: "Loans provided in collaboration with partner banks.",
+    borderColor: "border-green-500",
+  },
+];
+
+// ==================== MAIN SECTION ====================
+export default function FeaturesSection() {
+  return (
+    <div className="max-w-6xl mx-auto px-3 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      {notices.map((notice, index) => (
+        <div
+          key={index}
+          className={`bg-white shadow-md border-2 ${notice.borderColor} h-auto sm:h-40 p-3 sm:p-4 flex flex-col hover:shadow-lg transition-shadow duration-300`}
+        >
+          <h5 className="text-[11px] sm:text-xs font-semibold mb-1 sm:mb-2 text-gray-800 leading-snug">
+            {notice.title}
+          </h5>
+
+          {notice.countdown && <CountdownTimer />}
+
+          {notice.description && (
+            <p className="text-[15px] sm:text-[18px] text-gray-600 leading-tight">
+              {notice.description}
+            </p>
+          )}
+
+          {notice.extra && (
+            <p className="text-[9px] sm:text-[10px] text-gray-500 mt-1 sm:mt-2 flex-1 leading-tight">
+              {notice.extra}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}

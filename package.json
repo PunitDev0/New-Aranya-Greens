@@ -64,12 +64,15 @@
         "react-bootstrap": "^2.10.10",
         "react-day-picker": "^9.11.1",
         "react-dom": "^18.3.1",
+        "react-photo-album": "^3.3.0",
         "sonner": "^2.0.7",
+        "swiper": "^12.0.3",
         "tailwind-merge": "^3.0.1",
         "tailwindcss": "^4.0.0",
         "tailwindcss-animate": "^1.0.7",
         "typescript": "^5.7.2",
-        "vite": "^7.0.4"
+        "vite": "^7.0.4",
+        "yet-another-react-lightbox": "^3.27.0"
     },
     "optionalDependencies": {
         "@rollup/rollup-linux-x64-gnu": "4.9.5",

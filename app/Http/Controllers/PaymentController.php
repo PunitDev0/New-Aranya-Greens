@@ -143,10 +143,15 @@ class PaymentController extends Controller
                     'DD-1979' => ['name' => 'PRAVEEN SHIKHAWAT', 'phone' => '9306002013'],
                     'DD-0577' => ['name' => 'DEEPAK SINGH', 'phone' => '7494941002'],
                     'DD-1018' => ['name' => 'POONAM YADAV', 'phone' => '8800710249'],
-                    'DD-2602' => ['name' => 'SACHIN KHALDALWAL', 'phone' => '9971331667'],
+                    'DD-2602' => ['name' => 'SACHIN KHANDALWAL', 'phone' => '9971331667'],
                     'DD-3169' => ['name' => 'Kunal Sharma', 'phone' => '9999355215'],
-                    // 'DD-8462' => ['name' => 'Deepti', 'phone' => '9870368462'],
+                    'DD-2010' => ['name' => 'Anil kumar sharma', 'phone' => '9760011123'],
                     'DD-1562' => ['name' => 'Shanaya Kaur', 'phone' => '8076127927'],
+                    'DD-7120' => ['name' => 'Rohit Chaudhary', 'phone' => '9910357120'],
+                    'DD-6666' => ['name' => 'Saksham chhabra', 'phone' => '9910666013'],
+                    // 'DD-2308' => ['name' => 'Rishi Grewal', 'phone' => '9728939284'],
+                    'DD-7836' => ['name' => 'Ritik Vasishth', 'phone' => '9053547836'],
+                    'DD-9733' => ['name' => 'Vipin Makhija', 'phone' => '9582206501'],
                 ];
 
                 $rm = $rmMapping[$registration->rmcode] ?? ['name' => 'Not Assigned', 'phone' => 'Not Available'];

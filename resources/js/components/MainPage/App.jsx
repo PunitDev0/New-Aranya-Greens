@@ -4,49 +4,72 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'flatpickr/dist/flatpickr.min.css';
-import '../../../css/style.css';
 import * as bootstrap from 'bootstrap';
-import flatpickr from 'flatpickr';
 import axios from 'axios';
+
+
 import Header from './Header';
 import BannerSection from './BannerSection';
 import RegistrationModal from './RegistrationModal';
-import MainContent from './MainContent';
+import FeaturesSection from './FeaturesSection';
+import RegistrationBanner from './RegistrationsBanner';
+import ProjectIntro from './ProjectIntro';
+import ApprovedBanks from './ApprovedBanks';
+import ProjectHighlights from './ProjectHighlights';
+import PriceList from './PriceList';
+import LocationAdvantages from './LocationAdvantages';
+import GalleryComponent from './Gallery';
+import AboutDDJAY from './About-DDJAY';
+import Footer from './Footer';
+import { Button } from '../ui/button';
 
 const App = ({ flash }) => {
-  const [countdown, setCountdown] = useState({
-    days: '00',
-    hours: '00',
-    minutes: '00',
-    seconds: '00',
-  });
+  const [countdown, setCountdown] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [showFlash, setShowFlash] = useState(false);
+
+  // Registration Form
   const [regForm, setRegForm] = useState({
-    applicant_name: '',
-    father_or_husband_name: '',
-    dob: '',
-    phone: '',
-    email: '',
-    aadhaar: '',
-    pan: '',
-    address: '',
-    city: '',
-    pincode: '',
-    state: '',
-    quota: '',
-    size: '',
-    rmcode: '',
-    terms: false,
-  });
-  const [enqForm, setEnqForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    applicant_name: '', father_or_husband_name: '', dob: '', phone: '', email: '',
+    aadhaar: '', pan: '', address: '', city: '', pincode: '', state: '',
+    quota: '', size: '', rmcode: '', terms: false,
   });
   const [regFormErrors, setRegFormErrors] = useState({});
-  const [showFlash, setShowFlash] = useState(false);
   const dobInputRef = useRef(null);
 
+  // Quick Enquiry Popup
+  const [showEnquiryPopup, setShowEnquiryPopup] = useState(false);
+  const [enquiryForm, setEnquiryForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [enquiryErrors, setEnquiryErrors] = useState({});
+  const [enquirySubmitting, setEnquirySubmitting] = useState(false);
+  const toastRef = useRef(null);
+
+  // Open Registration Modal
+  const openRegistrationModal = () => {
+    const modalElement = document.getElementById('registrationModal');
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement);
+      modal.show();
+    }
+  };
+
+  // Auto-open enquiry popup (only once per session)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowEnquiryPopup(true);
+      sessionStorage.setItem('enquiryPopupSeen', 'true');
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Initialize Toast
+  useEffect(() => {
+    if (toastRef.current) {
+      new bootstrap.Toast(toastRef.current).show();
+    }
+  }, [showFlash]);
+
+  // Flash message handling
   useEffect(() => {
     if (flash && flash.message) {
       setShowFlash(true);
@@ -55,99 +78,84 @@ const App = ({ flash }) => {
     }
   }, [flash]);
 
-useEffect(() => {
-  const endTime = new Date(2025, 10, 23, 23, 59, 59).getTime() / 1000;
-
-  const makeTimer = () => {
-    const now = Date.now() / 1000;
-    const timeLeft = endTime - now;
-
-    if (timeLeft <= 0) {
-      setCountdown({ days: '00', hours: '00', minutes: '00', seconds: '00' });
-      return;
-    }
-
-    const days = Math.floor(timeLeft / 86400);
-    const hours = Math.floor((timeLeft % 86400) / 3600);
-    const minutes = Math.floor((timeLeft % 3600) / 60);
-    const seconds = Math.floor(timeLeft % 60);
-
-    setCountdown({
-      days: days < 10 ? `0${days}` : days,
-      hours: hours < 10 ? `0${hours}` : hours,
-      minutes: minutes < 10 ? `0${minutes}` : minutes,
-      seconds: seconds < 10 ? `0${seconds}` : seconds,
-    });
-  };
-
-  const interval = setInterval(makeTimer, 1000);
-  return () => clearInterval(interval);
-}, []);
-
-
+  // Countdown Timer
   useEffect(() => {
-    import('@fancyapps/ui')
-      .then(({ Fancybox }) => {
-        Fancybox.bind('[data-fancybox]', {});
-      })
-      .catch((error) => console.error('Error loading Fancybox:', error));
+    const endTime = Date.parse('October 12, 2025 18:00:00 PDT') / 1000;
+    const updateTimer = () => {
+      const now = Date.now() / 1000;
+      const timeLeft = endTime - now;
+
+      if (timeLeft <= 0) {
+        setCountdown({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+        return;
+      }
+
+      const days = Math.floor(timeLeft / 86400);
+      const hours = Math.floor((timeLeft % 86400) / 3600);
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = Math.floor(timeLeft % 60);
+
+      setCountdown({
+        days: days < 10 ? `0${days}` : days,
+        hours: hours < 10 ? `0${hours}` : hours,
+        minutes: minutes < 10 ? `0${minutes}` : minutes,
+        seconds: seconds < 10 ? `0${seconds}` : seconds,
+      });
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    return () => clearInterval(interval);
   }, []);
 
-  const toggleNav = () => setIsNavOpen(!isNavOpen);
+  // Fancybox
+  useEffect(() => {
+    import('@fancyapps/ui').then(({ Fancybox }) => {
+      Fancybox.bind('[data-fancybox]', {});
+    }).catch(err => console.error('Fancybox load error:', err));
+  }, []);
 
+  const toggleNav = () => setIsNavOpen(prev => !prev);
   const handleNavLinkClick = (e, targetId) => {
     e.preventDefault();
     setIsNavOpen(false);
-    const element = document.querySelector(targetId);
-    if (element) {
-      window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
-    }
+    document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Registration Form (unchanged)
   const validateRegForm = () => {
     const errors = {};
     if (!regForm.applicant_name) errors.applicant_name = 'Applicant Name is required';
     if (!regForm.father_or_husband_name) errors.father_or_husband_name = 'Father/Husband Name is required';
     if (!regForm.dob) errors.dob = 'Date of Birth is required';
-    else {
-      const selectedDate = new Date(regForm.dob);
-      const today = new Date();
-      if (selectedDate > today) errors.dob = 'Date of Birth cannot be in the future';
-    }
-    if (!regForm.phone || !/^[0-9]{10}$/.test(regForm.phone)) errors.phone = 'Valid 10-digit Phone Number is required';
-    if (!regForm.email || !/\S+@\S+\.\S+/.test(regForm.email)) errors.email = 'Valid Email is required';
-    if (regForm.aadhaar && !/^[0-9]{12}$/.test(regForm.aadhaar)) errors.aadhaar = 'Valid 12-digit Aadhaar is required';
-    if (!regForm.pan || !/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(regForm.pan)) errors.pan = 'Valid PAN is required';
+    if (!regForm.phone || !/^[0-9]{10}$/.test(regForm.phone)) errors.phone = 'Valid 10-digit phone required';
+    if (!regForm.email || !/\S+@\S+\.\S+/.test(regForm.email)) errors.email = 'Valid email required';
+    if (regForm.aadhaar && !/^[0-9]{12}$/.test(regForm.aadhaar)) errors.aadhaar = 'Valid 12-digit Aadhaar required';
+    if (!regForm.pan || !/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(regForm.pan)) errors.pan = 'Valid PAN required';
     if (!regForm.address) errors.address = 'Address is required';
     if (!regForm.city) errors.city = 'City is required';
-    if (!regForm.pincode || !/^[0-9]{6}$/.test(regForm.pincode)) errors.pincode = 'Valid 6-digit Pincode is required';
+    if (!regForm.pincode || !/^[0-9]{6}$/.test(regForm.pincode)) errors.pincode = 'Valid 6-digit pincode required';
     if (!regForm.state) errors.state = 'State is required';
     if (!regForm.quota) errors.quota = 'Quota is required';
-    if (!regForm.size) errors.size = 'Size is required';
+    if (!regForm.size) errors.size = 'Size selection is required';
     if (!regForm.rmcode) errors.rmcode = 'RM Code is required';
-    if (!regForm.terms) errors.terms = 'You must agree to the Terms and Conditions';
+    if (!regForm.terms) errors.terms = 'You must agree to Terms & Conditions';
     return errors;
   };
 
   const handleRegFormChange = (e) => {
     const { name, value, type, checked } = e.target || e;
-    setRegForm((prev) => ({
+    setRegForm(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
     if (regFormErrors[name]) {
-      setRegFormErrors((prev) => ({ ...prev, [name]: '' }));
+      setRegFormErrors(prev => ({ ...prev, [name]: '' }));
     }
-  };
-
-  const handleEnqFormChange = (e) => {
-    const { name, value } = e.target;
-    setEnqForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleRegFormSubmit = async (e) => {
     e.preventDefault();
-
     const errors = validateRegForm();
     if (Object.keys(errors).length > 0) {
       setRegFormErrors(errors);
@@ -156,78 +164,116 @@ useEffect(() => {
 
     try {
       const response = await axios.post('/api/register', regForm);
-      console.log('Registration Response:', response.data);
-
       if (response.data.success && response.data.payment_url) {
-        // Close modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('registrationModal'));
         modal.hide();
-
-        // Reset form
         setRegForm({
-          applicant_name: '',
-          father_or_husband_name: '',
-          dob: '',
-          phone: '',
-          email: '',
-          aadhaar: '',
-          pan: '',
-          address: '',
-          city: '',
-          pincode: '',
-          state: '',
-          quota: '',
-          size: '',
-          rmcode: '',
-          terms: false,
+          applicant_name: '', father_or_husband_name: '', dob: '', phone: '', email: '',
+          aadhaar: '', pan: '', address: '', city: '', pincode: '', state: '',
+          quota: '', size: '', rmcode: '', terms: false,
         });
         setRegFormErrors({});
-
-        // Redirect to Easebuzz
         window.location.href = response.data.payment_url;
       }
     } catch (error) {
-      console.error('Registration Error:', error);
-
-      if (error.response && error.response.data && error.response.data.errors) {
+      console.error(error);
+      if (error.response?.data?.errors) {
         setRegFormErrors(error.response.data.errors);
       } else {
-        setShowFlash(true);
-        flash.message = 'An error occurred during registration.';
-        setTimeout(() => setShowFlash(false), 5000);
+        alert('Registration failed. Please try again.');
       }
     }
   };
 
-  const handleEnqFormSubmit = async (e) => {
+  // Quick Enquiry Validation & Submit
+  const validateEnquiry = () => {
+    const err = {};
+    if (!enquiryForm.name.trim()) err.name = 'Name is required';
+    if (!enquiryForm.phone.match(/^[6-9]\d{9}$/)) err.phone = 'Valid 10-digit mobile required';
+    if (enquiryForm.email && !/\S+@\S+\.\S+/.test(enquiryForm.email)) err.email = 'Invalid email';
+    return err;
+  };
+
+  const handleEnquiryChange = (e) => {
+    const { name, value } = e.target;
+    setEnquiryForm(prev => ({ ...prev, [name]: value }));
+    if (enquiryErrors[name]) setEnquiryErrors(prev => ({ ...prev, [name]: '' }));
+  };
+
+  const showToast = (message, isSuccess = true) => {
+    const toastEl = document.getElementById('enquiryToast');
+    const toastBody = toastEl.querySelector('.toast-body');
+    toastBody.textContent = message;
+    toastEl.classList.remove('text-bg-success', 'text-bg-danger');
+    toastEl.classList.add(isSuccess ? 'text-bg-success' : 'text-bg-danger');
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  };
+
+  const handleEnquirySubmit = async (e) => {
     e.preventDefault();
+    const errors = validateEnquiry();
+    if (Object.keys(errors).length > 0) {
+      setEnquiryErrors(errors);
+      return;
+    }
 
+    setEnquirySubmitting(true);
     try {
-      const response = await axios.post('/api/enquiry', enqForm);
-      if (response.data.success) {
-        alert(response.data.message);
-        setEnqForm({ name: '', email: '', phone: '' });
-        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-        modal.hide();
-      } else {
-        alert(response.data.message || 'Something went wrong');
-      }
-    } catch (error) {
-      console.error('Error submitting enquiry:', error);
-      alert('Error submitting enquiry. Please try again later.');
+      await axios.post('/api/enquiry', enquiryForm);
+
+      showToast('Thank you! We will contact you shortly.', true);
+      setEnquiryForm({ name: '', email: '', phone: '', message: '' });
+      setEnquiryErrors({});
+      setShowEnquiryPopup(false);
+    } catch (err) {
+      const msg = err.response?.data?.message || 'Failed to submit. Please try again.';
+      showToast(msg, false);
+    } finally {
+      setEnquirySubmitting(false);
     }
   };
+
 
   return (
-    <div>
-      {showFlash && flash && flash.message && (
-        <div className="alert alert-dismissible fade show mt-3 mx-auto" style={{ maxWidth: '600px' }} role="alert">
-          <strong>{flash.success ? 'Success' : 'Error'}</strong>: {flash.message}
-          <button type="button" className="btn-close" onClick={() => setShowFlash(false)} aria-label="Close"></button>
+    <>
+      {/* Inertia Flash Message */}
+      {showFlash && flash?.message && (
+        <div className="alert alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3" style={{ zIndex: 9999 }} role="alert">
+          <strong>{flash.success ? 'Success' : 'Error'}:</strong> {flash.message}
+          <button type="button" className="btn-close" onClick={() => setShowFlash(false)}></button>
         </div>
       )}
-      <Header isNavOpen={isNavOpen} toggleNav={toggleNav} handleNavLinkClick={handleNavLinkClick} />
-      <BannerSection countdown={countdown} />
+
+      {/* Toast Notification for Enquiry */}
+      <div className="toast-container position-fixed bottom-0 end-0 p-3" style={{ zIndex: 9999 }}>
+        <div id="enquiryToast" className="toast align-items-center text-white border-0" role="alert">
+          <div className="d-flex">
+            <div className="toast-body fw-bold"></div>
+            <button type="button" className="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+          </div>
+        </div>
+      </div>
+
+      <Header isNavOpen={isNavOpen} toggleNav={toggleNav} handleNavLinkClick={handleNavLinkClick} openRegistrationModal={openRegistrationModal} />
+
+      <div>
+        <BannerSection openRegistrationModal={openRegistrationModal} />
+        <FeaturesSection />
+        {/* <NewsAdd/> */}
+        <ProjectIntro />
+        <ApprovedBanks />
+        <RegistrationBanner openRegistrationModal={openRegistrationModal} />
+        <GalleryComponent />
+        <ProjectHighlights />
+
+        <PriceList />
+        <LocationAdvantages />
+        <AboutDDJAY />
+        <Footer />
+      </div>
+
+      {/* Registration Modal */}
       <RegistrationModal
         regForm={regForm}
         regFormErrors={regFormErrors}
@@ -236,13 +282,95 @@ useEffect(() => {
         validateRegForm={validateRegForm}
         dobInputRef={dobInputRef}
       />
-      <MainContent
-        enqForm={enqForm}
-        handleEnqFormChange={handleEnqFormChange}
-        handleEnqFormSubmit={handleEnqFormSubmit}
-        handleNavLinkClick={handleNavLinkClick}
-      />
-    </div>
+
+      {/* Enquiry Popup */}
+      {showEnquiryPopup && (
+        <div className="position-fixed inset-0 d-flex align-items-center justify-content-center"
+          style={{ zIndex: 9999, background: 'rgba(0,0,0,0.7)' }}
+          onClick={() => setShowEnquiryPopup(false)}
+        >
+          <div className="bg-white shadow-lg p-4 mx-3"
+            style={{ maxWidth: '460px', width: '100%' }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="d-flex justify-content-between align-items-center mb-3">
+              <h4 className="mb-0 fw-bold">Quick Enquiry</h4>
+              <button className="btn-close" onClick={() => setShowEnquiryPopup(false)}></button>
+            </div>
+
+            <form onSubmit={handleEnquirySubmit}>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  value={enquiryForm.name}
+                  onChange={handleEnquiryChange}
+                  className={`form-control ${enquiryErrors.name ? "is-invalid" : ""}`}
+                  placeholder="Your Name *"
+                />
+                {enquiryErrors.name && <div className="invalid-feedback">{enquiryErrors.name}</div>}
+              </div>
+
+              <div className="mb-3">
+                <input
+                  type="tel"
+                  name="phone"
+                  value={enquiryForm.phone}
+                  onChange={handleEnquiryChange}
+                  className={`form-control ${enquiryErrors.phone ? "is-invalid" : ""}`}
+                  placeholder="Mobile Number *"
+                  maxLength="10"
+                />
+                {enquiryErrors.phone && <div className="invalid-feedback">{enquiryErrors.phone}</div>}
+              </div>
+
+              <div className="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  value={enquiryForm.email}
+                  onChange={handleEnquiryChange}
+                  className={`form-control ${enquiryErrors.email ? "is-invalid" : ""}`}
+                  placeholder="Email"
+                />
+                {enquiryErrors.email && <div className="invalid-feedback">{enquiryErrors.email}</div>}
+              </div>
+
+              <div className="mb-4">
+                <textarea
+                  name="message"
+                  rows="3"
+                  value={enquiryForm.message}
+                  onChange={handleEnquiryChange}
+                  className={`form-control ${enquiryErrors.message ? "is-invalid" : ""}`}
+                  placeholder="Your Message (Optional)"
+                ></textarea>
+              </div>
+
+
+              <Button
+                type="submit"
+                disabled={enquirySubmitting}
+                className="bg-green-600 hover:bg-green-300 w-full"
+              >
+                {enquirySubmitting ? "Submitting..." : "Submit"}
+              </Button>
+            </form>
+
+          </div>
+        </div>
+      )}
+
+      {/* Floating Enquiry Button */}
+      <button
+        onClick={() => setShowEnquiryPopup(true)}
+        className="btn btn-primary rounded-circle shadow-lg position-fixed d-flex align-items-center justify-content-center"
+        style={{ bottom: '20px', right: '20px', zIndex: 998, width: '60px', height: '60px', fontSize: '24px', backgroundColor: '#2563eb' }}
+        title="Quick Enquiry"
+      >
+        <i className="fas fa-phone-alt text-white"></i>
+      </button>
+    </>
   );
 };
 

@@ -1,137 +1,110 @@
-import React from 'react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import { Button } from "../ui/button";
 
-const BannerSection = ({ countdown }) => {
+export default function BannerSection({ openRegistrationModal }) {
+  const slideImages = [
+    "/images/aranyabanner.jpeg",
+    "/images/aranyabanner1.jpeg",
+    "/images/aranyabanner2.jpeg",
+  ];
+
   return (
     <>
+      {/* NEWS TICKER */}
       <div className="news-tricker">
-        <marquee width="100%" direction="left" height="100px">
-          ATTENTION REGISTRATION OPEN !!!! Book you plot under Haryana Government DTCP Policy 2013 for Aaranya Greens *** 33% Quota Reserved for Women *** 33% Quota Reserved under Government Category *** UNIT ALLOTMENT DATE 27 November 2025 *** LAST DATE OF APPLICATION 23 November 2025 *** Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
+        <marquee
+          width="100%"
+          direction="left"
+          className="text-[17px] font-semibold"
+        >
+          ATTENTION REGISTRATION OPEN !!!! Book Your Plot under Affordable
+          Housing Policy 2013 for{" "}
+          <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***  
+          33% Quota Reserved for Women ***  
+          Haryana Govt. Residential Plots ***
+
+          UNIT ALLOTMENT DATE:
+          <span className="bg-yellow-400 text-black px-3 py-1 mx-2 rounded-sm blink-date">
+            28 December 2025
+          </span>
+
+          LAST DATE OF APPLICATION:
+          <span className="bg-red-600 text-white px-3 py-1 mx-2 font-bold blink-date rounded-sm">
+            2 January 2026
+          </span>
+
+          Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
         </marquee>
       </div>
 
-      <section className="bnr-section">
-        <div className="container">
-          <div className="row">
-            {/* LEFT COLUMN */}
-            <div className="col-md-3">
-              <div className="col-md-12">
-                <div className="one-sec">
-                  <span><p>Registration Open Until - 23/11/25 Friday</p></span>
-                </div>
+      <div className="relative w-full" style={{ maxHeight: "70dvh" }}>
+        {/* OVERLAY CONTENT */}
+        <div className="absolute top-0 left-0 w-full h-full z-50">
+          <div className="absolute inset-0 bg-black opacity-60"></div>
 
-                <div className="two-sec scond">
-                  <div id="timer" className="flex-wrap d-flex justify-content-center text-center">
-                    <p className="text-success fw-bold text-red-600">Registration Closes in</p>
-                    <div>
-                      <span>{countdown.days} Days </span>
-                      <span>{countdown.hours} Hours </span>
-                      <span>{countdown.minutes} Minutes </span>
-                      <span>{countdown.seconds} Seconds</span>
-                    </div>
-                  </div>
-                </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="max-w-4xl text-center space-y-6 px-4">
 
-                <div className="one-sec trd">
-                  <span><a href="#payment-plan">Attractive Payment Plan <br />10%-40%-25%-25%</a>
-                  
-                  </span>
-                </div>
+              <h2 className="text-white text-3xl md:text-4xl font-bold tracking-wide">
+                AARANYA GREENS Residential Plots & Builder Floors Sector 35, Sonipat
+              </h2>
 
-                <div className="one-sec">
-                  <span><p>HRERA-PKL-SNP-675-2025 - Aaranya Greens</p></span>
-                </div>
+              <p className="text-base text-white font-semibold">
+                HRERA-PKL-SNP-675-2025 dated on 19-03-2025
+              </p>
 
-                <div className="one-sec trd">
-                  <span><a href="#loan">Loan Facility Available</a></span>
-                </div>
+              <p className="text-green-300 text-xl font-bold tracking-wide">
+                REGISTRATION OPEN
+              </p>
 
-                <div className="bg-green-600 p-1 rounded-lg">
-                  <p
-                    className="text-white font-bold text-sm text-center animate-[zoomInOut_2s_ease-in-out_infinite] hover:scale-110 hover:text-green-700 transition-transform duration-700"
-                  >
-                    **Registration Close**
-                  </p>
-                </div>
+              <p className="text-white text-lg font-semibold">
+                (HARYANA GOVT. RESIDENTIAL PLOTS)
+              </p>
 
+              <p className="text-yellow-400 text-lg font-bold">
+                Sonipat’s First 24 Meter Road Plots at This Price
+              </p>
+
+              {/* BUTTON + HIGHLIGHT */}
+              <div className="flex flex-col items-center gap-4 pt-4">
+                <Button
+                  onClick={openRegistrationModal}
+                  className="rounded-2xl bg-[#53bf4e] text-white"
+                >
+                  Register Now
+                </Button>
               </div>
-            </div>
-
-            {/* CENTER COLUMN */}
-            <div className="col-md-6 text-center text-bold">
-              <h1>DEEN DAYAL JAN AWAS YOJNA</h1>
-              <h5> (Under Haryana Governement DTCP)</h5>
-              <div className="carousel-wrapper">
-                <img src="images/rera-logo.png" alt="Overlay" className="carousel-overlay-img" />
-                <div id="bannerCarousel" className="carousel slide bnr-img" data-bs-ride="c arousel">
-                  <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img src="images/aranyabanner.jpeg" className="d-block w-100" alt="Aranya Greens Slide 1" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src="images/aranyabanner1.jpeg" className="d-block w-100" alt="Aranya Greens Slide 2" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src="images/aranyabanner2.jpeg" className="d-block w-100" alt="Aranya Greens Slide 3" />
-                    </div>
-                    <div className="carousel-item">
-                      <img src="images/aranyabanner3.jpeg" className="d-block w-100" alt="Aranya Greens Slide 4" />
-                    </div>
-                  </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT COLUMN */}
-            <div class="col-md-3">
-              <div class="col-md-12">
-
-
-
-                <div class="one-sec">
-                  <span><p class="">HRERA-PKL-SNP-675-2025 dated on 19-03-2025 </p></span>
-                </div>
-
-                <div class="two-sec scond click_pad space-y-10">
-                  <p><span><i class="fa fa-check-double"></i></span>Click to View Final License<a href="images/final-licence.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  <p><span><i class="fa fa-check-double"></i></span> Click to View Layout Plan<a href="images/layoutplan.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  <p><span><i class="fa fa-check-double"></i></span> Click to View RERA Certificate<a href="images/reracertificate.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  <p><span><i class="fa fa-check-double"></i></span>Click to View Brochure<a href="images/newAaranyaGreensBrochure.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  <p><span><i class="fa fa-check-double"></i></span>Click to View Price List<a href="images/AaranyaGreensNewPriceLists.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p>
-                  {/* <p><span><i class="fa fa-check-double"></i></span> Click to View Factsheet<a href="images/Aaranyafactsheetnewupdated.pdf" target="_blank" class="text-red blink-soft"><i class="fa-solid fa-arrow-right"></i>Click Here</a></p> */}
-
-
-
-                </div>
-                <div class="one-sec trd">
-                  <span><a href="#" class="">Registration Open Only for 20 Plots.</a></span>
-                </div>
-
-
-
-              </div>
-
-
 
             </div>
           </div>
         </div>
-      </section>
+
+        {/* SWIPER */}
+        <Swiper
+          className="mySwiper w-full h-full"
+          slidesPerView={1}
+          loop
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+        >
+          {slideImages.map((src, index) => (
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center bg-gray-100"
+              style={{ height: "70dvh" }}
+            >
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className="object-cover w-full h-full"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
-};
-
-export default BannerSection;
+}
