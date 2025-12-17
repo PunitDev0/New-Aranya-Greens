@@ -13,9 +13,9 @@ const Footer = () => {
                 </p>
                 <p>
                   &copy; Copyright 2025. All Rights Reserved{' '}
-                  <a href="privacy.php" target="_blank">Privacy Policy</a> |{' '}
-                  <a href="terms.php" target="_blank">Terms & Conditions</a> |{' '}
-                  <a href="refund-policy.php" target="_blank">Refund Policy</a>
+                  <a href="privacy" target="_blank">Privacy Policy</a> |{' '}
+                  <a href="terms" target="_blank">Terms & Conditions</a> |{' '}
+                  <a href="refund-policy" target="_blank">Refund Policy</a>
                 </p>
               </div>
             </div>
