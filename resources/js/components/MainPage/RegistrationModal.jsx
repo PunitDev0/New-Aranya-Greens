@@ -221,7 +221,7 @@ const RegistrationModal = ({
                     <option value="Female Applicant">Female Applicant</option>
                     <option value="Govt Employee Applicant">Govt Employee Applicant</option>
                     <option value="General Applicant">General Applicant</option>
-                    <option value="Management Quota Applicant">Management Quota Applicant</option>
+                    {/* <option value="Management Quota Applicant">Management Quota Applicant</option> */}
                   </select>
                   {regFormErrors.quota && <div className="invalid-feedback">{regFormErrors.quota}</div>}
                 </div>
