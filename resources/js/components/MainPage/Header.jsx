@@ -72,17 +72,20 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
           <div className="flex flex-col py-4 px-6 space-y-4">
             {navItems.map((item, i) => (
               <a
-                key={i}
-                href={item.link}
-                onClick={(e) => {
+              key={i}
+              href={item.link}
+              onClick={(e) => {
+                if (item.link.startsWith("#")) {
                   handleNavLinkClick(e, item.link);
-                  toggleNav();
-                }}
-                className="flex items-center gap-2 text-gray-700 hover:text-green-600"
-              >
-                <Check className="h-5 w-5 text-green-600" />
-                {item.label}
-              </a>
+                }
+                toggleNav(); // menu close
+              }}
+              className="flex items-center gap-2 text-gray-700 hover:text-green-600"
+            >
+              <Check className="h-5 w-5 text-green-600" />
+              {item.label}
+            </a>
+            
             ))}
             <Button
               onClick={() => {
@@ -91,7 +94,7 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
               }}
               className="w-full rounded-full bg-[#4285f4] hover:bg-blue-700"
             >
-               Registration Closed
+               Registration Open
             </Button>
           </div>
         </div>
