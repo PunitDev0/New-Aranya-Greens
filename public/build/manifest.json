@@ -1,31 +1,31 @@
 {
-  "_check-CqFOTukB.js": {
-    "file": "assets/check-CqFOTukB.js",
+  "_check-0aKAYkpd.js": {
+    "file": "assets/check-0aKAYkpd.js",
     "name": "check",
     "imports": [
-      "_index-NxUxDMq8.js"
+      "_index-BjwLEEy7.js"
     ]
   },
-  "_index-CtsbKeX0.js": {
-    "file": "assets/index-CtsbKeX0.js",
-    "name": "index",
-    "imports": [
-      "_index-NxUxDMq8.js",
-      "resources/js/app.jsx"
-    ]
-  },
-  "_index-NxUxDMq8.js": {
-    "file": "assets/index-NxUxDMq8.js",
+  "_index-BjwLEEy7.js": {
+    "file": "assets/index-BjwLEEy7.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_x-Dt0CsNtB.js": {
-    "file": "assets/x-Dt0CsNtB.js",
+  "_index-rYG0RNQs.js": {
+    "file": "assets/index-rYG0RNQs.js",
+    "name": "index",
+    "imports": [
+      "_index-BjwLEEy7.js",
+      "resources/js/app.jsx"
+    ]
+  },
+  "_x-gF30O8FH.js": {
+    "file": "assets/x-gF30O8FH.js",
     "name": "x",
     "imports": [
-      "_index-NxUxDMq8.js"
+      "_index-BjwLEEy7.js"
     ]
   },
   "node_modules/@fancyapps/ui/dist/index.js": {
@@ -59,7 +59,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-CtNHVuve.js",
+    "file": "assets/app-B3xYVJIF.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -78,7 +78,7 @@
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-v-6pdkXV.js",
+    "file": "assets/PaymentForm-BNPNSkTD.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -90,7 +90,7 @@
     ]
   },
   "resources/js/pages/Privacy.jsx": {
-    "file": "assets/Privacy-B-ohhdDc.js",
+    "file": "assets/Privacy-CAIbAlIz.js",
     "name": "Privacy",
     "src": "resources/js/pages/Privacy.jsx",
     "isDynamicEntry": true,
@@ -102,7 +102,7 @@
     ]
   },
   "resources/js/pages/RefundPolicy.jsx": {
-    "file": "assets/RefundPolicy-BFC0Htn-.js",
+    "file": "assets/RefundPolicy-DCSUv-dQ.js",
     "name": "RefundPolicy",
     "src": "resources/js/pages/RefundPolicy.jsx",
     "isDynamicEntry": true,
@@ -114,7 +114,7 @@
     ]
   },
   "resources/js/pages/Terms.jsx": {
-    "file": "assets/Terms-D2sE5WKz.js",
+    "file": "assets/Terms-D3JWDKSV.js",
     "name": "Terms",
     "src": "resources/js/pages/Terms.jsx",
     "isDynamicEntry": true,
@@ -126,45 +126,45 @@
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-R8-b04W1.js",
+    "file": "assets/dashboard-B9mP9RN8.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-NxUxDMq8.js",
-      "_index-CtsbKeX0.js",
-      "_x-Dt0CsNtB.js"
+      "_index-BjwLEEy7.js",
+      "_index-rYG0RNQs.js",
+      "_x-gF30O8FH.js"
     ],
     "css": [
       "assets/app-Cwy4PMlJ.css"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-DS02aB-M.js",
+    "file": "assets/login-DsKl64jF.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-NxUxDMq8.js",
-      "_index-CtsbKeX0.js",
-      "_check-CqFOTukB.js"
+      "_index-BjwLEEy7.js",
+      "_index-rYG0RNQs.js",
+      "_check-0aKAYkpd.js"
     ],
     "css": [
       "assets/app-Cwy4PMlJ.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-Chc7oOlG.js",
+    "file": "assets/welcome-DW2QeEhl.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-NxUxDMq8.js",
-      "_check-CqFOTukB.js",
-      "_x-Dt0CsNtB.js"
+      "_index-BjwLEEy7.js",
+      "_check-0aKAYkpd.js",
+      "_x-gF30O8FH.js"
     ],
     "dynamicImports": [
       "node_modules/@fancyapps/ui/dist/index.js"

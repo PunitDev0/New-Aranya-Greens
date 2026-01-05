@@ -20,7 +20,7 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION REGISTRATION OPEN !!!! Book Your Plot under Affordable
+          ATTENTION REGISTRATION Closed !!!! Book Your Plot under Affordable
           Housing Policy 2013 for{" "}
           <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***  
           33% Quota Reserved for Women ***  
