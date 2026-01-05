@@ -57,7 +57,7 @@ export default function BannerSection({ openRegistrationModal }) {
               </p>
 
               <p className="text-green-300 text-xl font-bold tracking-wide">
-                REGISTRATION OPEN
+                REGISTRATION Closed
               </p>
 
               <p className="text-white text-lg font-semibold">
@@ -71,10 +71,10 @@ export default function BannerSection({ openRegistrationModal }) {
               {/* BUTTON + HIGHLIGHT */}
               <div className="flex flex-col items-center gap-4 pt-4">
                 <Button
-                  onClick={openRegistrationModal}
+                  // onClick={openRegistrationModal}
                   className="rounded-2xl bg-[#53bf4e] text-white"
                 >
-                  Register Now
+                  Registration Closed
                 </Button>
               </div>
 
