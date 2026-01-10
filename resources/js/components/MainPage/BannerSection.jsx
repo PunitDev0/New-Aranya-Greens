@@ -20,7 +20,7 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION REGISTRATION Closed !!!! Book Your Plot under Affordable
+          ATTENTION REGISTRATION Open !!!! Book Your Plot under Affordable
           Housing Policy 2013 for{" "}
           <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***  
           33% Quota Reserved for Women ***  
@@ -57,7 +57,7 @@ export default function BannerSection({ openRegistrationModal }) {
               </p>
 
               <p className="text-green-300 text-xl font-bold tracking-wide">
-                REGISTRATION Closed
+                REGISTRATION Open
               </p>
 
               <p className="text-white text-lg font-semibold">
@@ -71,10 +71,10 @@ export default function BannerSection({ openRegistrationModal }) {
               {/* BUTTON + HIGHLIGHT */}
               <div className="flex flex-col items-center gap-4 pt-4">
                 <Button
-                  // onClick={openRegistrationModal}
+                  onClick={openRegistrationModal}
                   className="rounded-2xl bg-[#53bf4e] text-white"
                 >
-                  Registration Closed
+                  Registration Open
                 </Button>
               </div>
 
