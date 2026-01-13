@@ -28,12 +28,12 @@ export default function BannerSection({ openRegistrationModal }) {
 
           UNIT ALLOTMENT DATE:
           <span className="bg-yellow-400 text-black px-3 py-1 mx-2 rounded-sm blink-date">
-            25 January 2026
+            12 February 2026
           </span>
 
-          LAST DATE OF APPLICATION:
+          LAST DATE OF Registration:
           <span className="bg-red-600 text-white px-3 py-1 mx-2 font-bold blink-date rounded-sm">
-            29 January 2026
+            8 February 2026
           </span>
 
           Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days

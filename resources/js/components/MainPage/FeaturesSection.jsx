@@ -45,14 +45,14 @@ function CountdownTimer() {
 // ==================== NOTICE DATA ====================
 const notices = [
   {
-    title: "Registration Last Date - 24 January 2026",
+    title: "Registration Last Date - 8 February 2026",
     countdown: true,
     extra: "Please check our website for future updates.",
     borderColor: "border-green-500",
   },
   {
     title: "Registration Open",
-    description: "Allotment Last Date 29 January 2026",
+    description: "Allotment Last Date 12 February 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
   },
