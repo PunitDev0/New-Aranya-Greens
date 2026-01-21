@@ -9,10 +9,10 @@ export default function DisclaimerPage() {
           <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             {/* Brand */}
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+              <h1 className="text-xl md:text-5xl font-bold text-gray-900">
                 Disclaimer
               </h1>
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="text-xl text-gray-500 mt-1">
                 Important information about our website and services
               </p>
             </div>
