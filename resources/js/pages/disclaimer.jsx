@@ -17,21 +17,6 @@ export default function DisclaimerPage() {
               </p>
             </div>
   
-            {/* Buttons */}
-            <div className="flex items-center gap-3">
-              <a
-                href="/"
-                className="px-4 py-2 border border-gray-300 bg-white text-gray-900 font-semibold text-sm hover:bg-gray-50 transition"
-              >
-                ⬅ Back to Home
-              </a>
-              <a
-                href="/contact"
-                className="px-4 py-2 bg-green-600 text-white font-semibold text-sm hover:bg-green-700 transition"
-              >
-                Contact Us
-              </a>
-            </div>
           </div>
         </header>
   
@@ -160,30 +145,10 @@ export default function DisclaimerPage() {
                   </div>
                 </div>
   
-                <a
-                  href="/contact"
-                  className="mt-5 inline-flex w-full items-center justify-center px-4 py-2 bg-green-600 text-white font-semibold text-sm hover:bg-green-700 transition"
-                >
-                  Contact Now
-                </a>
+              
               </div>
   
-              {/* CTA Box */}
-              <div className="border border-green-200 bg-green-50 p-6">
-                <h3 className="text-lg font-bold text-green-900">
-                  Registration Assistance
-                </h3>
-                <p className="text-sm text-green-900/90 mt-2">
-                  We can guide you through registration steps and documentation.
-                </p>
-  
-                <a
-                  href="/register"
-                  className="mt-5 inline-flex w-full items-center justify-center px-4 py-2 bg-green-600 text-white font-semibold text-sm hover:bg-green-700 transition"
-                >
-                  Registration Open
-                </a>
-              </div>
+            
             </aside>
           </div>
   

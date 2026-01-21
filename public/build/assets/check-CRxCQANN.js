@@ -1,6 +1,6 @@
-import{a as o}from"./index-CW9xboWm.js";/**
+import{a as c}from"./index-Dqofu2Yu.js";/**
  * @license lucide-react v0.475.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
- */const e=[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]],c=o("X",e);export{c as X};
+ */const e=[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]],t=c("Check",e);export{t as C};

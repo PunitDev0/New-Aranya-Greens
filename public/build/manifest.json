@@ -1,31 +1,31 @@
 {
-  "_check-Dkdoxg21.js": {
-    "file": "assets/check-Dkdoxg21.js",
+  "_check-CRxCQANN.js": {
+    "file": "assets/check-CRxCQANN.js",
     "name": "check",
     "imports": [
-      "_index-CW9xboWm.js"
+      "_index-Dqofu2Yu.js"
     ]
   },
-  "_index-CW9xboWm.js": {
-    "file": "assets/index-CW9xboWm.js",
+  "_index-DPe8pj7I.js": {
+    "file": "assets/index-DPe8pj7I.js",
+    "name": "index",
+    "imports": [
+      "_index-Dqofu2Yu.js",
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index-Dqofu2Yu.js": {
+    "file": "assets/index-Dqofu2Yu.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_index-ChofWIKz.js": {
-    "file": "assets/index-ChofWIKz.js",
-    "name": "index",
-    "imports": [
-      "_index-CW9xboWm.js",
-      "resources/js/app.jsx"
-    ]
-  },
-  "_x-aHV04Bz2.js": {
-    "file": "assets/x-aHV04Bz2.js",
+  "_x-DXsZoolH.js": {
+    "file": "assets/x-DXsZoolH.js",
     "name": "x",
     "imports": [
-      "_index-CW9xboWm.js"
+      "_index-Dqofu2Yu.js"
     ]
   },
   "node_modules/@fancyapps/ui/dist/index.js": {
@@ -59,7 +59,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-y5kPwuGg.js",
+    "file": "assets/app-CGVb-nR3.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -79,7 +79,7 @@
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-CCXpucbK.js",
+    "file": "assets/PaymentForm-8dW_ycI1.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -91,7 +91,7 @@
     ]
   },
   "resources/js/pages/Privacy.jsx": {
-    "file": "assets/Privacy-DQ92PtJ_.js",
+    "file": "assets/Privacy-votXaDWy.js",
     "name": "Privacy",
     "src": "resources/js/pages/Privacy.jsx",
     "isDynamicEntry": true,
@@ -103,7 +103,7 @@
     ]
   },
   "resources/js/pages/RefundPolicy.jsx": {
-    "file": "assets/RefundPolicy-Bp0GUKBW.js",
+    "file": "assets/RefundPolicy-DwsY0xlX.js",
     "name": "RefundPolicy",
     "src": "resources/js/pages/RefundPolicy.jsx",
     "isDynamicEntry": true,
@@ -115,7 +115,7 @@
     ]
   },
   "resources/js/pages/Terms.jsx": {
-    "file": "assets/Terms-cKzIzVGl.js",
+    "file": "assets/Terms-CMFPHSNu.js",
     "name": "Terms",
     "src": "resources/js/pages/Terms.jsx",
     "isDynamicEntry": true,
@@ -127,22 +127,22 @@
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-CK-f2iVl.js",
+    "file": "assets/dashboard-BWBpjiAw.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-CW9xboWm.js",
-      "_index-ChofWIKz.js",
-      "_x-aHV04Bz2.js"
+      "_index-Dqofu2Yu.js",
+      "_index-DPe8pj7I.js",
+      "_x-DXsZoolH.js"
     ],
     "css": [
       "assets/app-Ck_6IRX_.css"
     ]
   },
   "resources/js/pages/disclaimer.jsx": {
-    "file": "assets/disclaimer-D_LAjk3C.js",
+    "file": "assets/disclaimer-BKZkDqxC.js",
     "name": "disclaimer",
     "src": "resources/js/pages/disclaimer.jsx",
     "isDynamicEntry": true,
@@ -154,30 +154,30 @@
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-DbgYf0WX.js",
+    "file": "assets/login-AkvKce6J.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-CW9xboWm.js",
-      "_index-ChofWIKz.js",
-      "_check-Dkdoxg21.js"
+      "_index-Dqofu2Yu.js",
+      "_index-DPe8pj7I.js",
+      "_check-CRxCQANN.js"
     ],
     "css": [
       "assets/app-Ck_6IRX_.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-CDuKuaJ7.js",
+    "file": "assets/welcome-Dm8bJDJ4.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-CW9xboWm.js",
-      "_check-Dkdoxg21.js",
-      "_x-aHV04Bz2.js"
+      "_index-Dqofu2Yu.js",
+      "_check-CRxCQANN.js",
+      "_x-DXsZoolH.js"
     ],
     "dynamicImports": [
       "node_modules/@fancyapps/ui/dist/index.js"
