@@ -140,7 +140,7 @@ export default function DisclaimerPage() {
                   <div className="border border-gray-200 p-3">
                     <p className="text-xs text-gray-500">Email</p>
                     <p className="font-semibold text-gray-900">
-                      info@deendayaljanawasyojnareg.org
+                      info@deendayaljanawasyojnareg.com
                     </p>
                   </div>
                 </div>

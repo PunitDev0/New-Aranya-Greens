@@ -20,7 +20,7 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
         </a>
         <span>|</span>
         <a href="mailto:info@deendayaljanawasyojnareg.org" className="hover:underline font-bold text-white">
-          info@deendayaljanawasyojnareg.org
+          info@deendayaljanawasyojnareg.com
         </a>
       </div>
 
