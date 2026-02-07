@@ -9,8 +9,8 @@ use App\Http\Controllers\PaymentController;
 
 
 Route::get('/', fn() => Inertia::render('welcome'))->name('home');
-
-
+Route::get('/about', fn() => Inertia::render('about'))->name('about');
+Route::get('/contact', fn() => Inertia::render('contact'))->name('contact');
 
 Route::get('/terms', fn() => Inertia::render('Terms'))->name('terms');
 Route::get('/privacy', fn() => Inertia::render('Privacy'))->name('privacy');

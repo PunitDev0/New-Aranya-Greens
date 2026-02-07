@@ -12,6 +12,7 @@ import Header from './Header';
 import BannerSection from './BannerSection';
 import RegistrationModal from './RegistrationModal';
 import FeaturesSection from './FeaturesSection';
+import DDJAYResidentialSection from './DDJAYResidentialSection';
 import RegistrationBanner from './RegistrationsBanner';
 import ProjectIntro from './ProjectIntro';
 import ApprovedBanks from './ApprovedBanks';
@@ -20,6 +21,7 @@ import PriceList from './PriceList';
 import LocationAdvantages from './LocationAdvantages';
 import GalleryComponent from './Gallery';
 import AboutDDJAY from './About-DDJAY';
+import WhyConsiderDDJAY from './WhyConsiderDDJAY';
 import Footer from './Footer';
 import { Button } from '../ui/button';
 
@@ -260,6 +262,7 @@ const App = ({ flash }) => {
       <div>
         <BannerSection openRegistrationModal={openRegistrationModal} />
         <FeaturesSection />
+        <DDJAYResidentialSection />
         {/* <NewsAdd/> */}
         <ProjectIntro />
         <ApprovedBanks />
@@ -270,6 +273,7 @@ const App = ({ flash }) => {
         <PriceList />
         <LocationAdvantages />
         <AboutDDJAY />
+        <WhyConsiderDDJAY />
         <Footer />
       </div>
 
