@@ -104,16 +104,16 @@ const MainContent = ({
               <h2 className="h4 h2-md mb-3">AARANYA GREENS, SECTOR - 35 SONIPAT</h2>
               <p>HRERA-PKL-SNP-675-2025 dated on 19-03-2025</p>
               {/* <a href="#" className="btn btn-danger px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#registrationModal">
-                EOI Registration Open
+                EOI Registration Closed
               </a> */}
               <a
                 href="#"
-                className="register-btn text-white fw-bold"
-                data-bs-toggle="modal"
+                className="register-btn bg-gray-500 text-white fw-bold cursor-not-allowed"
+                // data-bs-toggle="modal"
                 // data-bs-target="#registrationModal"
                 style={{ textDecoration: 'none' }}
               >
-                Registration CLosed
+                Registration Closed
               </a>
             </div>
             <div className=" text-center w-fit">

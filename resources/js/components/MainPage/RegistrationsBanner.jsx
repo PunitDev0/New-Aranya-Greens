@@ -1,11 +1,11 @@
 import React from "react";
 
-const RegistrationBanner = ({openRegistrationModal}) => {
+const RegistrationBanner = ({ openRegistrationModal }) => {
   return (
     <section className="relative bg-[#378042] text-black py-10 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between overflow-hidden">
       {/* Background Image */}
-     
-   
+
+
 
       {/* Overlay to darken background slightly */}
       {/* <div className="absolute inset-0 bg-green-700"></div> */}
@@ -16,9 +16,9 @@ const RegistrationBanner = ({openRegistrationModal}) => {
           Deen Dayal Jan Awas Yojana Affordable Residential Plots
         </h2>
         <button
-         onClick={() => openRegistrationModal()}
-         className="mt-4 border bg-green-200 border-black text-black font-semibold px-5 py-2 rounded-md transition-all">
-           Registration Open
+          // onClick={() => openRegistrationModal()}
+          className="mt-4 border bg-gray-400 border-black text-black font-semibold px-5 py-2 rounded-md cursor-not-allowed">
+          Registration Closed
         </button>
       </div>
 

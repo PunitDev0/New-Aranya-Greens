@@ -32,7 +32,7 @@ function CountdownTimer() {
   }, []);
 
   if (timeLeft.finished)
-    return <p className="text-green-600 text-xs">Registration Open!</p>;
+    return <p className="text-red-600 text-xs">Registration Closed!</p>;
 
   return (
     <div className="text-[18px] sm:text-[22px] font-semibold text-red-600 mt-2">
@@ -51,7 +51,7 @@ const notices = [
     borderColor: "border-green-500",
   },
   {
-    title: "Registration Open",
+    title: "Registration Closed",
     description: "Allotment Last Date 12 February 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
@@ -64,7 +64,7 @@ const notices = [
   },
   {
     title: "Loan Facility Available",
-    description: "Registration Open",
+    description: "Registration Closed",
     extra: "Loans provided in collaboration with partner banks.",
     borderColor: "border-green-500",
   },

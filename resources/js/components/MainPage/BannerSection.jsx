@@ -20,10 +20,10 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION REGISTRATION Open !!!! Book Your Plot under Affordable
+          ATTENTION REGISTRATION Closed !!!! Book Your Plot under Affordable
           Housing Policy 2013 for{" "}
-          <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***  
-          33% Quota Reserved for Women ***  
+          <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***
+          33% Quota Reserved for Women ***
           Haryana Govt. Residential Plots ***
 
           UNIT ALLOTMENT DATE:
@@ -56,8 +56,8 @@ export default function BannerSection({ openRegistrationModal }) {
                 HRERA-PKL-SNP-675-2025 dated on 19-03-2025
               </p>
 
-              <p className="text-green-300 text-xl font-bold tracking-wide">
-                REGISTRATION Open
+              <p className="text-red-400 text-xl font-bold tracking-wide">
+                REGISTRATION Closed
               </p>
 
               <p className="text-white text-lg font-semibold">
@@ -71,10 +71,10 @@ export default function BannerSection({ openRegistrationModal }) {
               {/* BUTTON + HIGHLIGHT */}
               <div className="flex flex-col items-center gap-4 pt-4">
                 <Button
-                  onClick={openRegistrationModal}
-                  className="rounded-2xl bg-[#53bf4e] text-white"
+                  // onClick={openRegistrationModal}
+                  className="rounded-2xl bg-gray-500 text-white cursor-not-allowed"
                 >
-                  Registration Open
+                  Registration Closed
                 </Button>
               </div>
 

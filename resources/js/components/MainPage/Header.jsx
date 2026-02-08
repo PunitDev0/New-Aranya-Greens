@@ -53,10 +53,10 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
           ))}
 
           <Button
-            onClick={openRegistrationModal}
-            className="rounded-full bg-[#53bf4e] hover:bg-green-300 text-white px-6"
+            // onClick={openRegistrationModal}
+            className="rounded-full bg-gray-500 text-white px-6 cursor-not-allowed"
           >
-             Registration Open
+            Registration Closed
           </Button>
         </nav>
 
@@ -72,29 +72,29 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
           <div className="flex flex-col py-4 px-6 space-y-4">
             {navItems.map((item, i) => (
               <a
-              key={i}
-              href={item.link}
-              onClick={(e) => {
-                if (item.link.startsWith("#")) {
-                  handleNavLinkClick(e, item.link);
-                }
-                toggleNav(); // menu close
-              }}
-              className="flex items-center gap-2 text-gray-700 hover:text-green-600"
-            >
-              <Check className="h-5 w-5 text-green-600" />
-              {item.label}
-            </a>
-            
+                key={i}
+                href={item.link}
+                onClick={(e) => {
+                  if (item.link.startsWith("#")) {
+                    handleNavLinkClick(e, item.link);
+                  }
+                  toggleNav(); // menu close
+                }}
+                className="flex items-center gap-2 text-gray-700 hover:text-green-600"
+              >
+                <Check className="h-5 w-5 text-green-600" />
+                {item.label}
+              </a>
+
             ))}
             <Button
-              onClick={() => {
-                openRegistrationModal();
-                toggleNav();
-              }}
-              className="w-full rounded-full bg-[#4285f4] hover:bg-blue-700"
+              // onClick={() => {
+              //   openRegistrationModal();
+              //   toggleNav();
+              // }}
+              className="w-full rounded-full bg-gray-500 cursor-not-allowed"
             >
-               Registration Open
+              Registration Closed
             </Button>
           </div>
         </div>
