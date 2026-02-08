@@ -352,6 +352,18 @@ const App = ({ flash }) => {
               </div>
 
 
+              <div className="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  className="form-check-input"
+                  id="quickEnquiryConsent"
+                  required
+                />
+                <label className="form-check-label text-xs text-gray-600" htmlFor="quickEnquiryConsent">
+                  I agree to the <a href="terms" target="_blank" className="underline">Terms</a>, <a href="privacy" target="_blank" className="underline">Privacy Policy</a> & <a href="refund-policy" target="_blank" className="underline">Refund Policy</a> and allow contact for project updates.
+                </label>
+              </div>
+
               <Button
                 type="submit"
                 disabled={enquirySubmitting}

@@ -37,12 +37,6 @@ export default function AboutPage() {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
-            <Link
-              href="/"
-              className="text-sm text-[#18885b] hover:underline mb-2 inline-block"
-            >
-              ← Back to Home
-            </Link>
             <h1 className="text-xl md:text-4xl font-bold text-gray-900">
               About Us
             </h1>

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import flatpickr from 'flatpickr';
 
-const RegistrationModal = ({ 
-  regForm, 
-  regFormErrors, 
-  handleRegFormChange, 
-  handleRegFormSubmit, 
+const RegistrationModal = ({
+  regForm,
+  regFormErrors,
+  handleRegFormChange,
+  handleRegFormSubmit,
   validateRegForm,
-  dobInputRef 
+  dobInputRef
 }) => {
   useEffect(() => {
     if (dobInputRef.current) {
@@ -23,7 +23,7 @@ const RegistrationModal = ({
       });
       return () => fp.destroy();
     }
-  }, [ dobInputRef]);
+  }, [dobInputRef]);
 
   return (
     <div className="modal fade" id="registrationModal" tabIndex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
@@ -245,29 +245,28 @@ const RegistrationModal = ({
                 </div>
 
                 {/* RM Code Input */}
-<div className="col-md-12 pt-3">
-  <label className="form-label">RM Code</label>
-  <span style={{ color: 'red', fontSize: '10px' }}>
-    (RM Code is Mandatory)
-  </span>
+                <div className="col-md-12 pt-3">
+                  <label className="form-label">RM Code</label>
+                  <span style={{ color: 'red', fontSize: '10px' }}>
+                    (RM Code is Mandatory)
+                  </span>
 
-  <input
-    type="text"
-    className={`form-control ${regFormErrors.rmcode ? 'is-invalid' : ''}`}
-    name="rmcode"
-    value={regForm.rmcode}
-    onChange={handleRegFormChange}
-    placeholder="Enter RM Code e.g., DD-XXXX"
-    required
-  />
+                  <input
+                    type="text"
+                    className={`form-control ${regFormErrors.rmcode ? 'is-invalid' : ''}`}
+                    name="rmcode"
+                    value={regForm.rmcode}
+                    onChange={handleRegFormChange}
+                    placeholder="Enter RM Code e.g., DD-XXXX"
+                    required
+                  />
 
-  {regFormErrors.rmcode && (
-    <div className="invalid-feedback">{regFormErrors.rmcode}</div>
-  )}
-</div>
+                  {regFormErrors.rmcode && (
+                    <div className="invalid-feedback">{regFormErrors.rmcode}</div>
+                  )}
+                </div>
 
 
-                {/* Terms Checkbox */}
                 <div className="form-check mt-4">
                   <input
                     className={`form-check-input ${regFormErrors.terms ? 'is-invalid' : ''}`}
@@ -278,8 +277,8 @@ const RegistrationModal = ({
                     onChange={handleRegFormChange}
                     required
                   />
-                  <label className="form-check-label" htmlFor="termsCheck">
-                    By clicking checkbox, you agree to the <a href="terms" target="_blank">Terms and Conditions</a> set out by this site.
+                  <label className="form-check-label text-sm" htmlFor="termsCheck">
+                    I agree to the <a href="terms" target="_blank">Terms & Conditions</a>, <a href="privacy" target="_blank">Privacy Policy</a>, <a href="refund-policy" target="_blank">Refund Policy</a>, and <a href="disclaimer" target="_blank">Disclaimer</a>, and I authorize the company to contact me via call, SMS, WhatsApp, or email regarding this project.
                   </label>
                   {regFormErrors.terms && <div className="invalid-feedback">{regFormErrors.terms}</div>}
                 </div>
