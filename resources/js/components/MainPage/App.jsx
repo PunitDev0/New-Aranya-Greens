@@ -288,7 +288,7 @@ const App = ({ flash }) => {
       />
 
       {/* Enquiry Popup */}
-      {showEnquiryPopup && (
+      {/* {showEnquiryPopup && (
         <div className="position-fixed inset-0 d-flex align-items-center justify-content-center"
           style={{ zIndex: 9999, background: 'rgba(0,0,0,0.7)' }}
           onClick={() => setShowEnquiryPopup(false)}
@@ -375,7 +375,7 @@ const App = ({ flash }) => {
 
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Floating Enquiry Button */}
       <button
