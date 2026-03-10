@@ -5,7 +5,7 @@ function CountdownTimer() {
   // Countdown ends EXACTLY: 14 Dec 2025, 23:59:59 IST
   // Convert IST → UTC: Subtract 5 hours 30 minutes
   // 23:59:59 IST == 18:29:59 UTC
-  const targetDate = new Date("2026-02-08T18:29:59Z").getTime();
+  const targetDate = new Date("2026-03-30T18:29:59Z").getTime();
 
   const [timeLeft, setTimeLeft] = useState({});
 
@@ -29,7 +29,7 @@ function CountdownTimer() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetDate]);
 
   if (timeLeft.finished)
     return <p className="text-red-600 text-xs">Registration Closed!</p>;
@@ -45,14 +45,14 @@ function CountdownTimer() {
 // ==================== NOTICE DATA ====================
 const notices = [
   {
-    title: "Registration Last Date - 8 February 2026",
+    title: "Registration Last Date - 30 March 2026",
     countdown: true,
     extra: "Please check our website for future updates.",
     borderColor: "border-green-500",
   },
   {
-    title: "Registration Closed",
-    description: "Allotment Last Date 12 February 2026",
+    title: "Registration Open",
+    description: "Allotment Date 3 April 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
   },
@@ -64,7 +64,7 @@ const notices = [
   },
   {
     title: "Loan Facility Available",
-    description: "Registration Closed",
+    description: "Registration Open",
     extra: "Loans provided in collaboration with partner banks.",
     borderColor: "border-green-500",
   },

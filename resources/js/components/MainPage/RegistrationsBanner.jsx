@@ -16,9 +16,9 @@ const RegistrationBanner = ({ openRegistrationModal }) => {
           Deen Dayal Jan Awas Yojana Affordable Residential Plots
         </h2>
         <button
-          // onClick={() => openRegistrationModal()}
-          className="mt-4 border bg-gray-400 border-black text-black font-semibold px-5 py-2 rounded-md cursor-not-allowed">
-          Registration Closed
+          onClick={() => openRegistrationModal()}
+          className="mt-4 border bg-green-600 hover:bg-green-700 border-black text-white font-semibold px-5 py-2 rounded-md">
+          Register Now
         </button>
       </div>
 

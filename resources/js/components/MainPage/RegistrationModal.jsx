@@ -218,10 +218,10 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Quota</option>
-                    <option value="Female Applicant">Female Applicant</option>
-                    <option value="Govt Employee Applicant">Govt Employee Applicant</option>
-                    <option value="General Applicant">General Applicant</option>
-                    {/* <option value="Management Quota Applicant">Management Quota Applicant</option> */}
+                    <option value="Female Applicant" disabled>Female Applicant</option>
+                    <option value="Govt Employee Applicant" disabled>Govt Employee Applicant</option>
+                    <option value="General Applicant" disabled>General Applicant</option>
+                    <option value="Management Quota Applicant">Management Quota Applicant</option>
                   </select>
                   {regFormErrors.quota && <div className="invalid-feedback">{regFormErrors.quota}</div>}
                 </div>
@@ -237,9 +237,8 @@ const RegistrationModal = ({
                     required
                   >
                     <option value="" disabled>Select Size</option>
-                    {/* <option value="150.69 @ 136000">150.69 @ 136000</option> */}
-                    <option value="128.98	 @ 110000">128.98 @ 110000</option>
-                    <option value="129.80	 @ 110000">129.80 @ 110000</option>
+                    <option value="138.05 @ 92500">138.05 @ 92500</option>
+                    <option value="150.69 @ 92500">150.69 @ 92500</option>
                   </select>
                   {regFormErrors.size && <div className="invalid-feedback">{regFormErrors.size}</div>}
                 </div>
@@ -283,7 +282,7 @@ const RegistrationModal = ({
                   {regFormErrors.terms && <div className="invalid-feedback">{regFormErrors.terms}</div>}
                 </div>
 
-                <button type="submit" className="btn btn-primary mt-3">Submit & Pay</button>
+                <button type="submit" className="btn bg-green-600 hover:bg-green-700 text-white mt-3">Submit & Pay</button>
               </div>
             </form>
           </div>

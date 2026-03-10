@@ -2,54 +2,53 @@ import React from "react";
 
 const focusPoints = [
   {
-    icon: "fa-map-marked-alt",
-    title: "Planned Plotted Layouts",
-    description: "Systematically designed layouts with clearly demarcated plots, open green spaces, and organized community living.",
+    icon: "fa-gem",
+    title: "Gold-Standard Plotted Layouts",
+    description: "Meticulously engineered layouts with perfectly aligned plots, demarcated with precision for an elite community experience.",
   },
   {
-    icon: "fa-road",
-    title: "Road & Infrastructure Connectivity",
-    description: "Well-developed internal roads, drainage systems, and seamless connectivity to major highways and urban centers.",
+    icon: "fa-crown",
+    title: "Elite Road & Infrastructure",
+    description: "Wide boulevard roads lined with palm trees, modern drainage, and rapid connectivity to the heart of the capital.",
   },
   {
-    icon: "fa-building",
-    title: "Residential Zoning as per Policy",
-    description: "Strict adherence to DDJAY guidelines ensuring transparent development norms and approved land use.",
+    icon: "fa-shield-halved",
+    title: "Premium Zoning & Safety",
+    description: "Strict adherence to government norms combined with secure gated development for ultimate peace of mind.",
   },
   {
-    icon: "fa-chart-line",
-    title: "Long-term Livability & Value",
-    description: "Sustainable design focused on quality of life, appreciation potential, and lasting value for homeowners.",
+    icon: "fa-chart-pie",
+    title: "Maximum ROI Appreciation",
+    description: "A high-value investment opportunity in Sonipat's fastest-growing corridor, designed for lasting wealth creation.",
   },
 ];
 
 const DDJAYResidentialSection = () => {
   return (
-    <section className="relative bg-white py-12 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section className="relative bg-white py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2318885b' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+      <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2318885b' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
 
       <div className="max-w-6xl mx-auto relative">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-14">
-          <span className="inline-block text-xs md:text-sm font-semibold text-[#18885b] uppercase tracking-wider mb-2">
-            Government of Haryana Policy
+          <span className="inline-block text-xs md:text-sm font-bold text-[#18885b] uppercase tracking-[0.2em] mb-3">
+            Elite Government Approved Township
           </span>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-4">
-            Deen Dayal Jan Awas Yojana – Residential Plotted Development
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-4 uppercase">
+            Ultra-Luxury Residential Plots – A New Benchmark in Modern Living
           </h2>
-          <div className="w-16 h-1 bg-[#18885b] rounded-full mx-auto"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#18885b] to-yellow-500 rounded-full mx-auto"></div>
         </div>
 
         {/* Introduction Content */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed text-center mb-5">
-            Discover residential plots offered under the{" "}
-            <span className="font-semibold text-[#18885b]">Deen Dayal Jan Awas Yojana (DDJAY)</span>{" "}
-            policy of the Haryana Government. These plotted developments are planned to support affordable, well-connected, and organized residential living as per applicable planning norms.
+        <div className="max-w-4xl mx-auto mb-16 px-4">
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed text-center mb-6 font-medium">
+            Discover a lifestyle of <span className="text-[#18885b] font-bold italic">Cinematic Excellence</span> with our premium plots under the Haryana Government's DDJAY policy.
+            We transition the concept of affordable housing into an <span className="text-gray-900 font-bold">Ultra-Realistic 3D vision</span> of luxury and sustainability.
           </p>
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed text-center">
-            Built on a vision of inclusive urban growth, DDJAY residential plots combine government-backed regulatory support with modern infrastructure — making homeownership more attainable and rewarding for aspiring buyers.
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed text-center">
+            Designed for those who seek more than just land — Aaranya Greens offers a premium real estate investment vibe, combining modern architectural visualization with the heritage and trust of Flowtech Estates.
           </p>
         </div>
 

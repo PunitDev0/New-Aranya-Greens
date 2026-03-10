@@ -108,12 +108,12 @@ const MainContent = ({
               </a> */}
               <a
                 href="#"
-                className="register-btn bg-gray-500 text-white fw-bold cursor-not-allowed"
-                // data-bs-toggle="modal"
-                // data-bs-target="#registrationModal"
+                className="register-btn bg-green-700 hover:bg-green-800 text-white fw-bold"
+                data-bs-toggle="modal"
+                data-bs-target="#registrationModal"
                 style={{ textDecoration: 'none' }}
               >
-                Registration Closed
+                Register Now
               </a>
             </div>
             <div className=" text-center w-fit">
@@ -173,8 +173,8 @@ const MainContent = ({
                       <th>UNIT PRICE (in Rs. Per Sq.yd.)</th>
                       <th>Registration Amount</th>
                       <th>10% On Allotment</th>
-                      <th>40% within 30 days of Allotment + Execution of BBA + include 50% EDC/IDC</th>
-                      <th>25% within 90 days of Allotment + include 25% EDC/IDC</th>
+                      <th>40% within 30 days of Allotment / BBA Execution + includes 50% EDC/IDC</th>
+                      <th>25% within 90 days of Allotment + includes 25% EDC/IDC</th>
                       <th>25% Offer of Possession + include 25% EDC/IDC</th>
                       <th>Total Cost*</th>
                     </tr>
@@ -182,55 +182,25 @@ const MainContent = ({
 
                   <tbody>
                     <tr>
-                      <td>128.98</td>
-                      <td>₹1,10,000</td>
+                      <td>138.05</td>
+                      <td>₹92,500</td>
                       <td>₹31,000</td>
-                      <td>₹13,87,780</td>
-                      <td>₹58,55,692</td>
-                      <td>₹36,37,236</td>
-                      <td>₹36,37,236</td>
-                      <td>₹1,45,48,944</td>
+                      <td>₹12,45,963</td>
+                      <td>₹53,01,120</td>
+                      <td>₹32,89,041</td>
+                      <td>₹32,89,041</td>
+                      <td>₹1,31,87,165</td>
                     </tr>
 
-                    <tr>
-                      <td>129.80</td>
-                      <td>₹1,10,000</td>
-                      <td>₹31,000</td>
-                      <td>₹13,96,800</td>
-                      <td>₹58,92,920</td>
-                      <td>₹36,60,360</td>
-                      <td>₹36,60,360</td>
-                      <td>₹1,46,41,440</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <h4 className="text-center">On 24 Meter Wide Road</h4>
-
-                <table className="table table-bordered text-center">
-                  <thead>
-                    <tr>
-                      <th>UNIT SIZE (Sq.yd)</th>
-                      <th>UNIT PRICE (in Rs. Per Sq.yd.)</th>
-                      <th>Registration Amount</th>
-                      <th>10% On Allotment</th>
-                      <th>40% within 30 days of Allotment + Execution of BBA + include 50% EDC/IDC</th>
-                      <th>25% within 90 days of Allotment + include 25% EDC/IDC</th>
-                      <th>25% Offer of Possession + include 25% EDC/IDC</th>
-                      <th>Total Cost*</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
                     <tr>
                       <td>150.69</td>
-                      <td>₹1,36,000</td>
+                      <td>₹92,500</td>
                       <td>₹31,000</td>
-                      <td>₹20,18,384</td>
-                      <td>₹84,08,502</td>
-                      <td>₹52,28,943</td>
-                      <td>₹52,28,943</td>
-                      <td>₹2,09,15,772</td>
+                      <td>₹13,62,883</td>
+                      <td>₹57,86,496</td>
+                      <td>₹35,90,189</td>
+                      <td>₹35,90,189</td>
+                      <td>₹1,43,91,757</td>
                     </tr>
                   </tbody>
                 </table>
@@ -249,14 +219,13 @@ const MainContent = ({
           </div>
           <div className="row">
             {[
+              'premium_township_aerial.png',
               'gal1.jpeg',
               'gal2.jpeg',
               'gal3.jpeg',
               'gal4.jpeg',
               'gal5.jpeg',
               'gal6.jpeg',
-              // 'gal7.jpeg',
-              // 'gal8.jpeg',
             ].map((image, index) => (
               <div className="col-md-4 p-0" key={index}>
                 <a data-fancybox="gallery-images" href={`images/${image}`}>

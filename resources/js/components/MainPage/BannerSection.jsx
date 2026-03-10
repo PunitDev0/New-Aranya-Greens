@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 
 export default function BannerSection({ openRegistrationModal }) {
   const slideImages = [
+    // "/images/premium_township_aerial.png",
     "/images/aranyabanner.jpeg",
     "/images/aranyabanner1.jpeg",
     "/images/aranyabanner2.jpeg",
@@ -20,7 +21,7 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION REGISTRATION Closed !!!! Book Your Plot under Affordable
+          ATTENTION REGISTRATION OPEN !!!! Book Your Plot under Affordable
           Housing Policy 2013 for{" "}
           <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***
           33% Quota Reserved for Women ***
@@ -28,12 +29,12 @@ export default function BannerSection({ openRegistrationModal }) {
 
           UNIT ALLOTMENT DATE:
           <span className="bg-yellow-400 text-black px-3 py-1 mx-2 rounded-sm blink-date">
-            12 February 2026
+            3 April 2026
           </span>
 
           LAST DATE OF Registration:
           <span className="bg-red-600 text-white px-3 py-1 mx-2 font-bold blink-date rounded-sm">
-            8 February 2026
+            30 March 2026
           </span>
 
           Registration Amount is Fully Refundable for Unsuccessful Applicants Within 14 Working Days
@@ -48,16 +49,20 @@ export default function BannerSection({ openRegistrationModal }) {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="max-w-4xl text-center space-y-6 px-4">
 
-              <h2 className="text-white text-3xl md:text-4xl font-bold tracking-wide">
-                AARANYA GREENS Residential Plots & Builder Floors Sector 35, Sonipat
+              <h2 className="text-white text-3xl md:text-5xl font-extrabold tracking-wide uppercase">
+                Experience Ultra-Luxury at Aaranya Greens
               </h2>
 
-              <p className="text-base text-white font-semibold">
-                HRERA-PKL-SNP-675-2025 dated on 19-03-2025
+              <p className="text-base text-white font-semibold uppercase tracking-widest">
+                Premium Residential Plots & Builder Floors | Sector 35, Sonipat
+              </p>
+
+              <p className="text-yellow-400 text-xl font-bold tracking-wide italic">
+                The Gold Standard of Modern Plotted Development
               </p>
 
               <p className="text-red-400 text-xl font-bold tracking-wide">
-                REGISTRATION Closed
+                REGISTRATION OPEN
               </p>
 
               <p className="text-white text-lg font-semibold">
@@ -65,16 +70,15 @@ export default function BannerSection({ openRegistrationModal }) {
               </p>
 
               <p className="text-yellow-400 text-lg font-bold">
-                Sonipat’s First 24 Meter Road Plots at This Price
+                Luxury Real Estate Investment with High ROI Potential
               </p>
 
-              {/* BUTTON + HIGHLIGHT */}
               <div className="flex flex-col items-center gap-4 pt-4">
                 <Button
-                  // onClick={openRegistrationModal}
-                  className="rounded-2xl bg-gray-500 text-white cursor-not-allowed"
+                  onClick={openRegistrationModal}
+                  className="rounded-2xl bg-[#378042] text-white hover:bg-green-700"
                 >
-                  Registration Closed
+                  Register Now
                 </Button>
               </div>
 
