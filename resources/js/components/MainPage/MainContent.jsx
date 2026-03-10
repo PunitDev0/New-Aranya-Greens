@@ -421,7 +421,7 @@ const MainContent = ({
       </footer>
 
       <a
-        href="https://api.whatsapp.com/send?phone=+919211494111&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
+        href="https://api.whatsapp.com/send?phone=+919311229433&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
         target="_blank"
         rel="noopener noreferrer"
         className="whtsap-btn"
@@ -433,13 +433,13 @@ const MainContent = ({
       <div className="bid-site-visit">
         <div className="row">
           <div className="col">
-            <a href="tel:+919211494111" onClick={() => window.gtag_call_conversion?.()}>
+            <a href="tel:+919311229433" onClick={() => window.gtag_call_conversion?.()}>
               <img src="images/call-icon-gif.gif" alt="Call" /><br /> Call Now
             </a>
           </div>
           <div className="col">
             <a
-              href="https://api.whatsapp.com/send?phone=+919211494111&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
+              href="https://api.whatsapp.com/send?phone=+919311229433&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
               onClick={() => window.gtag_whatsapp_conversion?.()}
             >
               <img src="images/whatsapp.gif" alt="WhatsApp" /><br /> Whatsapp

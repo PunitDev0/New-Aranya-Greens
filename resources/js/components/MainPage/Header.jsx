@@ -15,8 +15,8 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
     <header className="bg-white shadow-md sticky top-0 z-[1000]">
       {/* Top Contact Bar */}
       <div className="bg-[#378042] text-white text-xs sm:text-sm flex flex-row items-center justify-between gap-4 py-2 px-3">
-        <a href="tel:+919211494111" className="hover:underline font-bold text-white">
-          +91-9211494111
+        <a href="tel:+919311229433" className="hover:underline font-bold text-white">
+          +91-9311229433
         </a>
         <span>|</span>
         <a href="mailto:info@deendayaljanawasyojnareg.org" className="hover:underline font-bold text-white">

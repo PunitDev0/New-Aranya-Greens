@@ -138,7 +138,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="text-xs text-gray-500 mb-1">Phone</p>
-              <a href="tel:+919211494111" className="font-semibold text-gray-900 hover:text-[#18885b]">+91-9211494111</a>
+              <a href="tel:+919311229433" className="font-semibold text-gray-900 hover:text-[#18885b]">+91-9311229433</a>
             </div>
             <div className="border border-gray-200 p-4 rounded-lg">
               <p className="text-xs text-gray-500 mb-1">Email</p>

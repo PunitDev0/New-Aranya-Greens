@@ -16,8 +16,8 @@ const contactItems = [
   {
     icon: "fa-phone-alt",
     label: "Phone",
-    value: "+91-9211494111",
-    link: "tel:+919211494111",
+    value: "+91-9311229433",
+    link: "tel:+919311229433",
   },
   {
     icon: "fa-envelope",
@@ -101,13 +101,13 @@ export default function ContactPage() {
           <h3 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h3>
           <div className="flex flex-wrap gap-4">
             <a
-              href="tel:+919211494111"
+              href="tel:+919311229433"
               className="inline-flex items-center gap-2 bg-[#18885b] text-white px-5 py-3 rounded-lg font-medium hover:bg-[#157a4d] transition-colors"
             >
               <i className="fas fa-phone-alt"></i> Call Now
             </a>
             <a
-              href="https://api.whatsapp.com/send?phone=+919211494111&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
+              href="https://api.whatsapp.com/send?phone=+919311229433&text=Hello,%20I%20am%20interested%20in%20DDJAY%20Plots%20,%20Please%20get%20in%20touch%E2%80%A6"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-3 rounded-lg font-medium hover:bg-[#20bd5a] transition-colors"
