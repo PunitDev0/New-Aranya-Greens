@@ -21,19 +21,18 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION REGISTRATION OPEN !!!! Book Your Plot under Affordable
-          Housing Policy 2013 for{" "}
+          ATTENTION: EXCLUSIVE MANAGEMENT QUOTA REGISTRATION OPEN !!!! Book your premium plot at{" "}
           <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***
-          33% Quota Reserved for Women ***
-          Haryana Govt. Residential Plots ***
+          Only 8 Exclusive Plots Available ***
+          Starting at ₹1.31 Cr* ***
 
           UNIT ALLOTMENT DATE:
-          <span className="bg-yellow-400 text-black px-3 py-1 mx-2 rounded-sm blink-date">
+          <span className="bg-yellow-400 text-black px-3 py-1 mx-2 blink-date">
             3 April 2026
           </span>
 
           LAST DATE OF Registration:
-          <span className="bg-red-600 text-white px-3 py-1 mx-2 font-bold blink-date rounded-sm">
+          <span className="bg-red-600 text-white px-3 py-1 mx-2 font-bold blink-date">
             30 March 2026
           </span>
 
@@ -47,38 +46,43 @@ export default function BannerSection({ openRegistrationModal }) {
           <div className="absolute inset-0 bg-black opacity-60"></div>
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="max-w-4xl text-center space-y-6 px-4">
+            <div className="max-w-4xl text-center space-y-4 px-4">
 
               <h2 className="text-white text-3xl md:text-5xl font-extrabold tracking-wide uppercase">
-                Experience Ultra-Luxury at Aaranya Greens
+                DEEN DAYAL JAN AWAS YOJNA PLOTS
               </h2>
 
               <p className="text-base text-white font-semibold uppercase tracking-widest">
-                Premium Residential Plots & Builder Floors | Sector 35, Sonipat
+                Premium Residential Plots | Sector 35, Sonipat
               </p>
 
-              <p className="text-yellow-400 text-xl font-bold tracking-wide italic">
-                The Gold Standard of Modern Plotted Development
-              </p>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-4">
+                <div className="bg-yellow-400 text-black px-6 py-2 font-bold text-xl uppercase rounded-none">
+                  Management Quota: Only 8 Plots
+                </div>
+                <div className="bg-white text-black px-6 py-2 font-bold text-xl uppercase rounded-none">
+                  Starting at ₹1.31 Cr*
+                </div>
+              </div>
 
-              <p className="text-red-400 text-xl font-bold tracking-wide">
+              <p className="text-red-400 text-2xl font-black tracking-widest animate-pulse">
                 REGISTRATION OPEN
               </p>
 
-              <p className="text-white text-lg font-semibold">
-                (HARYANA GOVT. RESIDENTIAL PLOTS)
+              <p className="text-white text-lg font-semibold uppercase">
+                (Haryana Govt. Approved Residential Township)
               </p>
 
               <p className="text-yellow-400 text-lg font-bold">
-                Luxury Real Estate Investment with High ROI Potential
+                High ROI Luxury Real Estate Investment
               </p>
 
               <div className="flex flex-col items-center gap-4 pt-4">
                 <Button
                   onClick={openRegistrationModal}
-                  className="rounded-2xl bg-[#378042] text-white hover:bg-green-700"
+                  className="rounded-none bg-[#378042] text-white hover:bg-green-700 font-bold px-10 py-6 text-xl tracking-widest shadow-none border-2 border-white/20"
                 >
-                  Register Now
+                  REGISTER NOW
                 </Button>
               </div>
 

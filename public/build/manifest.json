@@ -1,31 +1,31 @@
 {
-  "_check-DiRWQIx2.js": {
-    "file": "assets/check-DiRWQIx2.js",
+  "_check-D8qTfnBr.js": {
+    "file": "assets/check-D8qTfnBr.js",
     "name": "check",
     "imports": [
-      "_index-BXLiMTuN.js"
+      "_index-CUMe7tq9.js"
     ]
   },
-  "_index-BO1TcZ0P.js": {
-    "file": "assets/index-BO1TcZ0P.js",
+  "_index-BLKze3lu.js": {
+    "file": "assets/index-BLKze3lu.js",
     "name": "index",
     "imports": [
-      "_index-BXLiMTuN.js",
+      "_index-CUMe7tq9.js",
       "resources/js/app.jsx"
     ]
   },
-  "_index-BXLiMTuN.js": {
-    "file": "assets/index-BXLiMTuN.js",
+  "_index-CUMe7tq9.js": {
+    "file": "assets/index-CUMe7tq9.js",
     "name": "index",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_x-Bhb0CO_C.js": {
-    "file": "assets/x-Bhb0CO_C.js",
+  "_x-DVtZagAg.js": {
+    "file": "assets/x-DVtZagAg.js",
     "name": "x",
     "imports": [
-      "_index-BXLiMTuN.js"
+      "_index-CUMe7tq9.js"
     ]
   },
   "node_modules/@fancyapps/ui/dist/index.js": {
@@ -51,7 +51,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Dly3sY64.css",
+    "file": "assets/app-HFZbqRhk.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
@@ -59,7 +59,7 @@
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-BFxIP88Q.js",
+    "file": "assets/app-C4CeI8EV.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
@@ -77,11 +77,11 @@
     ],
     "css": [
       "assets/app-BWOoncUM.css",
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/PaymentForm.jsx": {
-    "file": "assets/PaymentForm-BRCYn9eO.js",
+    "file": "assets/PaymentForm-DxOXA6Q_.js",
     "name": "PaymentForm",
     "src": "resources/js/pages/PaymentForm.jsx",
     "isDynamicEntry": true,
@@ -89,11 +89,11 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/Privacy.jsx": {
-    "file": "assets/Privacy-CmebXfp7.js",
+    "file": "assets/Privacy-CgVaEzS0.js",
     "name": "Privacy",
     "src": "resources/js/pages/Privacy.jsx",
     "isDynamicEntry": true,
@@ -101,11 +101,11 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/RefundPolicy.jsx": {
-    "file": "assets/RefundPolicy-HzYKwvg_.js",
+    "file": "assets/RefundPolicy-CJlQBHTx.js",
     "name": "RefundPolicy",
     "src": "resources/js/pages/RefundPolicy.jsx",
     "isDynamicEntry": true,
@@ -113,11 +113,11 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/Terms.jsx": {
-    "file": "assets/Terms-CuTrTtWg.js",
+    "file": "assets/Terms-BGDomS_U.js",
     "name": "Terms",
     "src": "resources/js/pages/Terms.jsx",
     "isDynamicEntry": true,
@@ -125,11 +125,11 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/about.jsx": {
-    "file": "assets/about-BRJ0mPpV.js",
+    "file": "assets/about-CSVY9P1c.js",
     "name": "about",
     "src": "resources/js/pages/about.jsx",
     "isDynamicEntry": true,
@@ -137,11 +137,11 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/contact.jsx": {
-    "file": "assets/contact-DH-nCvzO.js",
+    "file": "assets/contact-GL43M7Wp.js",
     "name": "contact",
     "src": "resources/js/pages/contact.jsx",
     "isDynamicEntry": true,
@@ -149,26 +149,26 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/dashboard.jsx": {
-    "file": "assets/dashboard-DJkkVwm5.js",
+    "file": "assets/dashboard-DXNMI-cl.js",
     "name": "dashboard",
     "src": "resources/js/pages/dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BXLiMTuN.js",
-      "_index-BO1TcZ0P.js",
-      "_x-Bhb0CO_C.js"
+      "_index-CUMe7tq9.js",
+      "_index-BLKze3lu.js",
+      "_x-DVtZagAg.js"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/disclaimer.jsx": {
-    "file": "assets/disclaimer-pcTjQW9_.js",
+    "file": "assets/disclaimer-DjIh3_hE.js",
     "name": "disclaimer",
     "src": "resources/js/pages/disclaimer.jsx",
     "isDynamicEntry": true,
@@ -176,41 +176,41 @@
       "resources/js/app.jsx"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/login.jsx": {
-    "file": "assets/login-Dd-1Jx6a.js",
+    "file": "assets/login-BU9LDeca.js",
     "name": "login",
     "src": "resources/js/pages/login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BXLiMTuN.js",
-      "_index-BO1TcZ0P.js",
-      "_check-DiRWQIx2.js"
+      "_index-CUMe7tq9.js",
+      "_index-BLKze3lu.js",
+      "_check-D8qTfnBr.js"
     ],
     "css": [
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ]
   },
   "resources/js/pages/welcome.jsx": {
-    "file": "assets/welcome-DCj0qqEq.js",
+    "file": "assets/welcome-DWayEMvn.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_index-BXLiMTuN.js",
-      "_check-DiRWQIx2.js",
-      "_x-Bhb0CO_C.js"
+      "_index-CUMe7tq9.js",
+      "_check-D8qTfnBr.js",
+      "_x-DVtZagAg.js"
     ],
     "dynamicImports": [
       "node_modules/@fancyapps/ui/dist/index.js"
     ],
     "css": [
       "assets/welcome-SGcD4g3u.css",
-      "assets/app-Dly3sY64.css"
+      "assets/app-HFZbqRhk.css"
     ],
     "assets": [
       "assets/fa-brands-400-BfBXV7Mm.woff2",

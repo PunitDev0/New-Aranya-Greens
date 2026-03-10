@@ -282,7 +282,7 @@ const RegistrationModal = ({
                   {regFormErrors.terms && <div className="invalid-feedback">{regFormErrors.terms}</div>}
                 </div>
 
-                <button type="submit" className="btn bg-green-600 hover:bg-green-700 text-white mt-3">Submit & Pay</button>
+                <button type="submit" className="btn bg-green-600 hover:bg-green-700 text-white mt-3 rounded-0">Submit & Pay</button>
               </div>
             </form>
           </div>

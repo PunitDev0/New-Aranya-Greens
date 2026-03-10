@@ -36,9 +36,9 @@ const DDJAYResidentialSection = () => {
             Elite Government Approved Township
           </span>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-4 uppercase">
-            Ultra-Luxury Residential Plots – A New Benchmark in Modern Living
+             Residential Plots – A New Benchmark in Modern Living
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-[#18885b] to-yellow-500 rounded-full mx-auto"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-[#18885b] to-yellow-500 mx-auto"></div>
         </div>
 
         {/* Introduction Content */}
@@ -63,7 +63,7 @@ const DDJAYResidentialSection = () => {
                 key={index}
                 className="group bg-gradient-to-b from-[#f0f9f6] to-white p-6  border border-[#e5f0ec] hover:shadow-lg hover:border-[#18885b]/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#18885b] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-[#18885b] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <i className={`fas ${item.icon} text-white text-lg`}></i>
                 </div>
                 <h4 className="font-semibold text-gray-800 mb-2">{item.title}</h4>
@@ -74,7 +74,7 @@ const DDJAYResidentialSection = () => {
         </div>
 
         {/* Platform Purpose CTA */}
-        <div className="bg-gradient-to-r from-[#18885b] to-[#1a9b66] rounded-2xl p-8 md:p-10 text-center text-white shadow-lg">
+        <div className="bg-gradient-to-r from-[#18885b] to-[#1a9b66] p-8 md:p-10 text-center text-white shadow-lg">
           <h3 className="text-lg md:text-xl font-semibold mb-3">
             How We Help You
           </h3>
@@ -82,13 +82,13 @@ const DDJAYResidentialSection = () => {
             This platform is designed to provide project information, eligibility guidance, and enquiry support for interested buyers. Whether you are a first-time buyer or looking to invest, we are here to assist you every step of the way.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2">
               <i className="fas fa-info-circle"></i> Project Information
             </span>
-            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2">
               <i className="fas fa-user-check"></i> Eligibility Guidance
             </span>
-            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-white/20 px-4 py-2">
               <i className="fas fa-headset"></i> Enquiry Support
             </span>
           </div>

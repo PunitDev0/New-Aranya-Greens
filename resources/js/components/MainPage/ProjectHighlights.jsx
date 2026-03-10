@@ -2,8 +2,8 @@
 
   const ProjectHighlights = () => {
     const highlights = [
-      { label: "Plots Starting", value: "Price ₹1.45 Cr*" },
-      { label: "Total No. of Plots", value: "20" },
+      { label: "Plots Starting", value: "Price ₹1.31 Cr*" },
+      { label: "Total No. of Plots", value: "8" },
       { label: "Payment Plan", value: "10:40:25:25" },
       {
         label: "HRERA-NO",

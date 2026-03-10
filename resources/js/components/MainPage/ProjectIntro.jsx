@@ -7,14 +7,14 @@ export default function ProjectIntro() {
 
         {/* IMAGE SIDE */}
         <div className="w-full lg:w-1/2 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-green-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-          <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl">
+          <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-green-600 blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative bg-white overflow-hidden shadow-2xl">
             <img
               src="/images/gal1.jpeg"
               alt="Aaranya Greens Living"
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-lg text-sm border border-white/20">
+            <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white px-4 py-2 text-sm border border-white/20">
               <span className="font-bold text-yellow-400">DEVELOPMENT STATUS:</span> Professional Surveying & Land Demarcation in Progress
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function ProjectIntro() {
 
         {/* CONTENT SIDE */}
         <div className="w-full lg:w-1/2 space-y-6">
-          <div className="inline-block px-4 py-1.5 bg-[#18885b]/10 text-[#18885b] rounded-full text-xs font-bold tracking-widest uppercase mb-2">
+          <div className="inline-block px-4 py-1.5 bg-[#18885b]/10 text-[#18885b] text-xs font-bold tracking-widest uppercase mb-2">
             The Future of Premium Living
           </div>
 
@@ -30,10 +30,10 @@ export default function ProjectIntro() {
             Aaranya Greens: <span className="text-gray-900">Setting the Gold Standard in Sonipat</span>
           </h2>
 
-          <div className="h-1.5 w-24 bg-gradient-to-r from-[#18885b] to-yellow-400 rounded-full"></div>
+          <div className="h-1.5 w-24 bg-gradient-to-r from-[#18885b] to-yellow-400"></div>
 
           <p className="text-lg text-gray-800 font-medium leading-relaxed">
-            Flowtech Estates marks its flagship debut with an ultra-luxury plotted township designed for the elite.
+            Flowtech Estates marks its flagship debut with an plotted township designed for the elite.
             Aaranya Greens isn't just a project; it's a cinematic lifestyle statement in Sector 35, Sonipat.
           </p>
 
@@ -50,25 +50,25 @@ export default function ProjectIntro() {
 
           <div className="grid grid-cols-2 gap-4 pt-4">
             <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-1">
+              <div className="w-5 h-5 bg-green-100 flex items-center justify-center mt-1">
                 <i className="fas fa-check text-[#18885b] text-[10px]"></i>
               </div>
               <p className="text-xs font-bold text-gray-700">Ultra-Realistic Urban Planning</p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-1">
+              <div className="w-5 h-5 bg-green-100 flex items-center justify-center mt-1">
                 <i className="fas fa-check text-[#18885b] text-[10px]"></i>
               </div>
               <p className="text-xs font-bold text-gray-700">High Appreciation Vibe</p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-1">
+              <div className="w-5 h-5 bg-green-100 flex items-center justify-center mt-1">
                 <i className="fas fa-check text-[#18885b] text-[10px]"></i>
               </div>
               <p className="text-xs font-bold text-gray-700">Modern Professional Eqpt</p>
             </div>
             <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-1">
+              <div className="w-5 h-5 bg-green-100 flex items-center justify-center mt-1">
                 <i className="fas fa-check text-[#18885b] text-[10px]"></i>
               </div>
               <p className="text-xs font-bold text-gray-700">8K Quality Infrastructure</p>

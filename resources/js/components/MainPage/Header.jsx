@@ -54,7 +54,7 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
 
           <Button
             onClick={openRegistrationModal}
-            className="rounded-full bg-[#378042] text-white px-6 hover:bg-green-700"
+            className="rounded-none bg-[#378042] text-white px-6 hover:bg-green-700"
           >
             Register Now
           </Button>
@@ -92,7 +92,7 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
                 openRegistrationModal();
                 toggleNav();
               }}
-              className="w-full rounded-full bg-[#378042] hover:bg-green-700"
+              className="w-full rounded-none bg-[#378042] hover:bg-green-700"
             >
               Register Now
             </Button>
