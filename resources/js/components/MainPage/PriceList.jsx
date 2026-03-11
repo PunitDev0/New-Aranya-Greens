@@ -22,13 +22,13 @@ export default function PriceList() {
                     <th>UNIT SIZE (Sq.yd)</th>
                     <th>UNIT PRICE (in Rs. Per Sq.yd.)</th>
                     <th>Registration Amount</th>
-                    <th>10% On Allotment</th>
+                    <th>10% at the time of Booking</th>
                     <th>
-                      40% within 30 days of Allotment / BBA Execution +
+                      40% within 20 days of Allotment / BBA Execution +
                       includes 50% EDC/IDC
                     </th>
                     <th>
-                      25% within 90 days of Allotment + includes 25% EDC/IDC
+                      25% within 60 days of Allotment + includes 25% EDC/IDC
                     </th>
                     <th>
                       25% Offer of Possession + include 25% EDC/IDC
@@ -46,7 +46,7 @@ export default function PriceList() {
                     <td>₹53,01,120</td>
                     <td>₹32,89,041</td>
                     <td>₹32,89,041</td>
-                    <td>₹1,31,87,165</td>
+                    <td>₹1,31,56,165</td>
                   </tr>
 
                   <tr>
@@ -57,7 +57,7 @@ export default function PriceList() {
                     <td>₹57,86,496</td>
                     <td>₹35,90,189</td>
                     <td>₹35,90,189</td>
-                    <td>₹1,43,91,757</td>
+                    <td>₹1,43,60,757</td>
                   </tr>
                 </tbody>
               </table>
