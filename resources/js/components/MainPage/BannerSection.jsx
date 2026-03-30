@@ -21,8 +21,9 @@ export default function BannerSection({ openRegistrationModal }) {
           direction="left"
           className="text-[17px] font-semibold"
         >
-          ATTENTION: EXCLUSIVE MANAGEMENT QUOTA REGISTRATION OPEN !!!! Book your premium plot at{" "}
-          <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> ***
+          ATTENTION: REGISTRATION CLOSED !!!! Bookings for premium plots at{" "}
+          <strong>AARANYA GREENS, SECTOR 35, SONIPAT</strong> are now closed. 
+          Thank you for the overwhelming response. ***
           Only 8 Exclusive Plots Available ***
           Starting at ₹1.31 Cr* ***
 
@@ -65,8 +66,8 @@ export default function BannerSection({ openRegistrationModal }) {
                 </div>
               </div>
 
-              <p className="text-red-400 text-lg sm:text-2xl font-black tracking-widest animate-pulse">
-                REGISTRATION OPEN
+              <p className="text-red-500 text-lg sm:text-2xl font-black tracking-widest">
+                REGISTRATION CLOSED
               </p>
 
               <p className="text-white text-[10px] sm:text-lg font-semibold uppercase">
@@ -75,10 +76,10 @@ export default function BannerSection({ openRegistrationModal }) {
 
               <div className="flex flex-col items-center gap-4 pt-2 md:pt-4">
                 <Button
-                  onClick={openRegistrationModal}
-                  className="rounded-none bg-[#378042] text-white hover:bg-green-700 font-bold px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl tracking-widest shadow-none border-2 border-white/20"
+                  className="rounded-none bg-red-600 text-white cursor-not-allowed opacity-75 font-bold px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl tracking-widest shadow-none border-2 border-white/20"
+                  disabled
                 >
-                  REGISTER NOW
+                  REGISTRATION CLOSED
                 </Button>
               </div>
 

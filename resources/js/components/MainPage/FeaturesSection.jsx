@@ -51,7 +51,7 @@ const notices = [
     borderColor: "border-green-500",
   },
   {
-    title: "Registration Open",
+    title: "Registration Closed",
     description: "Allotment Date 3 April 2026",
     extra: "Stay tuned for the next registration cycle.",
     borderColor: "border-gray-500",
@@ -64,7 +64,7 @@ const notices = [
   },
   {
     title: "Loan Facility Available",
-    description: "Registration Open",
+    description: "Registration Closed",
     extra: "Loans provided in collaboration with partner banks.",
     borderColor: "border-green-500",
   },

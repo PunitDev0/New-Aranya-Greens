@@ -53,10 +53,10 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
           ))}
 
           <Button
-            onClick={openRegistrationModal}
-            className="rounded-none bg-[#378042] text-white px-6 hover:bg-green-700"
+            className="rounded-none bg-red-600 text-white px-6 cursor-not-allowed opacity-75"
+            disabled
           >
-            Register Now
+            Registration Closed
           </Button>
         </nav>
 
@@ -88,13 +88,10 @@ const Header = ({ openRegistrationModal, isNavOpen, toggleNav, handleNavLinkClic
 
             ))}
             <Button
-              onClick={() => {
-                openRegistrationModal();
-                toggleNav();
-              }}
-              className="w-full rounded-none bg-[#378042] hover:bg-green-700"
+              className="w-full rounded-none bg-red-600 cursor-not-allowed opacity-75"
+              disabled
             >
-              Register Now
+              Registration Closed
             </Button>
           </div>
         </div>

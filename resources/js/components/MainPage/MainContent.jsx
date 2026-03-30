@@ -108,12 +108,10 @@ const MainContent = ({
               </a> */}
               <a
                 href="#"
-                className="register-btn bg-green-700 hover:bg-green-800 text-white fw-bold"
-                data-bs-toggle="modal"
-                data-bs-target="#registrationModal"
+                className="register-btn bg-red-600 text-white fw-bold cursor-not-allowed opacity-75"
                 style={{ textDecoration: 'none' }}
               >
-                Register Now
+                Registration Closed
               </a>
             </div>
             <div className=" text-center w-fit">

@@ -12,6 +12,11 @@ class RegistrationController extends Controller
 {
     public function store(Request $request)
     {
+        return response()->json([
+            'success' => false,
+            'message' => 'Registration is currently closed. Please check back later.'
+        ], 403);
+
         $validated = $request->validate([
             'applicant_name' => 'required|string|max:255',
             'father_or_husband_name' => 'required|string|max:255',
